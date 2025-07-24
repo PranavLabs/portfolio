@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Pranav Gandha - Full-Stack Developer & AI Enthusiast</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Pranav Gandha - Full-Stack Developer, AI Developer, and UI/UX Enthusiast. Passionate about creating intuitive web experiences with React, Node.js, Python, and AI technologies.">
+    <meta name="keywords" content="full-stack developer, AI developer, React, Node.js, Python, JavaScript, UI/UX, web development, portfolio">
+    <meta name="author" content="Pranav Gandha">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pranav Gandha - Full-Stack Developer & AI Enthusiast">
+    <meta property="og:description" content="Full-Stack Developer specializing in React, Node.js, Python, and AI technologies. Creating intuitive and performant web experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pranavlabs.github.io/portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pranav Gandha - Full-Stack Developer & AI Enthusiast">
+    <meta name="twitter:description" content="Full-Stack Developer specializing in React, Node.js, Python, and AI technologies.">
+    <meta name="twitter:creator" content="@pranavbyte">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tailwind CSS Configuration -->
@@ -44,10 +61,35 @@
                             '0%': { opacity: '0', transform: 'translateY(-20px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         },
+                        slideInLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        pulse: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' },
+                        },
+                        typing: {
+                            'from': { width: '0' },
+                            'to': { width: '100%' },
+                        },
+                        blink: {
+                            '0%, 50%': { borderColor: 'transparent' },
+                            '50%, 100%': { borderColor: '#00B0FF' },
+                        }
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.8s ease-out forwards',
                         'slide-down': 'slideDown 0.6s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'typing': 'typing 3.5s steps(40, end)',
+                        'blink': 'blink 1s infinite',
                     },
                     dropShadow: {
                         sky: '0 0 10px rgba(0, 176, 255, 0.7)', // Custom glow for icons
@@ -80,6 +122,38 @@
                 tagline: 'Full-Stack Developer, AI Developer, UI/UX Enthusiast',
                 intro: 'Passionate about crafting intuitive and performant web experiences along with developing AI components, I thrive on bringing ideas to life through clean code and thoughtful design. My journey in development is fueled by curiosity and a commitment to continuous learning.',
                 skills: ['React', 'Node.js', 'Python', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Figma','Framer'],
+                projects: [
+                    {
+                        title: 'AI Chat Application',
+                        description: 'A real-time chat application with AI integration featuring natural language processing and responsive design.',
+                        tech: ['React', 'Node.js', 'Socket.io', 'OpenAI API'],
+                        github: 'https://github.com/PranavLabs',
+                        demo: '#',
+                        icon: 'fas fa-robot'
+                    },
+                    {
+                        title: 'Portfolio Website',
+                        description: 'Modern, responsive portfolio website built with React and Tailwind CSS featuring smooth animations.',
+                        tech: ['React', 'Tailwind CSS', 'JavaScript', 'HTML'],
+                        github: 'https://github.com/PranavLabs/portfolio',
+                        demo: '#',
+                        icon: 'fas fa-globe'
+                    },
+                    {
+                        title: 'Task Management App',
+                        description: 'Full-stack task management application with user authentication and real-time updates.',
+                        tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+                        github: 'https://github.com/PranavLabs',
+                        demo: '#',
+                        icon: 'fas fa-tasks'
+                    }
+                ],
+                stats: [
+                    { label: 'Projects Completed', value: '25+' },
+                    { label: 'Years Experience', value: '3+' },
+                    { label: 'Technologies Mastered', value: '10+' },
+                    { label: 'Happy Clients', value: '15+' }
+                ],
                 social: {
                     github: 'https://github.com/PranavLabs',
                     linkedin: 'https://www.linkedin.com/in/pranav-gandha-a5a27a291/',
@@ -90,8 +164,17 @@
             };
 
             return (
-                <div className="min-h-screen bg-neutral-900 text-gray-100 font-inter flex flex-col items-center justify-center p-4">
-                    <Portfolio data={portfolioData} />
+                <div className="min-h-screen bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-gray-100 font-inter">
+                    {/* Animated background dots */}
+                    <div className="fixed inset-0 overflow-hidden pointer-events-none">
+                        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-sky-500 rounded-full opacity-20 animate-pulse-slow"></div>
+                        <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-sky-400 rounded-full opacity-30 animate-pulse-slow" style={{animationDelay: '1s'}}></div>
+                        <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-sky-300 rounded-full opacity-25 animate-pulse-slow" style={{animationDelay: '2s'}}></div>
+                    </div>
+                    
+                    <div className="relative z-10 flex flex-col items-center justify-center p-4 py-12">
+                        <Portfolio data={portfolioData} />
+                    </div>
                 </div>
             );
         };
@@ -99,69 +182,160 @@
         // Portfolio Component
         const Portfolio = ({ data }) => {
             return (
-                <div className="w-full max-w-4xl bg-neutral-800 rounded-xl shadow-2xl p-8 md:p-12 space-y-12 animate-fade-in">
-                    {/* Hero Section */}
-                    <header className="text-center space-y-4">
-                        <h1 className="text-5xl md:text-6xl font-extrabold text-gray-50 leading-tight tracking-tight animate-slide-down">
-                            {data.name}
-                        </h1>
-                        <h2 className="text-2xl md:text-3xl font-semibold text-sky-400 animate-slide-down delay-100">
-                            {data.tagline}
-                        </h2>
-                        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-slide-down delay-200">
-                            {data.intro}
-                        </p>
-                    </header>
-
-                    {/* Skills Section */}
-                    <section className="text-center">
-                        <h3 className="text-3xl md:text-4xl font-bold text-gray-50 mb-8 relative inline-block group">
-                            My Skills
-                            <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-12 h-1 bg-sky-500 rounded-full transition-all duration-300 ease-in-out group-hover:w-24"></span>
-                        </h3>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            {data.skills.map((skill, index) => (
-                                <div
-                                    key={index}
-                                    className="px-6 py-3 bg-neutral-700 text-gray-100 rounded-full text-lg font-medium shadow-md
-                                               hover:bg-sky-500 hover:text-neutral-900 transform hover:-translate-y-1 transition-all duration-300 ease-in-out
-                                               hover:shadow-sky-500/50 cursor-default"
+                <div className="w-full max-w-6xl space-y-16">
+                    {/* Main Card */}
+                    <div className="bg-neutral-800/50 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12 border border-neutral-700/50 animate-fade-in">
+                        {/* Hero Section with enhanced styling */}
+                        <header className="text-center space-y-6 mb-16">
+                            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-50 leading-tight tracking-tight animate-slide-down">
+                                {data.name}
+                            </h1>
+                            <h2 className="text-2xl md:text-4xl font-semibold text-sky-400 animate-slide-down delay-100">
+                                {data.tagline}
+                            </h2>
+                            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-slide-down delay-200">
+                                {data.intro}
+                            </p>
+                            
+                            {/* CTA Button */}
+                            <div className="pt-6 animate-slide-down delay-300">
+                                <a
+                                    href="#projects"
+                                    className="inline-flex items-center px-8 py-4 bg-sky-500 hover:bg-sky-600 text-neutral-900 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-500/25"
                                 >
-                                    {skill}
-                                </div>
-                            ))}
-                        </div>
-                    </section>
+                                    <i className="fas fa-rocket mr-3"></i>
+                                    View My Work
+                                </a>
+                            </div>
+                        </header>
 
-                    {/* Social Links Section */}
-                    <section className="text-center">
-                        <h3 className="text-3xl md:text-4xl font-bold text-gray-50 mb-8 relative inline-block group">
-                            Connect With Me
-                            <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-12 h-1 bg-sky-500 rounded-full transition-all duration-300 ease-in-out group-hover:w-24"></span>
-                        </h3>
-                        <div className="flex justify-center gap-8">
-                            {/* Using Font Awesome icons */}
-                            <SocialLink href={data.social.github} iconClass="fab fa-github" label="GitHub" />
-                            <SocialLink href={data.social.linkedin} iconClass="fab fa-linkedin" label="LinkedIn" />
-                            <SocialLink href={data.social.x} iconClass="fab fa-twitter" label="X (Twitter)" /> {/* Font Awesome uses fa-twitter for X */}
-                            <SocialLink href={data.social.insta} iconClass="fab fa-instagram" label="Instagram" />
-                            <SocialLink href={data.social.email} iconClass="fas fa-envelope" label="Email" /> {/* Added Email icon */}
-                        </div>
-                    </section>
+                        {/* Stats Section */}
+                        <section className="mb-16">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                {data.stats.map((stat, index) => (
+                                    <div
+                                        key={index}
+                                        className="text-center p-6 bg-neutral-700/30 rounded-xl border border-neutral-600/30 hover:border-sky-500/30 transition-all duration-300 animate-fade-in"
+                                        style={{animationDelay: `${index * 0.1}s`}}
+                                    >
+                                        <div className="text-3xl md:text-4xl font-bold text-sky-400 mb-2">
+                                            {stat.value}
+                                        </div>
+                                        <div className="text-sm md:text-base text-gray-300 font-medium">
+                                            {stat.label}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Skills Section with enhanced animations */}
+                        <section className="text-center mb-16">
+                            <h3 className="text-3xl md:text-5xl font-bold text-gray-50 mb-12 relative inline-block group">
+                                My Skills
+                                <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-sky-500 rounded-full transition-all duration-300 ease-in-out group-hover:w-32"></span>
+                            </h3>
+                            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                                {data.skills.map((skill, index) => (
+                                    <div
+                                        key={index}
+                                        className="px-6 py-3 bg-neutral-700/50 text-gray-100 rounded-full text-lg font-medium shadow-md border border-neutral-600/50
+                                                   hover:bg-sky-500 hover:text-neutral-900 hover:border-sky-400 transform hover:-translate-y-2 transition-all duration-300 ease-in-out
+                                                   hover:shadow-lg hover:shadow-sky-500/25 cursor-default animate-slide-in-left"
+                                        style={{animationDelay: `${index * 0.1}s`}}
+                                    >
+                                        {skill}
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Projects Section */}
+                        <section id="projects" className="mb-16">
+                            <h3 className="text-3xl md:text-5xl font-bold text-gray-50 mb-12 text-center relative inline-block group w-full">
+                                Featured Projects
+                                <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-sky-500 rounded-full transition-all duration-300 ease-in-out group-hover:w-32"></span>
+                            </h3>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {data.projects.map((project, index) => (
+                                    <ProjectCard key={index} project={project} index={index} />
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* Social Links Section with enhanced styling */}
+                        <section className="text-center">
+                            <h3 className="text-3xl md:text-5xl font-bold text-gray-50 mb-12 relative inline-block group">
+                                Connect With Me
+                                <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-1 bg-sky-500 rounded-full transition-all duration-300 ease-in-out group-hover:w-32"></span>
+                            </h3>
+                            <div className="flex justify-center gap-8 flex-wrap">
+                                <SocialLink href={data.social.github} iconClass="fab fa-github" label="GitHub" />
+                                <SocialLink href={data.social.linkedin} iconClass="fab fa-linkedin" label="LinkedIn" />
+                                <SocialLink href={data.social.x} iconClass="fab fa-twitter" label="X (Twitter)" />
+                                <SocialLink href={data.social.insta} iconClass="fab fa-instagram" label="Instagram" />
+                                <SocialLink href={data.social.email} iconClass="fas fa-envelope" label="Email" />
+                            </div>
+                        </section>
+                    </div>
                 </div>
             );
         };
 
-        // SocialLink Component - Updated to use iconClass for Font Awesome
+        // ProjectCard Component
+        const ProjectCard = ({ project, index }) => (
+            <div 
+                className="bg-neutral-700/30 backdrop-blur-sm rounded-xl p-6 border border-neutral-600/30 hover:border-sky-500/50 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 animate-fade-in"
+                style={{animationDelay: `${index * 0.2}s`}}
+            >
+                <div className="flex items-center mb-4">
+                    <i className={`${project.icon} text-2xl text-sky-400 mr-3`}></i>
+                    <h4 className="text-xl font-bold text-gray-50">{project.title}</h4>
+                </div>
+                <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.map((tech, techIndex) => (
+                        <span 
+                            key={techIndex}
+                            className="px-3 py-1 bg-neutral-600/50 text-sky-300 rounded-full text-sm font-medium border border-neutral-500/30"
+                        >
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+                <div className="flex gap-4">
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center px-4 py-2 bg-neutral-600/50 hover:bg-neutral-600 text-gray-100 rounded-lg transition-all duration-300 border border-neutral-500/30 hover:border-neutral-500"
+                    >
+                        <i className="fab fa-github mr-2"></i>
+                        Code
+                    </a>
+                    <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center px-4 py-2 bg-sky-500 hover:bg-sky-600 text-neutral-900 rounded-lg transition-all duration-300 font-medium"
+                    >
+                        <i className="fas fa-external-link-alt mr-2"></i>
+                        Demo
+                    </a>
+                </div>
+            </div>
+        );
+
+        // Enhanced SocialLink Component
         const SocialLink = ({ href, iconClass, label }) => (
             <a
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-sky-500 transform hover:scale-125 transition-all duration-300 ease-in-out group"
+                className="text-gray-300 hover:text-sky-400 transform hover:scale-125 transition-all duration-300 ease-in-out group p-3 rounded-full hover:bg-sky-500/10 border border-transparent hover:border-sky-500/20"
                 aria-label={label}
             >
-                <i className={`${iconClass} text-5xl drop-shadow-lg group-hover:drop-shadow-sky`}></i>
+                <i className={`${iconClass} text-4xl md:text-5xl drop-shadow-lg group-hover:drop-shadow-sky`}></i>
                 <span className="sr-only">{label}</span>
             </a>
         );
@@ -171,4 +345,3 @@
     </script>
 </body>
 </html>
-

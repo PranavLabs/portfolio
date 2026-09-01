@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranav Gandha | Full-Stack Developer & AI Innovator</title>
+    <title>Pranav Gandha — Full-Stack & AI Engineer</title>
 
-    <meta name="description" content="Portfolio of Pranav Gandha - Full-Stack Developer, AI Innovator, and B.Tech CSE student at Lovely Professional University. Explore projects, skills, certifications, and achievements.">
+    <meta name="description" content="Pranav Gandha — Full-Stack Developer, AI Innovator, and B.Tech CSE Student at Lovely Professional University. Explore AI/ML models, scalable web systems, certifications, and achievements.">
     <meta name="author" content="Pranav Gandha">
-    <meta property="og:title" content="Pranav Gandha | Full-Stack Developer & AI Innovator">
-    <meta property="og:description" content="Portfolio of Pranav Gandha - Explore projects in AI/ML, Full-Stack development, certifications, and achievements.">
+    <meta property="og:title" content="Pranav Gandha — Full-Stack & AI Engineer">
+    <meta property="og:description" content="Liquid Glass Portfolio — AI/ML Engineering, Full-Stack Architecture, and Interactive Showcase.">
     <meta property="og:image" content="https://raw.githubusercontent.com/PranavLabs/portfolio/refs/heads/main/1764480530308.jpg">
     <meta property="og:type" content="website">
 
@@ -19,39 +19,44 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
                     },
                     colors: {
-                        background: '#070709',
-                        surface: '#0f1117',
-                        surfaceHover: '#161922',
-                        surfaceBorder: 'rgba(255, 255, 255, 0.08)',
-                        accent: '#38BDF8',
-                        accentGlow: 'rgba(56, 189, 248, 0.25)',
-                        purpleAccent: '#818cf8',
-                        emeraldAccent: '#34d399',
-                        textMain: '#F3F4F6',
-                        textMuted: '#9CA3AF',
+                        baseBg: '#030508',
+                        panelBg: 'rgba(9, 13, 20, 0.72)',
+                        panelHover: 'rgba(15, 23, 36, 0.88)',
+                        cyanNeon: '#00F2FE',
+                        cyanGlow: 'rgba(0, 242, 254, 0.35)',
+                        mintNeon: '#00FFA3',
+                        mintGlow: 'rgba(0, 255, 163, 0.3)',
+                        slateMuted: '#94A3B8',
+                        slateLight: '#E2E8F0',
                     },
                     animation: {
-                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'glow-pulse': 'glowPulse 6s ease-in-out infinite alternate',
-                        'float': 'float 4s ease-in-out infinite',
+                        'liquid-drift': 'liquidDrift 18s ease-in-out infinite alternate',
+                        'liquid-drift-slow': 'liquidDriftSlow 24s ease-in-out infinite alternate-reverse',
+                        'pulse-glow': 'pulseGlow 5s ease-in-out infinite alternate',
+                        'badge-ping': 'badgePing 2.5s cubic-bezier(0, 0, 0.2, 1) infinite',
                     },
                     keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(24px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        liquidDrift: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '50%': { transform: 'translate(40px, -30px) scale(1.12)' },
+                            '100%': { transform: 'translate(-30px, 25px) scale(0.95)' },
                         },
-                        glowPulse: {
-                            '0%': { opacity: '0.25', transform: 'scale(1) translate(-50%, 0)' },
-                            '100%': { opacity: '0.55', transform: 'scale(1.15) translate(-50%, 10px)' },
+                        liquidDriftSlow: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '50%': { transform: 'translate(-50px, 40px) scale(1.15)' },
+                            '100%': { transform: 'translate(35px, -35px) scale(0.92)' },
                         },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-6px)' },
+                        pulseGlow: {
+                            '0%': { opacity: '0.2', transform: 'scale(0.96)' },
+                            '100%': { opacity: '0.45', transform: 'scale(1.08)' },
+                        },
+                        badgePing: {
+                            '75%, 100%': { transform: 'scale(2)', opacity: '0' }
                         }
                     }
                 }
@@ -59,68 +64,151 @@
         }
     </script>
     
-    <!-- Google Fonts & Font Awesome -->
+    <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        body { 
-            background-color: #070709; 
-            color: #F3F4F6; 
-            overflow-x: hidden; 
+        :root {
+            --cyan-glow: #00F2FE;
+            --mint-glow: #00FFA3;
         }
-        
-        .glass-card {
-            background: rgba(15, 17, 23, 0.65);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.07);
+
+        body { 
+            background-color: #030508; 
+            color: #F8FAFC; 
+            overflow-x: hidden; 
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+        }
+
+        /* Liquid Glass Card Core */
+        .liquid-glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%), rgba(7, 11, 18, 0.65);
+            backdrop-filter: blur(24px) saturate(200%);
+            -webkit-backdrop-filter: blur(24px) saturate(200%);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            box-shadow: 
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.16),
+                inset 0 0 20px 0 rgba(0, 242, 254, 0.02),
+                0 20px 40px -15px rgba(0, 0, 0, 0.8);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .liquid-glass::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(0, 242, 254, 0.1), transparent 60%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .liquid-glass:hover {
+            border-color: rgba(0, 242, 254, 0.35);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%), rgba(11, 17, 28, 0.85);
+            box-shadow: 
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.28),
+                inset 0 0 30px 0 rgba(0, 242, 254, 0.08),
+                0 25px 50px -12px rgba(0, 0, 0, 0.85),
+                0 0 30px -5px rgba(0, 242, 254, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Liquid Dock Floating Navigation */
+        .liquid-dock {
+            background: rgba(6, 10, 16, 0.7);
+            backdrop-filter: blur(28px) saturate(210%);
+            -webkit-backdrop-filter: blur(28px) saturate(210%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+                0 20px 40px -10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* High-End Fluid Mesh Glows (No Generic Purple) */
+        .liquid-mesh-cyan {
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.16) 0%, rgba(0, 180, 216, 0.05) 50%, transparent 70%);
+        }
+
+        .liquid-mesh-mint {
+            background: radial-gradient(circle, rgba(0, 255, 163, 0.13) 0%, rgba(16, 185, 129, 0.04) 50%, transparent 70%);
+        }
+
+        .liquid-mesh-carbon {
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(15, 23, 42, 0.4) 60%, transparent 80%);
+        }
+
+        /* Custom Grid Matrix Pattern */
+        .grid-matrix {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        }
+
+        /* Gradient Typography */
+        .hero-title-gradient {
+            background: linear-gradient(135deg, #FFFFFF 20%, #F1F5F9 50%, #94A3B8 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-liquid-gradient {
+            background: linear-gradient(120deg, #00F2FE 0%, #00FFA3 60%, #38BDF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .titanium-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Liquid Button Styles */
+        .btn-liquid-primary {
+            background: linear-gradient(135deg, #00F2FE 0%, #00FFA3 100%);
+            color: #030508;
+            font-weight: 700;
+            box-shadow: 0 0 25px -5px rgba(0, 242, 254, 0.5), inset 0 1px 1px 0 rgba(255, 255, 255, 0.5);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        
-        .glass-card:hover {
-            border-color: rgba(56, 189, 248, 0.35);
-            background: rgba(22, 25, 34, 0.85);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(56, 189, 248, 0.15);
+
+        .btn-liquid-primary:hover {
+            box-shadow: 0 0 35px 0px rgba(0, 255, 163, 0.65), inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px) scale(1.02);
         }
-        
-        .glass-nav {
-            background: rgba(7, 7, 9, 0.75);
+
+        .btn-liquid-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #FFFFFF 20%, #E2E8F0 50%, #94A3B8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .btn-liquid-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 242, 254, 0.4);
+            box-shadow: 0 0 20px -5px rgba(0, 242, 254, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
         }
 
-        .accent-gradient-text {
-            background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-glow-1 {
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(129, 140, 248, 0.08) 45%, transparent 70%);
-        }
-
-        .hero-glow-2 {
-            background: radial-gradient(circle, rgba(129, 140, 248, 0.14) 0%, rgba(56, 189, 248, 0.05) 50%, transparent 70%);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #070709; }
-        ::-webkit-scrollbar-thumb { background: #1f2430; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #2f3647; }
+        /* Subtle Sleek Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #030508; }
+        ::-webkit-scrollbar-thumb { background: #16202e; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00F2FE; }
     </style>
 </head>
-<body class="font-sans antialiased selection:bg-accent selection:text-black">
+<body class="font-sans antialiased selection:bg-cyanNeon selection:text-black grid-matrix">
     <div id="root"></div>
 
     <!-- React 18 & Babel CDN -->
@@ -129,20 +217,46 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
-        const { useState, useEffect } = React;
+        const { useState, useEffect, useRef } = React;
+
+        // Custom Mouse Spotlight Hook for Liquid Glass Glow
+        const useCardSpotlight = () => {
+            const handleMouseMove = (e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+                e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+            };
+            return { onMouseMove: handleMouseMove };
+        };
 
         const App = () => {
-            const [copiedItem, setCopiedItem] = useState(null);
-            const [activeFilter, setActiveFilter] = useState('all');
-            const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+            const [copiedKey, setCopiedKey] = useState(null);
+            const [activeTab, setActiveTab] = useState('all');
+            const [isNavScrolled, setIsNavScrolled] = useState(false);
+            const [terminalPrompt, setTerminalPrompt] = useState('');
+            const [terminalLogs, setTerminalLogs] = useState([
+                { user: false, text: 'System initialized. Pranav Gandha profile loaded.' },
+                { user: false, text: 'Type "skills", "projects", "status", or "contact" for quick telemetry.' }
+            ]);
+
+            useEffect(() => {
+                const handleScroll = () => {
+                    setIsNavScrolled(window.scrollY > 40);
+                };
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
 
             const portfolioData = {
                 name: 'Pranav Gandha',
                 tagline: 'Full-Stack Developer & AI Innovator',
-                location: 'Punjab, India',
+                location: 'Phagwara / Jalandhar, Punjab',
+                status: 'Open for AI, Full-Stack & Engineering Roles',
                 profilePic: 'https://raw.githubusercontent.com/PranavLabs/portfolio/refs/heads/main/1764480530308.jpg',
                 cvDownloadLink: 'https://drive.google.com/file/d/1YA_xPwQs9Iu1ZfzjHNWtJxDz1XjTIRpn/view?usp=sharing',
-                bio: 'B.Tech Computer Science student at Lovely Professional University and AI Generalist. Passionate about engineering intelligent machine learning models, performant web applications, and scalable backend architectures that solve real-world problems with high efficiency.',
+                bio: 'B.Tech Computer Science student at Lovely Professional University and freelance AI Generalist. Passionate about engineering high-precision AI/ML workflows, scalable full-stack web applications, and low-latency systems that solve real-world problems with maximum computational efficiency.',
                 contact: {
                     email: 'pranavgandha@outlook.com',
                     emailSecondary: 'pranavgandha@hotmail.com',
@@ -160,87 +274,93 @@
                         title: 'Academic Record',
                         desc: 'B.Tech CSE at Lovely Professional University',
                         icon: 'fa-solid fa-graduation-cap',
-                        color: 'from-sky-500/20 to-blue-600/20',
-                        accentColor: 'text-sky-400'
+                        color: 'text-cyanNeon',
+                        tag: 'LPU Honors'
                     },
                     {
                         number: '300+',
                         label: 'Problems',
-                        title: 'Coding Challenges',
+                        title: 'Algorithm Rigor',
                         desc: 'Solved across competitive programming platforms',
                         icon: 'fa-solid fa-code',
-                        color: 'from-indigo-500/20 to-purple-600/20',
-                        accentColor: 'text-indigo-400'
+                        color: 'text-mintNeon',
+                        tag: 'DSA & Code'
                     },
                     {
                         number: 'Gold',
                         label: 'Consultant',
                         title: 'WorldQuant BRAIN',
-                        desc: 'Quantitative alpha research & platform consultant',
+                        desc: 'Quantitative alpha formulation & data signaling',
                         icon: 'fa-solid fa-brain',
-                        color: 'from-amber-500/20 to-yellow-600/20',
-                        accentColor: 'text-amber-400'
+                        color: 'text-amber-400',
+                        tag: 'Quant Alpha'
                     },
                     {
                         number: 'Rank #2',
                         label: 'Winner',
                         title: 'RCS CTF Hackathon',
-                        desc: 'National-level cybersecurity & CTF challenge',
+                        desc: 'National-level cybersecurity & hackathon challenge',
                         icon: 'fa-solid fa-shield-halved',
-                        color: 'from-emerald-500/20 to-teal-600/20',
-                        accentColor: 'text-emerald-400'
+                        color: 'text-cyanNeon',
+                        tag: 'Cybersec'
                     }
                 ],
                 skillCategories: [
                     {
-                        category: 'Programming Languages',
+                        category: 'Core Languages',
                         icon: 'fa-solid fa-terminal',
+                        gradient: 'from-cyanNeon to-blue-400',
                         items: ['Python', 'JavaScript', 'C', 'C++', 'SQL', 'HTML5', 'CSS3']
                     },
                     {
-                        category: 'AI / Machine Learning & Data',
-                        icon: 'fa-solid fa-microchip',
-                        items: ['Machine Learning', 'Artificial Intelligence', 'PyTorch', 'Computer Vision', 'NLP & LLMs', 'Data Modeling', 'Streamlit']
+                        category: 'AI / Machine Learning & CV',
+                        icon: 'fa-solid fa-brain',
+                        gradient: 'from-mintNeon to-emerald-400',
+                        items: ['Machine Learning', 'Artificial Intelligence', 'PyTorch', 'Computer Vision', 'Conversational AI / NLP', 'Model Optimization', 'Streamlit']
                     },
                     {
-                        category: 'Web Development & Frameworks',
-                        icon: 'fa-solid fa-cubes',
-                        items: ['React.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'REST APIs', 'Babel', 'State Management']
+                        category: 'Full-Stack & Web Engineering',
+                        icon: 'fa-solid fa-layer-group',
+                        gradient: 'from-sky-400 to-indigo-400',
+                        items: ['React.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'REST APIs', 'Babel / Modern Tooling', 'State Architecture']
                     },
                     {
-                        category: 'Databases, DevOps & Tools',
+                        category: 'Databases, Cloud & DevOps',
                         icon: 'fa-solid fa-database',
+                        gradient: 'from-teal-400 to-cyanNeon',
                         items: ['MySQL', 'MongoDB', 'PostgreSQL', 'Git', 'GitHub', 'Figma', 'AWS', 'Linux']
                     },
                     {
-                        category: 'Leadership & Soft Skills',
-                        icon: 'fa-solid fa-people-group',
-                        items: ['Problem Solving', 'Leadership', 'Team Collaboration', 'Time Management', 'Adaptability', 'Communication (IELTS 7.5)']
+                        category: 'Strategic Soft Skills',
+                        icon: 'fa-solid fa-bolt',
+                        gradient: 'from-amber-400 to-yellow-300',
+                        items: ['Problem Solving', 'Technical Leadership', 'Team Collaboration', 'Time Management', 'Adaptability', 'Communication (IELTS 7.5)']
                     }
                 ],
                 projects: [
                     {
                         id: 'ecocheck',
                         title: 'Ecocheck (Eco-Gram)',
-                        category: 'ai-web',
+                        category: 'ai',
                         date: 'Dec 2025 - Jan 2026',
                         tagline: 'Automated Green Computing & Eco-Efficiency Code Analysis',
                         description: 'Engineered an automated eco-efficiency and code quality analysis tool designed to identify performance bottlenecks, reduce computational resource consumption, and enforce green software engineering practices.',
                         highlights: [
-                            'Implemented static code parsing routines and automated metric checks across client-server workflows to analyze runtime overhead, memory utilization patterns, and redundant asset loading.',
-                            'Accelerated code execution efficiency by optimizing resource-heavy operations and provided actionable insights to lower carbon footprint across target web applications.',
-                            'Equipped with computer vision modules to analyze environmental imagery, evaluate biodiversity, transport modes, and e-waste for an urban sustainability score.'
+                            'Implemented static code parsing routines and automated metric checks across client-server workflows to analyze runtime overhead, memory utilization, and redundant asset loading.',
+                            'Accelerated execution efficiency by optimizing resource-heavy operations to lower carbon footprint across target web applications.',
+                            'Equipped with computer vision modules to quantify biodiversity, transport modes, and e-waste for an urban sustainability score.'
                         ],
                         tech: ['Node.js', 'Express.js', 'JavaScript', 'React.js', 'Tailwind CSS', 'REST APIs', 'Computer Vision', 'Streamlit', 'Python', 'Git'],
                         github: 'https://github.com/manudeep07/Collaborative-online-notepad',
                         demo: 'https://ecocheck.streamlit.app',
                         icon: 'fa-solid fa-leaf',
-                        badge: 'Featured Green AI'
+                        badge: 'Featured Green AI',
+                        status: 'Live & Operational'
                     },
                     {
                         id: 'natya-ai',
                         title: 'Natya-AI',
-                        category: 'ai-web',
+                        category: 'ai',
                         date: '2025',
                         tagline: 'Conversational AI Recommendation & Media Discovery Engine',
                         description: 'Designed and developed Natya-AI, a chat-first movie and TV recommendation application leveraging conversational AI to deliver hyper-personalized entertainment suggestions.',
@@ -253,7 +373,8 @@
                         github: 'https://github.com/PranavLabs/Natya-AI/tree/main',
                         demo: 'https://natyamv.onrender.app',
                         icon: 'fa-solid fa-film',
-                        badge: 'Live AI Web App'
+                        badge: 'Live AI App',
+                        status: 'Live on Render'
                     },
                     {
                         id: 'taskify',
@@ -265,13 +386,14 @@
                         highlights: [
                             'Implemented an engaging points system to incentivize task completion, allowing users to earn and redeem points for "chill time" to build consistent productivity.',
                             'Designed a minimal, distraction-free, mobile-friendly user interface with responsive interactions and persistent local storage.',
-                            'Engineered using clean, modular vanilla JavaScript and lightweight styling for optimal performance.'
+                            'Engineered using clean, modular vanilla JavaScript and lightweight styling for maximum speed and zero friction.'
                         ],
                         tech: ['HTML5', 'CSS3', 'JavaScript', 'Gamification Logic', 'Local Storage', 'UI/UX'],
                         github: 'https://github.com/PranavLabs/taskify/tree/main',
                         demo: null,
                         icon: 'fa-solid fa-list-check',
-                        badge: 'Gamified Productivity'
+                        badge: 'Gamified Productivity',
+                        status: 'Active Repo'
                     }
                 ],
                 certificates: [
@@ -279,7 +401,7 @@
                         title: 'Supervised Machine Learning: Regression and Classification',
                         issuer: 'Coursera (DeepLearning.AI & Stanford Online)',
                         date: 'Aug 2025',
-                        desc: 'Mastered core ML foundations, linear/logistic regression, cost functions, gradient descent, overfitting mitigation, and regularized classification.',
+                        desc: 'Rigorous foundation in machine learning, cost minimization, linear & logistic regression, gradient descent optimization, and classification regularizations.',
                         link: 'https://coursera.org/share/823973311d59167801c78af9e7d890c7',
                         icon: 'fa-solid fa-certificate',
                         badge: 'Coursera Verified'
@@ -288,16 +410,16 @@
                         title: 'Computer Programming & Algorithmic Problem Solving',
                         issuer: 'NeoColab',
                         date: 'Sep 2024',
-                        desc: 'Demonstrated high algorithmic rigor, data structure implementation, computational efficiency, and robust problem-solving in C/C++.',
+                        desc: 'Demonstrated high algorithmic rigor, efficient data structures, computational speed, and problem-solving mastery in C/C++.',
                         link: 'https://drive.google.com/file/d/1tfUuBbssScN7SY5Y4FhucPp1RfvS-YfR/view?usp=drive_link',
                         icon: 'fa-solid fa-laptop-code',
                         badge: 'NeoColab Verified'
                     },
                     {
-                        title: 'Time Management Fundamentals & Leadership',
+                        title: 'Time Management Fundamentals & Professional Execution',
                         issuer: 'LinkedIn Learning',
                         date: 'Verified Credential',
-                        desc: 'Applied professional productivity frameworks, strategic workflow prioritization, goal-setting, and execution management.',
+                        desc: 'Applied professional productivity frameworks, strategic workflow prioritization, deep work scheduling, and goal architecture.',
                         link: 'https://www.linkedin.com/learning/certificates/0df0cd22a2f15487299e6f1a225cf44fe2985451fb00282f28a02dfb9e12072a',
                         icon: 'fa-solid fa-clock',
                         badge: 'LinkedIn Certified'
@@ -315,7 +437,7 @@
                         title: 'RCS CTF National Cybersecurity Achievement',
                         issuer: 'RCS Hackathon & CTF',
                         date: 'May 2024',
-                        desc: 'Ranked #2 in collegiate hackathon CTF through penetration testing, vulnerability assessment, cryptographic challenges, and problem solving.',
+                        desc: 'Ranked #2 in collegiate hackathon CTF through penetration testing, vulnerability assessment, cryptographic challenges, and system exploitation.',
                         link: 'https://www.linkedin.com/in/pranavgandha/',
                         icon: 'fa-solid fa-shield-halved',
                         badge: 'National Hackathon'
@@ -324,12 +446,12 @@
                 education: [
                     {
                         institution: 'Lovely Professional University',
-                        degree: 'Bachelor of Technology - Computer Science and Engineering',
+                        degree: 'Bachelor of Technology — Computer Science & Engineering',
                         score: 'CGPA: 8.51',
                         duration: 'Aug 2025 - Present',
                         location: 'Phagwara, Punjab',
                         icon: 'fa-solid fa-building-columns',
-                        details: 'Specializing in Artificial Intelligence, Machine Learning, and Full-Stack Software Engineering. Active participant in hackathons and technical clubs.'
+                        details: 'Specializing in Artificial Intelligence, Machine Learning, and Full-Stack Engineering. Active participant in hackathons and technical clubs.'
                     },
                     {
                         institution: 'Innocent Hearts School',
@@ -347,224 +469,239 @@
                         duration: 'May 2022 - Mar 2023',
                         location: 'Jalandhar, Punjab',
                         icon: 'fa-solid fa-book-open',
-                        details: 'Graduated with academic distinction across all subjects and foundational science.'
+                        details: 'Graduated with academic distinction across all foundational sciences and mathematics.'
                     }
                 ]
             };
 
-            const copyToClipboard = (text, type) => {
+            const copyToClipboard = (text, key) => {
                 navigator.clipboard.writeText(text);
-                setCopiedItem(type);
-                setTimeout(() => setCopiedItem(null), 2500);
+                setCopiedKey(key);
+                setTimeout(() => setCopiedKey(null), 2500);
+            };
+
+            const handleTerminalSubmit = (e) => {
+                e.preventDefault();
+                const cmd = terminalPrompt.trim().toLowerCase();
+                if (!cmd) return;
+
+                let response = '';
+                if (cmd === 'help' || cmd === '?') {
+                    response = 'Commands: bio, skills, projects, cv, contact, clear';
+                } else if (cmd === 'bio') {
+                    response = portfolioData.bio;
+                } else if (cmd === 'skills') {
+                    response = 'Skills: Python, JavaScript, C++, PyTorch, React, Node.js, Computer Vision, REST APIs, SQL, AWS, IELTS 7.5';
+                } else if (cmd === 'projects') {
+                    response = 'Projects: Ecocheck (Green AI CV analysis), Natya-AI (Conversational Recommender), Taskify (Gamified Planner)';
+                } else if (cmd === 'cv') {
+                    window.open(portfolioData.cvDownloadLink, '_blank');
+                    response = 'Opening official CV in new tab...';
+                } else if (cmd === 'contact') {
+                    response = `Email: ${portfolioData.contact.email} | Mobile: ${portfolioData.contact.phone} | LinkedIn: in/pranavgandha`;
+                } else if (cmd === 'clear') {
+                    setTerminalLogs([]);
+                    setTerminalPrompt('');
+                    return;
+                } else {
+                    response = `Unknown command "${cmd}". Type "help" for available directives.`;
+                }
+
+                setTerminalLogs(prev => [
+                    ...prev,
+                    { user: true, text: terminalPrompt },
+                    { user: false, text: response }
+                ]);
+                setTerminalPrompt('');
             };
 
             return (
                 <div className="relative min-h-screen">
-                    {/* Ambient Background Lights */}
-                    <div className="fixed top-[-100px] left-1/2 -translate-x-1/2 w-[900px] h-[550px] hero-glow-1 blur-[140px] rounded-full pointer-events-none animate-glow-pulse z-0"></div>
-                    <div className="fixed bottom-0 right-[-100px] w-[600px] h-[450px] hero-glow-2 blur-[140px] rounded-full pointer-events-none z-0"></div>
+                    {/* Ambient Dynamic Liquid Lights (Cyan & Acid Mint Mesh) */}
+                    <div className="fixed top-[-140px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] liquid-mesh-cyan blur-[150px] rounded-full pointer-events-none animate-liquid-drift z-0"></div>
+                    <div className="fixed top-[40%] right-[-100px] w-[700px] h-[600px] liquid-mesh-mint blur-[160px] rounded-full pointer-events-none animate-liquid-drift-slow z-0"></div>
+                    <div className="fixed bottom-[-100px] left-[-100px] w-[600px] h-[500px] liquid-mesh-carbon blur-[140px] rounded-full pointer-events-none z-0"></div>
 
-                    {/* Navigation Bar */}
-                    <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
-                        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-                            <a href="#" className="flex items-center gap-3 group">
-                                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-500 p-[1.5px] shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
-                                    <div className="w-full h-full bg-background rounded-[10px] flex items-center justify-center font-heading font-extrabold text-lg text-white">
+                    {/* Floating Liquid Glass Dock Navigation */}
+                    <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+                        <nav className={`liquid-dock rounded-full px-5 py-3 flex items-center justify-between gap-6 transition-all duration-300 ${isNavScrolled ? 'shadow-2xl shadow-cyanNeon/10 border-cyanNeon/30' : ''}`}>
+                            <a href="#" className="flex items-center gap-2.5 group">
+                                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-cyanNeon to-mintNeon p-[1.5px] group-hover:scale-105 transition-transform">
+                                    <div className="w-full h-full bg-baseBg rounded-full flex items-center justify-center font-display font-bold text-xs text-white">
                                         PG
                                     </div>
                                 </div>
-                                <div>
-                                    <div className="font-heading font-bold text-white text-base tracking-tight group-hover:text-accent transition-colors">Pranav Gandha</div>
-                                    <div className="text-[11px] font-mono text-textMuted flex items-center gap-1.5">
-                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                                        Available for opportunities
-                                    </div>
-                                </div>
+                                <span className="font-display font-bold text-sm tracking-tight text-white hidden sm:inline-block group-hover:text-cyanNeon transition-colors">
+                                    Pranav Gandha
+                                </span>
                             </a>
 
-                            {/* Desktop Nav Links */}
-                            <div className="hidden md:flex items-center gap-7 text-sm font-medium text-textMuted">
+                            {/* Desktop Links */}
+                            <div className="hidden md:flex items-center gap-6 text-xs font-medium text-slateMuted">
                                 <a href="#about" className="hover:text-white transition-colors">About</a>
-                                <a href="#achievements" className="hover:text-white transition-colors">Achievements</a>
-                                <a href="#skills" className="hover:text-white transition-colors">Skills</a>
+                                <a href="#highlights" className="hover:text-white transition-colors">Highlights</a>
+                                <a href="#skills" className="hover:text-white transition-colors">Arsenal</a>
                                 <a href="#projects" className="hover:text-white transition-colors">Projects</a>
-                                <a href="#certificates" className="hover:text-white transition-colors">Certificates</a>
+                                <a href="#certifications" className="hover:text-white transition-colors">Credentials</a>
                                 <a href="#education" className="hover:text-white transition-colors">Education</a>
                                 <a href="#contact" className="hover:text-white transition-colors">Contact</a>
                             </div>
 
-                            {/* Action Buttons */}
-                            <div className="hidden md:flex items-center gap-3">
-                                <a 
-                                    href={portfolioData.cvDownloadLink} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-500 text-black font-semibold text-xs tracking-wide uppercase hover:shadow-lg hover:shadow-sky-400/25 hover:scale-[1.02] transition-all flex items-center gap-2"
-                                >
-                                    <i className="fa-solid fa-file-arrow-down text-sm"></i>
-                                    Download CV
-                                </a>
-                            </div>
-
-                            {/* Mobile Hamburger */}
-                            <button 
-                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className="md:hidden text-textMuted hover:text-white p-2"
-                                aria-label="Toggle Navigation Menu"
+                            {/* Resume Action */}
+                            <a 
+                                href={portfolioData.cvDownloadLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-liquid-primary px-4 py-1.5 rounded-full text-xs font-display flex items-center gap-2"
                             >
-                                <i className={`fa-solid ${isMobileMenuOpen ? 'fa-xmark' : 'fa-bars'} text-xl`}></i>
-                            </button>
-                        </div>
+                                <i className="fa-solid fa-file-arrow-down text-[11px]"></i>
+                                <span>Download CV</span>
+                            </a>
+                        </nav>
+                    </header>
 
-                        {/* Mobile Menu Dropdown */}
-                        {isMobileMenuOpen && (
-                            <div className="md:hidden px-6 py-6 border-t border-surfaceBorder bg-background/95 backdrop-blur-xl flex flex-col gap-4">
-                                <a onClick={() => setIsMobileMenuOpen(false)} href="#about" className="text-textMuted hover:text-white py-1">About</a>
-                                <a onClick={() => setIsMobileMenuOpen(false)} href="#achievements" className="text-textMuted hover:text-white py-1">Achievements</a>
-                                <a onClick={() => setIsMobileMenuOpen(false)} href="#skills" className="text-textMuted hover:text-white py-1">Skills</a>
-                                <a onClick={() => setIsMobileMenuOpen(false)} href="#projects" className="text-textMuted hover:text-white py-1">Projects</a>
-                                <a onClick={() => setIsMobileMenuOpen(false)} href="#certificates" className="text-textMuted hover:text-white py-1">Certificates</a>
-                                <a onClick={() => setIsMobileMenuOpen(false)} href="#education" className="text-textMuted hover:text-white py-1">Education</a>
-                                <a onClick={() => setIsMobileMenuOpen(false)} href="#contact" className="text-textMuted hover:text-white py-1">Contact</a>
-                                <div className="pt-2">
-                                    <a 
-                                        href={portfolioData.cvDownloadLink} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
-                                        className="w-full py-3 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-500 text-black font-semibold text-center block text-sm shadow-md"
-                                    >
-                                        <i className="fa-solid fa-file-arrow-down mr-2"></i> Download CV
-                                    </a>
-                                </div>
-                            </div>
-                        )}
-                    </nav>
-
-                    {/* Main Content Container */}
-                    <main className="relative z-10 max-w-6xl mx-auto px-6 pt-32 md:pt-40 pb-24">
+                    {/* Main Content Area */}
+                    <main className="relative z-10 max-w-6xl mx-auto px-6 pt-36 md:pt-44 pb-24">
                         
-                        {/* HERO & PROFILE SECTION */}
-                        <section id="about" className="mb-28 animate-fade-in-up">
-                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                        {/* HERO SECTION */}
+                        <section id="about" className="mb-32">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                                 
-                                {/* Left Content */}
-                                <div className="lg:col-span-7 space-y-6">
-                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-mono text-accent border border-accent/25 bg-accent/10 rounded-full shadow-inner">
-                                        <span className="w-2 h-2 rounded-full bg-accent animate-ping"></span>
-                                        Available for Software & AI Roles
+                                {/* Left Hero Copy */}
+                                <div className="lg:col-span-7 space-y-7">
+                                    {/* Status Badge */}
+                                    <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full liquid-glass border-cyanNeon/30 text-xs font-mono text-cyanNeon">
+                                        <span className="relative flex h-2 w-2">
+                                            <span className="animate-badge-ping absolute inline-flex h-full w-full rounded-full bg-mintNeon opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-mintNeon"></span>
+                                        </span>
+                                        <span>{portfolioData.status}</span>
                                     </div>
-                                    
-                                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-heading font-extrabold tracking-tight leading-[1.1] gradient-text">
-                                        Hi, I'm <br />
-                                        <span className="accent-gradient-text">{portfolioData.name}</span>
+
+                                    {/* Headline */}
+                                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold tracking-[-0.03em] leading-[1.08] hero-title-gradient">
+                                        Engineering <br />
+                                        <span className="accent-liquid-gradient">Intelligent Systems</span> <br />
+                                        & Full-Stack Web.
                                     </h1>
-                                    
-                                    <h2 className="text-xl sm:text-2xl font-heading font-medium text-gray-300 flex items-center gap-2">
-                                        <span>{portfolioData.tagline}</span>
+
+                                    <h2 className="text-lg sm:text-xl font-display font-medium text-slateLight/90 flex items-center gap-2">
+                                        <span>{portfolioData.name}</span>
+                                        <span className="text-cyanNeon">•</span>
+                                        <span className="text-slateMuted text-base">{portfolioData.tagline}</span>
                                     </h2>
-                                    
-                                    <p className="text-base sm:text-lg text-textMuted leading-relaxed max-w-2xl font-normal">
+
+                                    <p className="text-base sm:text-lg text-slateMuted leading-relaxed max-w-2xl font-normal">
                                         {portfolioData.bio}
                                     </p>
 
-                                    {/* Action Buttons & Socials */}
+                                    {/* Primary CTA Bar */}
                                     <div className="pt-2 flex flex-wrap items-center gap-4">
                                         <a 
                                             href={portfolioData.cvDownloadLink} 
                                             target="_blank" 
                                             rel="noopener noreferrer" 
-                                            className="px-6 py-3.5 bg-white text-black font-heading font-semibold rounded-2xl hover:bg-gray-200 transition-all duration-300 flex items-center gap-2.5 shadow-lg shadow-white/10 hover:scale-[1.02]"
+                                            className="btn-liquid-primary px-7 py-3.5 rounded-2xl font-display text-sm tracking-wide flex items-center gap-2.5"
                                         >
-                                            <i className="fa-solid fa-file-pdf text-red-500 text-lg"></i>
-                                            <span>Download CV</span>
-                                            <i className="fa-solid fa-arrow-up-right-from-square text-xs ml-0.5 opacity-70"></i>
+                                            <i className="fa-solid fa-file-pdf text-black text-base"></i>
+                                            <span>Download Official CV</span>
+                                            <i className="fa-solid fa-arrow-up-right-from-square text-xs ml-0.5 opacity-80"></i>
                                         </a>
 
                                         <a 
                                             href="#contact" 
-                                            className="px-6 py-3.5 glass-card text-white font-heading font-medium rounded-2xl hover:border-accent/40 transition-all flex items-center gap-2"
+                                            className="btn-liquid-secondary px-6 py-3.5 rounded-2xl font-display text-sm text-white flex items-center gap-2"
                                         >
-                                            <i className="fa-solid fa-paper-plane text-accent text-sm"></i>
+                                            <i className="fa-solid fa-bolt text-cyanNeon text-sm"></i>
                                             <span>Get in Touch</span>
                                         </a>
 
-                                        <div className="flex items-center gap-2 pl-2">
-                                            <SocialIcon href={portfolioData.contact.github} icon="fa-brands fa-github" title="GitHub Profile" />
-                                            <SocialIcon href={portfolioData.contact.linkedin} icon="fa-brands fa-linkedin-in" title="LinkedIn Profile" />
-                                            <SocialIcon href={portfolioData.contact.x} icon="fa-brands fa-x-twitter" title="X (Twitter)" />
-                                            <SocialIcon href={portfolioData.contact.insta} icon="fa-brands fa-instagram" title="Instagram" />
+                                        {/* Social Icons */}
+                                        <div className="flex items-center gap-2 pl-1">
+                                            <LiquidSocial href={portfolioData.contact.github} icon="fa-brands fa-github" title="GitHub Profile" />
+                                            <LiquidSocial href={portfolioData.contact.linkedin} icon="fa-brands fa-linkedin-in" title="LinkedIn Profile" />
+                                            <LiquidSocial href={portfolioData.contact.x} icon="fa-brands fa-x-twitter" title="X (Twitter)" />
+                                            <LiquidSocial href={portfolioData.contact.insta} icon="fa-brands fa-instagram" title="Instagram" />
                                         </div>
                                     </div>
 
-                                    {/* Direct Contact Snippets */}
-                                    <div className="pt-4 flex flex-wrap gap-4 text-xs font-mono text-textMuted">
+                                    {/* Copy Direct Contact Badges */}
+                                    <div className="pt-3 flex flex-wrap gap-3 text-xs font-mono">
                                         <div 
                                             onClick={() => copyToClipboard(portfolioData.contact.email, 'email')}
-                                            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface border border-surfaceBorder hover:border-accent/40 cursor-pointer transition-colors"
-                                            title="Click to copy Email"
+                                            className="flex items-center gap-2 px-3.5 py-2 rounded-xl liquid-glass hover:border-cyanNeon/50 cursor-pointer transition-all"
+                                            title="Click to copy email address"
                                         >
-                                            <i className="fa-regular fa-envelope text-accent"></i>
-                                            <span>{portfolioData.contact.email}</span>
-                                            <i className={`fa-solid ${copiedItem === 'email' ? 'fa-check text-emerald-400' : 'fa-copy opacity-50'} text-xs ml-1`}></i>
+                                            <i className="fa-regular fa-envelope text-cyanNeon"></i>
+                                            <span className="text-slateLight">{portfolioData.contact.email}</span>
+                                            <i className={`fa-solid ${copiedKey === 'email' ? 'fa-check text-mintNeon' : 'fa-copy opacity-50'} text-xs ml-1`}></i>
                                         </div>
                                         <div 
                                             onClick={() => copyToClipboard(portfolioData.contact.phone, 'phone')}
-                                            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface border border-surfaceBorder hover:border-accent/40 cursor-pointer transition-colors"
-                                            title="Click to copy Phone"
+                                            className="flex items-center gap-2 px-3.5 py-2 rounded-xl liquid-glass hover:border-mintNeon/50 cursor-pointer transition-all"
+                                            title="Click to copy mobile number"
                                         >
-                                            <i className="fa-solid fa-phone text-emerald-400"></i>
-                                            <span>{portfolioData.contact.phone}</span>
-                                            <i className={`fa-solid ${copiedItem === 'phone' ? 'fa-check text-emerald-400' : 'fa-copy opacity-50'} text-xs ml-1`}></i>
+                                            <i className="fa-solid fa-phone text-mintNeon"></i>
+                                            <span className="text-slateLight">{portfolioData.contact.phone}</span>
+                                            <i className={`fa-solid ${copiedKey === 'phone' ? 'fa-check text-mintNeon' : 'fa-copy opacity-50'} text-xs ml-1`}></i>
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* Right Profile Card */}
+                                {/* Right Hero Interactive Profile Card */}
                                 <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                                    <div className="relative group">
-                                        {/* Outer Glow Ring */}
-                                        <div className="absolute -inset-2 bg-gradient-to-r from-sky-500/30 via-indigo-500/30 to-purple-500/30 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <div className="relative group max-w-sm w-full">
+                                        {/* Specular Liquid Ambient Glow */}
+                                        <div className="absolute -inset-2 bg-gradient-to-tr from-cyanNeon/25 via-mintNeon/15 to-blue-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
                                         
-                                        <div className="relative glass-card p-4 rounded-3xl border border-white/10 overflow-hidden max-w-sm">
-                                            <div className="relative aspect-square rounded-2xl overflow-hidden bg-surface mb-5 shadow-2xl">
+                                        <div className="relative liquid-glass p-5 rounded-3xl overflow-hidden">
+                                            {/* Photo Canvas */}
+                                            <div className="relative aspect-[4/4.5] rounded-2xl overflow-hidden bg-baseBg mb-5 shadow-2xl border border-white/10">
                                                 <img 
                                                     src={portfolioData.profilePic} 
                                                     alt="Pranav Gandha" 
-                                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                                                     onError={(e) => {
-                                                        // Fallback to local image if raw.githubusercontent is offline
                                                         e.target.onerror = null;
                                                         e.target.src = '1764480530308.jpg';
                                                     }}
                                                 />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
                                                 
-                                                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                                                    <span className="px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono text-white/90 border border-white/10">
-                                                        <i className="fa-solid fa-location-dot text-red-400 mr-1"></i> {portfolioData.location}
+                                                {/* Liquid Overlays */}
+                                                <div className="absolute inset-0 bg-gradient-to-t from-baseBg/90 via-transparent to-transparent"></div>
+                                                
+                                                {/* Floating Badges */}
+                                                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
+                                                    <span className="px-3 py-1 rounded-xl liquid-glass text-[11px] font-mono text-white flex items-center gap-1.5 border-white/20">
+                                                        <i className="fa-solid fa-location-dot text-cyanNeon"></i>
+                                                        <span>Punjab, IN</span>
                                                     </span>
-                                                    <span className="px-2.5 py-1 rounded-lg bg-sky-500/20 backdrop-blur-md text-[11px] font-mono text-sky-300 border border-sky-400/30">
-                                                        B.Tech CSE
+                                                    <span className="px-3 py-1 rounded-xl liquid-glass text-[11px] font-mono text-mintNeon border-mintNeon/30">
+                                                        8.51 CGPA
                                                     </span>
                                                 </div>
                                             </div>
 
-                                            <div className="space-y-2 px-2 pb-1">
-                                                <div className="flex justify-between items-center">
-                                                    <span className="text-sm font-semibold text-white">Pranav Gandha</span>
-                                                    <span className="text-xs font-mono text-accent">LPU '25-29</span>
+                                            {/* Profile Meta Deck */}
+                                            <div className="space-y-3 px-1">
+                                                <div className="flex items-center justify-between">
+                                                    <div className="font-display font-bold text-white text-base">Pranav Gandha</div>
+                                                    <span className="text-[11px] font-mono text-cyanNeon px-2 py-0.5 rounded-md bg-cyanNeon/10 border border-cyanNeon/20">
+                                                        AI & Full-Stack
+                                                    </span>
                                                 </div>
-                                                <p className="text-xs text-textMuted leading-relaxed">
-                                                    Full-Stack & AI Engineer specializing in Python, JavaScript, PyTorch & scalable web platforms.
+                                                <p className="text-xs text-slateMuted leading-relaxed">
+                                                    Specializing in high-performance PyTorch models, conversational AI engines & modern web applications.
                                                 </p>
-                                                <div className="pt-2 flex gap-2">
+                                                <div className="pt-1">
                                                     <a 
                                                         href={portfolioData.cvDownloadLink}
                                                         target="_blank" 
                                                         rel="noopener noreferrer"
-                                                        className="w-full py-2 bg-accent/10 hover:bg-accent/20 text-accent text-xs font-medium text-center rounded-xl border border-accent/25 transition-colors flex items-center justify-center gap-1.5"
+                                                        className="w-full py-2.5 rounded-xl btn-liquid-secondary text-xs font-display text-cyanNeon text-center flex items-center justify-center gap-2 group-hover:border-cyanNeon/40 transition-colors"
                                                     >
-                                                        <i className="fa-solid fa-file-arrow-down"></i> View Full Resume
+                                                        <i className="fa-solid fa-file-arrow-down"></i>
+                                                        <span>View Verified Resume</span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -575,71 +712,77 @@
                             </div>
                         </section>
 
-                        {/* BENTO GRID: KEY HIGHLIGHTS & ACHIEVEMENTS */}
-                        <section id="achievements" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.15s'}}>
-                            <div className="flex items-center justify-between mb-8">
+                        {/* HIGHLIGHTS & ACHIEVEMENTS BENTO */}
+                        <section id="highlights" className="mb-32">
+                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
                                 <div>
-                                    <span className="text-xs font-mono text-accent uppercase tracking-wider">Milestones & Highlights</span>
-                                    <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
-                                        <i className="fa-solid fa-trophy text-amber-400 text-xl"></i> Key Achievements
+                                    <span className="text-xs font-mono text-cyanNeon uppercase tracking-widest">Key Milestones</span>
+                                    <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                                        Proven Impact & Metrics
                                     </h3>
                                 </div>
+                                <span className="text-xs font-mono text-slateMuted">Verified Academic & Competitive Credentials</span>
                             </div>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                                 {portfolioData.highlights.map((item, idx) => (
                                     <div 
                                         key={idx} 
-                                        className="glass-card p-6 rounded-3xl relative overflow-hidden group flex flex-col justify-between"
+                                        className="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/40"
                                     >
-                                        <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.color} blur-2xl rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-500`}></div>
-                                        
-                                        <div className="flex justify-between items-start mb-6 relative z-10">
-                                            <div className="w-12 h-12 rounded-2xl bg-surface border border-surfaceBorder flex items-center justify-center group-hover:border-accent/40 transition-colors">
-                                                <i className={`${item.icon} text-xl ${item.accentColor}`}></i>
+                                        <div>
+                                            <div className="flex items-start justify-between mb-8">
+                                                <div className="w-12 h-12 rounded-2xl liquid-glass flex items-center justify-center text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors">
+                                                    <i className={`${item.icon} ${item.color}`}></i>
+                                                </div>
+                                                <span className="text-[10px] font-mono px-2.5 py-1 rounded-full liquid-glass text-slateMuted border-white/10">
+                                                    {item.tag}
+                                                </span>
                                             </div>
-                                            <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-surface border border-surfaceBorder text-textMuted">
-                                                {item.label}
-                                            </span>
-                                        </div>
 
-                                        <div className="relative z-10">
-                                            <div className="text-3xl sm:text-4xl font-heading font-extrabold text-white mb-1 tracking-tight">
+                                            <div className="text-4xl font-display font-extrabold text-white mb-2 tracking-tight">
                                                 {item.number}
                                             </div>
-                                            <div className="font-medium text-sm text-gray-200 mb-1">{item.title}</div>
-                                            <div className="text-xs text-textMuted leading-relaxed">{item.desc}</div>
+                                            <div className="font-display font-semibold text-sm text-slateLight mb-1">
+                                                {item.title}
+                                            </div>
+                                            <p className="text-xs text-slateMuted leading-relaxed">
+                                                {item.desc}
+                                            </p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </section>
 
-                        {/* TECHNICAL ARSENAL / SKILLS SECTION */}
-                        <section id="skills" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
-                            <div className="mb-8">
-                                <span className="text-xs font-mono text-accent uppercase tracking-wider">Expertise & Tools</span>
-                                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
-                                    <i className="fa-solid fa-layer-group text-accent text-xl"></i> Technical Arsenal
+                        {/* TECHNICAL ARSENAL */}
+                        <section id="skills" className="mb-32">
+                            <div className="mb-10">
+                                <span className="text-xs font-mono text-mintNeon uppercase tracking-widest">Core Capabilities</span>
+                                <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                                    Technical Arsenal & Stacks
                                 </h3>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {portfolioData.skillCategories.map((cat, idx) => (
-                                    <div key={idx} className="glass-card p-6 rounded-3xl flex flex-col justify-between">
+                                    <div key={idx} className="liquid-glass p-7 rounded-3xl flex flex-col justify-between group">
                                         <div>
-                                            <div className="flex items-center gap-3 mb-5">
-                                                <div className="w-10 h-10 rounded-xl bg-surface border border-surfaceBorder flex items-center justify-center text-accent text-lg">
+                                            <div className="flex items-center gap-3.5 mb-6">
+                                                <div className="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-lg border-cyanNeon/20">
                                                     <i className={cat.icon}></i>
                                                 </div>
-                                                <h4 className="font-heading font-bold text-white text-base">{cat.category}</h4>
+                                                <div>
+                                                    <h4 className="font-display font-bold text-white text-base">{cat.category}</h4>
+                                                    <div className="h-[2px] w-10 bg-gradient-to-r from-cyanNeon to-transparent mt-1"></div>
+                                                </div>
                                             </div>
 
                                             <div className="flex flex-wrap gap-2">
                                                 {cat.items.map((skill, sIdx) => (
                                                     <span 
                                                         key={sIdx} 
-                                                        className="px-3 py-1.5 text-xs font-medium text-gray-200 bg-surface/90 border border-surfaceBorder rounded-xl hover:border-accent/40 hover:text-white hover:-translate-y-0.5 transition-all cursor-default"
+                                                        className="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl hover:border-cyanNeon/50 hover:text-cyanNeon hover:bg-cyanNeon/5 transition-all cursor-default"
                                                     >
                                                         {skill}
                                                     </span>
@@ -651,76 +794,81 @@
                             </div>
                         </section>
 
-                        {/* FEATURED PROJECTS SECTION */}
-                        <section id="projects" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.35s'}}>
-                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+                        {/* FEATURED PROJECTS SHOWCASE */}
+                        <section id="projects" className="mb-32">
+                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
                                 <div>
-                                    <span className="text-xs font-mono text-accent uppercase tracking-wider">Showcase</span>
-                                    <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
-                                        <i className="fa-solid fa-code-branch text-accent text-xl"></i> Featured Projects
+                                    <span className="text-xs font-mono text-cyanNeon uppercase tracking-widest">Selected Works</span>
+                                    <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                                        Featured Engineering Projects
                                     </h3>
                                 </div>
-                                <div className="text-xs font-mono text-textMuted">
-                                    Engineering robust solutions with AI & Modern Web Stacks
+                                <div className="text-xs font-mono text-slateMuted">
+                                    Production-ready AI & scalable web systems
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                                 {portfolioData.projects.map((project) => (
                                     <div 
                                         key={project.id} 
-                                        className="glass-card p-7 rounded-3xl flex flex-col justify-between group h-full relative"
+                                        className="liquid-glass p-8 rounded-3xl flex flex-col justify-between group relative overflow-hidden"
                                     >
+                                        {/* Subtle Corner Accent */}
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-cyanNeon/5 blur-2xl pointer-events-none group-hover:bg-cyanNeon/15 transition-colors"></div>
+
                                         <div>
-                                            {/* Header */}
-                                            <div className="flex items-start justify-between gap-3 mb-5">
-                                                <div className="w-12 h-12 rounded-2xl bg-surface border border-surfaceBorder flex items-center justify-center group-hover:border-accent/40 group-hover:bg-accent/10 transition-colors">
-                                                    <i className={`${project.icon} text-accent text-xl`}></i>
+                                            {/* Header Meta */}
+                                            <div className="flex items-start justify-between gap-3 mb-6 relative z-10">
+                                                <div className="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-xl text-cyanNeon border-cyanNeon/25 group-hover:border-cyanNeon/60 transition-colors">
+                                                    <i className={project.icon}></i>
                                                 </div>
-                                                <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-medium">
-                                                    {project.badge}
-                                                </span>
+                                                <div className="flex flex-col items-end gap-1">
+                                                    <span className="text-[10px] font-mono px-3 py-1 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 text-cyanNeon font-semibold">
+                                                        {project.badge}
+                                                    </span>
+                                                    <span className="text-[10px] font-mono text-slateMuted">{project.date}</span>
+                                                </div>
                                             </div>
 
-                                            <div className="text-xs font-mono text-textMuted mb-1">{project.date}</div>
-                                            <h4 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-accent transition-colors">
+                                            <h4 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-cyanNeon transition-colors">
                                                 {project.title}
                                             </h4>
-                                            <p className="text-xs font-medium text-sky-400/90 mb-4">{project.tagline}</p>
+                                            <p className="text-xs font-medium text-mintNeon/90 mb-4">{project.tagline}</p>
 
-                                            <p className="text-sm text-textMuted leading-relaxed mb-6">
+                                            <p className="text-sm text-slateMuted leading-relaxed mb-6">
                                                 {project.description}
                                             </p>
 
-                                            {/* Key Bullet Highlights */}
-                                            <div className="space-y-2.5 mb-6 text-xs text-gray-300">
-                                                {project.highlights.map((point, pIdx) => (
-                                                    <div key={pIdx} className="flex items-start gap-2">
-                                                        <i className="fa-solid fa-check text-accent text-[11px] mt-0.5 shrink-0"></i>
-                                                        <span className="leading-relaxed">{point}</span>
+                                            {/* Bullet Highlights */}
+                                            <div className="space-y-3 mb-8 text-xs text-slateLight/90">
+                                                {project.highlights.map((pt, pIdx) => (
+                                                    <div key={pIdx} className="flex items-start gap-2.5">
+                                                        <i className="fa-solid fa-chevron-right text-cyanNeon text-[10px] mt-1 shrink-0"></i>
+                                                        <span className="leading-relaxed">{pt}</span>
                                                     </div>
                                                 ))}
                                             </div>
                                         </div>
 
-                                        <div>
-                                            {/* Tech Stack Pills */}
-                                            <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-surfaceBorder">
+                                        <div className="pt-4 border-t border-white/10">
+                                            {/* Tech Pills */}
+                                            <div className="flex flex-wrap gap-1.5 mb-6">
                                                 {project.tech.map((t, tIdx) => (
-                                                    <span key={tIdx} className="text-[11px] font-mono px-2.5 py-1 bg-surface border border-surfaceBorder rounded-lg text-textMuted">
+                                                    <span key={tIdx} className="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">
                                                         {t}
                                                     </span>
                                                 ))}
                                             </div>
 
-                                            {/* Action Links */}
-                                            <div className="flex gap-3 pt-2">
+                                            {/* Links */}
+                                            <div className="flex gap-3">
                                                 {project.demo && (
                                                     <a 
                                                         href={project.demo} 
                                                         target="_blank" 
                                                         rel="noopener noreferrer" 
-                                                        className="flex-1 py-2.5 px-4 bg-white text-black font-heading font-semibold text-xs rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-1.5 shadow-md shadow-white/5"
+                                                        className="flex-1 btn-liquid-primary py-3 px-4 rounded-xl text-xs font-display text-center flex items-center justify-center gap-2"
                                                     >
                                                         <span>Live Demo</span>
                                                         <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
@@ -731,11 +879,11 @@
                                                         href={project.github} 
                                                         target="_blank" 
                                                         rel="noopener noreferrer" 
-                                                        className={`${project.demo ? 'px-4' : 'flex-1'} py-2.5 bg-surface border border-surfaceBorder hover:border-accent/40 text-white font-heading font-medium text-xs rounded-xl hover:bg-surfaceHover transition-all flex items-center justify-center gap-2`}
+                                                        className={`${project.demo ? 'px-4' : 'flex-1'} btn-liquid-secondary py-3 text-white text-xs font-display rounded-xl flex items-center justify-center gap-2`}
                                                     >
                                                         <i className="fa-brands fa-github text-sm"></i>
                                                         <span>{project.demo ? 'Repo' : 'View on GitHub'}</span>
-                                                        <i className="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+                                                        <i className="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
                                                     </a>
                                                 )}
                                             </div>
@@ -745,54 +893,96 @@
                             </div>
                         </section>
 
-                        {/* CERTIFICATIONS & CREDENTIALS SECTION */}
-                        <section id="certificates" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.45s'}}>
-                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-2">
+                        {/* INTERACTIVE TELEMETRY / TERMINAL WIDGET */}
+                        <section className="mb-32">
+                            <div className="liquid-glass p-6 sm:p-8 rounded-3xl border-cyanNeon/20">
+                                <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                                    <div className="flex items-center gap-2">
+                                        <span className="w-3 h-3 rounded-full bg-red-500/80"></span>
+                                        <span className="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                                        <span className="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                                        <span className="text-xs font-mono text-slateMuted ml-2">pranav@antigravity-os: ~$</span>
+                                    </div>
+                                    <span className="text-[11px] font-mono text-cyanNeon">Interactive Terminal v2.4</span>
+                                </div>
+
+                                <div className="space-y-2 mb-4 max-h-48 overflow-y-auto font-mono text-xs text-slateMuted">
+                                    {terminalLogs.map((log, lIdx) => (
+                                        <div key={lIdx} className={log.user ? 'text-cyanNeon' : 'text-slateLight'}>
+                                            {log.user ? `> ${log.text}` : log.text}
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <form onSubmit={handleTerminalSubmit} className="flex gap-3">
+                                    <div className="relative flex-1">
+                                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-cyanNeon font-mono text-xs">></span>
+                                        <input 
+                                            type="text" 
+                                            value={terminalPrompt}
+                                            onChange={(e) => setTerminalPrompt(e.target.value)}
+                                            placeholder="Type command: bio, skills, projects, cv, contact..."
+                                            className="w-full pl-8 pr-4 py-2.5 rounded-xl bg-baseBg/90 border border-white/10 text-xs font-mono text-white focus:outline-none focus:border-cyanNeon/60"
+                                        />
+                                    </div>
+                                    <button 
+                                        type="submit"
+                                        className="btn-liquid-secondary px-5 py-2.5 rounded-xl text-xs font-mono text-cyanNeon hover:text-white"
+                                    >
+                                        Execute
+                                    </button>
+                                </form>
+                            </div>
+                        </section>
+
+                        {/* VERIFIED CREDENTIALS & CERTIFICATIONS */}
+                        <section id="certifications" className="mb-32">
+                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
                                 <div>
-                                    <span className="text-xs font-mono text-accent uppercase tracking-wider">Verified Qualifications</span>
-                                    <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
-                                        <i className="fa-solid fa-certificate text-purple-400 text-xl"></i> Certifications & Honors
+                                    <span className="text-xs font-mono text-mintNeon uppercase tracking-widest">Verified Credentials</span>
+                                    <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                                        Certifications & Honors
                                     </h3>
                                 </div>
-                                <span className="text-xs font-mono text-textMuted">Click credentials to verify online</span>
+                                <span className="text-xs font-mono text-slateMuted">Click card to verify certification online</span>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {portfolioData.certificates.map((cert, cIdx) => (
                                     <a 
                                         key={cIdx} 
                                         href={cert.link} 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="glass-card p-6 rounded-3xl flex flex-col justify-between group hover:scale-[1.02] transition-all duration-300 block"
+                                        className="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/50 transition-all block"
                                     >
                                         <div>
-                                            <div className="flex items-start justify-between gap-3 mb-4">
-                                                <div className="w-10 h-10 rounded-xl bg-surface border border-surfaceBorder flex items-center justify-center group-hover:border-purple-400/40 text-purple-400 transition-colors">
+                                            <div className="flex items-start justify-between gap-3 mb-5">
+                                                <div className="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors">
                                                     <i className={cert.icon}></i>
                                                 </div>
-                                                <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300">
+                                                <span className="text-[10px] font-mono px-3 py-1 rounded-full liquid-glass text-mintNeon border-mintNeon/30 font-medium">
                                                     {cert.badge}
                                                 </span>
                                             </div>
 
-                                            <h4 className="font-heading font-bold text-white text-base mb-1 group-hover:text-purple-300 transition-colors">
+                                            <h4 className="font-display font-bold text-white text-base mb-1.5 group-hover:text-cyanNeon transition-colors">
                                                 {cert.title}
                                             </h4>
                                             
-                                            <div className="text-xs font-medium text-textMuted mb-3 flex items-center gap-2">
+                                            <div className="text-xs font-mono text-slateMuted mb-3 flex items-center gap-2">
                                                 <span>{cert.issuer}</span>
                                                 <span>•</span>
-                                                <span className="text-accent">{cert.date}</span>
+                                                <span className="text-cyanNeon">{cert.date}</span>
                                             </div>
 
-                                            <p className="text-xs text-textMuted leading-relaxed mb-4">
+                                            <p className="text-xs text-slateMuted leading-relaxed mb-6">
                                                 {cert.desc}
                                             </p>
                                         </div>
 
-                                        <div className="pt-3 border-t border-surfaceBorder flex items-center justify-between text-xs font-mono text-purple-300 group-hover:text-white transition-colors">
-                                            <span>Verify Credential</span>
+                                        <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-cyanNeon group-hover:text-white transition-colors">
+                                            <span>Verify Credential Link</span>
                                             <i className="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
                                         </div>
                                     </a>
@@ -800,37 +990,37 @@
                             </div>
                         </section>
 
-                        {/* EDUCATION TIMELINE */}
-                        <section id="education" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.55s'}}>
-                            <div className="mb-8">
-                                <span className="text-xs font-mono text-accent uppercase tracking-wider">Academic Background</span>
-                                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
-                                    <i className="fa-solid fa-graduation-cap text-sky-400 text-xl"></i> Education Journey
+                        {/* EDUCATION JOURNEY */}
+                        <section id="education" className="mb-32">
+                            <div className="mb-10">
+                                <span className="text-xs font-mono text-cyanNeon uppercase tracking-widest">Academic Foundations</span>
+                                <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                                    Education Journey
                                 </h3>
                             </div>
 
-                            <div className="space-y-5">
+                            <div className="space-y-6">
                                 {portfolioData.education.map((edu, eIdx) => (
-                                    <div key={eIdx} className="glass-card p-6 sm:p-7 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+                                    <div key={eIdx} className="liquid-glass p-7 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-cyanNeon/30">
                                         <div className="flex items-start gap-4">
-                                            <div className="w-12 h-12 rounded-2xl bg-surface border border-surfaceBorder flex items-center justify-center text-sky-400 text-xl shrink-0 mt-1">
+                                            <div className="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-xl shrink-0 mt-1 border-white/10">
                                                 <i className={edu.icon}></i>
                                             </div>
                                             <div>
-                                                <div className="flex flex-wrap items-center gap-2 mb-1">
-                                                    <h4 className="font-heading font-bold text-white text-lg">{edu.institution}</h4>
-                                                    <span className="text-xs font-mono text-textMuted">• {edu.location}</span>
+                                                <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                                                    <h4 className="font-display font-bold text-white text-lg">{edu.institution}</h4>
+                                                    <span className="text-xs font-mono text-slateMuted">• {edu.location}</span>
                                                 </div>
-                                                <p className="text-sm font-medium text-gray-300 mb-2">{edu.degree}</p>
-                                                <p className="text-xs text-textMuted leading-relaxed max-w-2xl">{edu.details}</p>
+                                                <p className="text-sm font-medium text-slateLight mb-2">{edu.degree}</p>
+                                                <p className="text-xs text-slateMuted leading-relaxed max-w-2xl">{edu.details}</p>
                                             </div>
                                         </div>
 
-                                        <div className="flex md:flex-col md:items-end justify-between items-center gap-2 shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-surfaceBorder">
-                                            <span className="px-3.5 py-1.5 rounded-xl bg-accent/10 border border-accent/25 text-accent font-heading font-bold text-sm">
+                                        <div className="flex md:flex-col md:items-end justify-between items-center gap-2 shrink-0 border-t md:border-t-0 pt-4 md:pt-0 border-white/10">
+                                            <span className="px-4 py-1.5 rounded-full liquid-glass border-cyanNeon/40 text-cyanNeon font-display font-bold text-sm shadow-sm">
                                                 {edu.score}
                                             </span>
-                                            <span className="text-xs font-mono text-textMuted">
+                                            <span className="text-xs font-mono text-slateMuted">
                                                 {edu.duration}
                                             </span>
                                         </div>
@@ -839,90 +1029,91 @@
                             </div>
                         </section>
 
-                        {/* CONTACT & CONNECT SECTION */}
-                        <section id="contact" className="mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '0.65s'}}>
-                            <div className="glass-card p-8 sm:p-12 rounded-3xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-80 h-80 bg-accent/10 blur-3xl rounded-full pointer-events-none"></div>
+                        {/* CONTACT & CONNECT CONSOLE */}
+                        <section id="contact" className="mb-20">
+                            <div className="liquid-glass p-8 sm:p-14 rounded-3xl relative overflow-hidden border-cyanNeon/25">
+                                <div className="absolute top-0 right-0 w-96 h-96 liquid-mesh-cyan blur-3xl rounded-full pointer-events-none"></div>
 
-                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-                                    <div className="lg:col-span-7 space-y-4">
-                                        <span className="text-xs font-mono text-accent uppercase tracking-wider">Let's Connect</span>
-                                        <h3 className="text-3xl sm:text-4xl font-heading font-extrabold text-white tracking-tight">
-                                            Let's build something exceptional together.
+                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+                                    <div className="lg:col-span-7 space-y-5">
+                                        <span className="text-xs font-mono text-mintNeon uppercase tracking-widest">Connect Console</span>
+                                        <h3 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
+                                            Let's engineer the future together.
                                         </h3>
-                                        <p className="text-sm sm:text-base text-textMuted leading-relaxed max-w-xl">
-                                            Whether you're looking for an ambitious developer for an innovative AI role, full-stack development, or open-source collaboration, my inbox is always open.
+                                        <p className="text-sm sm:text-base text-slateMuted leading-relaxed max-w-xl">
+                                            I'm open for high-impact AI/ML engineering roles, full-stack architecture opportunities, and ambitious software collaborations.
                                         </p>
 
-                                        <div className="pt-2 flex flex-wrap gap-3">
+                                        <div className="pt-2 flex flex-wrap gap-4">
                                             <a 
                                                 href={`mailto:${portfolioData.contact.email}`} 
-                                                className="px-6 py-3 bg-white text-black font-heading font-semibold text-sm rounded-xl hover:bg-gray-200 transition-all flex items-center gap-2 shadow-lg"
+                                                className="btn-liquid-primary px-7 py-3.5 rounded-2xl font-display text-sm flex items-center gap-2.5"
                                             >
-                                                <i className="fa-regular fa-envelope text-base"></i>
+                                                <i className="fa-regular fa-envelope text-base text-black"></i>
                                                 <span>Send Email</span>
                                             </a>
                                             <a 
                                                 href={portfolioData.cvDownloadLink}
                                                 target="_blank" 
                                                 rel="noopener noreferrer"
-                                                className="px-6 py-3 glass-card text-white font-heading font-medium text-sm rounded-xl hover:border-accent/40 transition-all flex items-center gap-2"
+                                                className="btn-liquid-secondary px-6 py-3.5 rounded-2xl font-display text-sm text-white flex items-center gap-2"
                                             >
-                                                <i className="fa-solid fa-file-arrow-down text-accent"></i>
+                                                <i className="fa-solid fa-file-arrow-down text-cyanNeon"></i>
                                                 <span>Download CV</span>
                                             </a>
                                         </div>
                                     </div>
 
-                                    <div className="lg:col-span-5 space-y-3">
+                                    {/* Direct Interactive Cards */}
+                                    <div className="lg:col-span-5 space-y-3.5">
                                         <div 
-                                            onClick={() => copyToClipboard(portfolioData.contact.email, 'email_box')}
-                                            className="p-4 rounded-2xl bg-surface border border-surfaceBorder hover:border-accent/40 cursor-pointer transition-all flex items-center justify-between"
+                                            onClick={() => copyToClipboard(portfolioData.contact.email, 'email_card')}
+                                            className="p-4 rounded-2xl liquid-glass hover:border-cyanNeon/50 cursor-pointer transition-all flex items-center justify-between"
                                         >
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
+                                            <div className="flex items-center gap-3.5">
+                                                <div className="w-10 h-10 rounded-xl liquid-glass flex items-center justify-center text-cyanNeon">
                                                     <i className="fa-regular fa-envelope"></i>
                                                 </div>
                                                 <div>
-                                                    <div className="text-[11px] font-mono text-textMuted">Email Address</div>
+                                                    <div className="text-[10px] font-mono text-slateMuted">Email Address</div>
                                                     <div className="text-sm font-medium text-white">{portfolioData.contact.email}</div>
                                                 </div>
                                             </div>
-                                            <i className={`fa-solid ${copiedItem === 'email_box' ? 'fa-check text-emerald-400' : 'fa-copy text-textMuted'} text-sm`}></i>
+                                            <i className={`fa-solid ${copiedKey === 'email_card' ? 'fa-check text-mintNeon' : 'fa-copy text-slateMuted'} text-sm`}></i>
                                         </div>
 
                                         <div 
-                                            onClick={() => copyToClipboard(portfolioData.contact.phone, 'phone_box')}
-                                            className="p-4 rounded-2xl bg-surface border border-surfaceBorder hover:border-accent/40 cursor-pointer transition-all flex items-center justify-between"
+                                            onClick={() => copyToClipboard(portfolioData.contact.phone, 'phone_card')}
+                                            className="p-4 rounded-2xl liquid-glass hover:border-mintNeon/50 cursor-pointer transition-all flex items-center justify-between"
                                         >
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                                            <div className="flex items-center gap-3.5">
+                                                <div className="w-10 h-10 rounded-xl liquid-glass flex items-center justify-center text-mintNeon">
                                                     <i className="fa-solid fa-phone"></i>
                                                 </div>
                                                 <div>
-                                                    <div className="text-[11px] font-mono text-textMuted">Phone / WhatsApp</div>
+                                                    <div className="text-[10px] font-mono text-slateMuted">Phone / WhatsApp</div>
                                                     <div className="text-sm font-medium text-white">{portfolioData.contact.phone}</div>
                                                 </div>
                                             </div>
-                                            <i className={`fa-solid ${copiedItem === 'phone_box' ? 'fa-check text-emerald-400' : 'fa-copy text-textMuted'} text-sm`}></i>
+                                            <i className={`fa-solid ${copiedKey === 'phone_card' ? 'fa-check text-mintNeon' : 'fa-copy text-slateMuted'} text-sm`}></i>
                                         </div>
 
                                         <a 
                                             href={portfolioData.contact.linkedin}
                                             target="_blank" 
                                             rel="noopener noreferrer"
-                                            className="p-4 rounded-2xl bg-surface border border-surfaceBorder hover:border-accent/40 transition-all flex items-center justify-between group"
+                                            className="p-4 rounded-2xl liquid-glass hover:border-cyanNeon/50 transition-all flex items-center justify-between group"
                                         >
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-sky-400">
+                                            <div className="flex items-center gap-3.5">
+                                                <div className="w-10 h-10 rounded-xl liquid-glass flex items-center justify-center text-cyanNeon">
                                                     <i className="fa-brands fa-linkedin-in"></i>
                                                 </div>
                                                 <div>
-                                                    <div className="text-[11px] font-mono text-textMuted">LinkedIn Connection</div>
+                                                    <div className="text-[10px] font-mono text-slateMuted">LinkedIn Network</div>
                                                     <div className="text-sm font-medium text-white">in/pranavgandha</div>
                                                 </div>
                                             </div>
-                                            <i className="fa-solid fa-arrow-up-right-from-square text-xs text-textMuted group-hover:text-accent group-hover:translate-x-0.5 transition-all"></i>
+                                            <i className="fa-solid fa-arrow-up-right-from-square text-xs text-slateMuted group-hover:text-cyanNeon group-hover:translate-x-0.5 transition-all"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -930,17 +1121,17 @@
                         </section>
 
                         {/* FOOTER */}
-                        <footer className="pt-10 border-t border-surfaceBorder flex flex-col sm:flex-row justify-between items-center gap-6 text-sm text-textMuted">
-                            <div className="flex items-center gap-2">
-                                <span>© {new Date().getFullYear()} Pranav Gandha. Designed & Built with passion.</span>
+                        <footer className="pt-10 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs font-mono text-slateMuted">
+                            <div>
+                                © {new Date().getFullYear()} Pranav Gandha. Designed with Liquid Glass UI.
                             </div>
 
                             <div className="flex items-center gap-3">
-                                <SocialIcon href={portfolioData.contact.github} icon="fa-brands fa-github" title="GitHub" />
-                                <SocialIcon href={portfolioData.contact.linkedin} icon="fa-brands fa-linkedin-in" title="LinkedIn" />
-                                <SocialIcon href={portfolioData.contact.x} icon="fa-brands fa-x-twitter" title="X (Twitter)" />
-                                <SocialIcon href={portfolioData.contact.insta} icon="fa-brands fa-instagram" title="Instagram" />
-                                <SocialIcon href={`mailto:${portfolioData.contact.email}`} icon="fa-regular fa-envelope" title="Email" />
+                                <LiquidSocial href={portfolioData.contact.github} icon="fa-brands fa-github" title="GitHub" />
+                                <LiquidSocial href={portfolioData.contact.linkedin} icon="fa-brands fa-linkedin-in" title="LinkedIn" />
+                                <LiquidSocial href={portfolioData.contact.x} icon="fa-brands fa-x-twitter" title="X (Twitter)" />
+                                <LiquidSocial href={portfolioData.contact.insta} icon="fa-brands fa-instagram" title="Instagram" />
+                                <LiquidSocial href={`mailto:${portfolioData.contact.email}`} icon="fa-regular fa-envelope" title="Email" />
                             </div>
                         </footer>
 
@@ -949,13 +1140,13 @@
             );
         };
 
-        const SocialIcon = ({ href, icon, title }) => (
+        const LiquidSocial = ({ href, icon, title }) => (
             <a 
                 href={href} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 title={title}
-                className="w-10 h-10 flex items-center justify-center rounded-xl glass-card text-textMuted hover:text-white hover:border-accent/40 hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300"
             >
                 <i className={icon}></i>
             </a>

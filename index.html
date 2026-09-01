@@ -1,247 +1,962 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranav Gandha - Full-Stack Developer & AI Enthusiast</title>
+    <title>Pranav Gandha | Full-Stack Developer & AI Innovator</title>
 
-    <meta name="description" content="Pranav Gandha - Full-Stack Developer, AI Developer, and UI/UX Enthusiast.">
+    <meta name="description" content="Portfolio of Pranav Gandha - Full-Stack Developer, AI Innovator, and B.Tech CSE student at Lovely Professional University. Explore projects, skills, certifications, and achievements.">
     <meta name="author" content="Pranav Gandha">
+    <meta property="og:title" content="Pranav Gandha | Full-Stack Developer & AI Innovator">
+    <meta property="og:description" content="Portfolio of Pranav Gandha - Explore projects in AI/ML, Full-Stack development, certifications, and achievements.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/PranavLabs/portfolio/refs/heads/main/1764480530308.jpg">
+    <meta property="og:type" content="website">
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        background: '#050505',
-                        surface: '#111111',
-                        surfaceHover: '#1a1a1a',
-                        border: '#222222',
-                        textMain: '#EDEDED',
-                        textMuted: '#A1A1AA',
+                        background: '#070709',
+                        surface: '#0f1117',
+                        surfaceHover: '#161922',
+                        surfaceBorder: 'rgba(255, 255, 255, 0.08)',
                         accent: '#38BDF8',
+                        accentGlow: 'rgba(56, 189, 248, 0.25)',
+                        purpleAccent: '#818cf8',
+                        emeraldAccent: '#34d399',
+                        textMain: '#F3F4F6',
+                        textMuted: '#9CA3AF',
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'glow-pulse': 'glowPulse 4s ease-in-out infinite alternate',
+                        'glow-pulse': 'glowPulse 6s ease-in-out infinite alternate',
+                        'float': 'float 4s ease-in-out infinite',
                     },
                     keyframes: {
                         fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '0%': { opacity: '0', transform: 'translateY(24px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         },
                         glowPulse: {
-                            '0%': { opacity: '0.3', transform: 'scale(1)' },
-                            '100%': { opacity: '0.6', transform: 'scale(1.2)' },
+                            '0%': { opacity: '0.25', transform: 'scale(1) translate(-50%, 0)' },
+                            '100%': { opacity: '0.55', transform: 'scale(1.15) translate(-50%, 10px)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-6px)' },
                         }
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        body { background-color: #050505; color: #EDEDED; overflow-x: hidden; }
+        body { 
+            background-color: #070709; 
+            color: #F3F4F6; 
+            overflow-x: hidden; 
+        }
+        
         .glass-card {
-            background: rgba(17, 17, 17, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(15, 17, 23, 0.65);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
+        
         .glass-card:hover {
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            background: rgba(26, 26, 26, 0.6);
+            border-color: rgba(56, 189, 248, 0.35);
+            background: rgba(22, 25, 34, 0.85);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(56, 189, 248, 0.15);
         }
-        /* Custom scrollbar for a sleek look */
+        
+        .glass-nav {
+            background: rgba(7, 7, 9, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 20%, #E2E8F0 50%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .accent-gradient-text {
+            background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-glow-1 {
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(129, 140, 248, 0.08) 45%, transparent 70%);
+        }
+
+        .hero-glow-2 {
+            background: radial-gradient(circle, rgba(129, 140, 248, 0.14) 0%, rgba(56, 189, 248, 0.05) 50%, transparent 70%);
+        }
+
+        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #222; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #333; }
+        ::-webkit-scrollbar-track { background: #070709; }
+        ::-webkit-scrollbar-thumb { background: #1f2430; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2f3647; }
     </style>
 </head>
-<body class="font-inter antialiased selection:bg-accent selection:text-black">
+<body class="font-sans antialiased selection:bg-accent selection:text-black">
     <div id="root"></div>
 
+    <!-- React 18 & Babel CDN -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
+        const { useState, useEffect } = React;
+
         const App = () => {
+            const [copiedItem, setCopiedItem] = useState(null);
+            const [activeFilter, setActiveFilter] = useState('all');
+            const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
             const portfolioData = {
                 name: 'Pranav Gandha',
                 tagline: 'Full-Stack Developer & AI Innovator',
-                intro: 'As a B.Tech Computer Science student and freelance AI Generalist, I am passionate about crafting intuitive web experiences and developing intelligent AI models. I thrive on bringing ambitious ideas to life through scalable backend architecture, clean frontend design, and advanced data-driven solutions.',
-                skills: [
-                    'AI/ML', 'PyTorch (Beginner)', 'Leadership', 'Communication (IELTS 7.5)', 
-                    'C/C++', 'Frontend', 'Backend', 'AWS', 'NoSQL', 'PostgreSQL', 'DevOps'
+                location: 'Punjab, India',
+                profilePic: 'https://raw.githubusercontent.com/PranavLabs/portfolio/refs/heads/main/1764480530308.jpg',
+                cvDownloadLink: 'https://drive.google.com/file/d/1YA_xPwQs9Iu1ZfzjHNWtJxDz1XjTIRpn/view?usp=sharing',
+                bio: 'B.Tech Computer Science student at Lovely Professional University and AI Generalist. Passionate about engineering intelligent machine learning models, performant web applications, and scalable backend architectures that solve real-world problems with high efficiency.',
+                contact: {
+                    email: 'pranavgandha@outlook.com',
+                    emailSecondary: 'pranavgandha@hotmail.com',
+                    phone: '+91-6280326280',
+                    phoneHref: 'tel:+916280326280',
+                    linkedin: 'https://www.linkedin.com/in/pranavgandha/',
+                    github: 'https://github.com/PranavLabs',
+                    x: 'https://x.com/pranavbyte',
+                    insta: 'https://instagram.com/pranav.x.d',
+                },
+                highlights: [
+                    {
+                        number: '8.51',
+                        label: 'CGPA',
+                        title: 'Academic Record',
+                        desc: 'B.Tech CSE at Lovely Professional University',
+                        icon: 'fa-solid fa-graduation-cap',
+                        color: 'from-sky-500/20 to-blue-600/20',
+                        accentColor: 'text-sky-400'
+                    },
+                    {
+                        number: '300+',
+                        label: 'Problems',
+                        title: 'Coding Challenges',
+                        desc: 'Solved across competitive programming platforms',
+                        icon: 'fa-solid fa-code',
+                        color: 'from-indigo-500/20 to-purple-600/20',
+                        accentColor: 'text-indigo-400'
+                    },
+                    {
+                        number: 'Gold',
+                        label: 'Consultant',
+                        title: 'WorldQuant BRAIN',
+                        desc: 'Quantitative alpha research & platform consultant',
+                        icon: 'fa-solid fa-brain',
+                        color: 'from-amber-500/20 to-yellow-600/20',
+                        accentColor: 'text-amber-400'
+                    },
+                    {
+                        number: 'Rank #2',
+                        label: 'Winner',
+                        title: 'RCS CTF Hackathon',
+                        desc: 'National-level cybersecurity & CTF challenge',
+                        icon: 'fa-solid fa-shield-halved',
+                        color: 'from-emerald-500/20 to-teal-600/20',
+                        accentColor: 'text-emerald-400'
+                    }
                 ],
-                achievements: [
-                    { 
-                        title: 'RCS CTF 2026', 
-                        value: 'Winner', 
-                        desc: 'National-Level Hackathon',
-                        icon: 'fa-solid fa-flag-checkered'
+                skillCategories: [
+                    {
+                        category: 'Programming Languages',
+                        icon: 'fa-solid fa-terminal',
+                        items: ['Python', 'JavaScript', 'C', 'C++', 'SQL', 'HTML5', 'CSS3']
                     },
-                    { 
-                        title: 'WorldQuant BRAIN', 
-                        value: 'Gold Level', 
-                        desc: '& Consultant',
-                        icon: 'fa-solid fa-brain'
+                    {
+                        category: 'AI / Machine Learning & Data',
+                        icon: 'fa-solid fa-microchip',
+                        items: ['Machine Learning', 'Artificial Intelligence', 'PyTorch', 'Computer Vision', 'NLP & LLMs', 'Data Modeling', 'Streamlit']
                     },
-                    { 
-                        title: 'Academic Record', 
-                        value: '8.5 CGPA', 
-                        desc: 'Overall Score',
-                        icon: 'fa-solid fa-graduation-cap'
+                    {
+                        category: 'Web Development & Frameworks',
+                        icon: 'fa-solid fa-cubes',
+                        items: ['React.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'REST APIs', 'Babel', 'State Management']
+                    },
+                    {
+                        category: 'Databases, DevOps & Tools',
+                        icon: 'fa-solid fa-database',
+                        items: ['MySQL', 'MongoDB', 'PostgreSQL', 'Git', 'GitHub', 'Figma', 'AWS', 'Linux']
+                    },
+                    {
+                        category: 'Leadership & Soft Skills',
+                        icon: 'fa-solid fa-people-group',
+                        items: ['Problem Solving', 'Leadership', 'Team Collaboration', 'Time Management', 'Adaptability', 'Communication (IELTS 7.5)']
                     }
                 ],
                 projects: [
                     {
-                        title: 'Eco-Gram (Ecocheck)',
-                        description: 'An AI-powered tool designed to quantify the environmental impact of urban spaces using computer vision. By analyzing images for biodiversity, transportation modes, and electronic waste, it generates a "Sustainability Score" to evaluate the ecological health of a captured scene.',
-                        tech: ['AI/ML', 'Computer Vision', 'Streamlit', 'Python'],
-                        github: '#',
+                        id: 'ecocheck',
+                        title: 'Ecocheck (Eco-Gram)',
+                        category: 'ai-web',
+                        date: 'Dec 2025 - Jan 2026',
+                        tagline: 'Automated Green Computing & Eco-Efficiency Code Analysis',
+                        description: 'Engineered an automated eco-efficiency and code quality analysis tool designed to identify performance bottlenecks, reduce computational resource consumption, and enforce green software engineering practices.',
+                        highlights: [
+                            'Implemented static code parsing routines and automated metric checks across client-server workflows to analyze runtime overhead, memory utilization patterns, and redundant asset loading.',
+                            'Accelerated code execution efficiency by optimizing resource-heavy operations and provided actionable insights to lower carbon footprint across target web applications.',
+                            'Equipped with computer vision modules to analyze environmental imagery, evaluate biodiversity, transport modes, and e-waste for an urban sustainability score.'
+                        ],
+                        tech: ['Node.js', 'Express.js', 'JavaScript', 'React.js', 'Tailwind CSS', 'REST APIs', 'Computer Vision', 'Streamlit', 'Python', 'Git'],
+                        github: 'https://github.com/manudeep07/Collaborative-online-notepad',
                         demo: 'https://ecocheck.streamlit.app',
-                        icon: 'fa-solid fa-leaf'
+                        icon: 'fa-solid fa-leaf',
+                        badge: 'Featured Green AI'
                     },
                     {
+                        id: 'natya-ai',
                         title: 'Natya-AI',
-                        description: 'An intelligent application that recommends personalized entertainment content dynamically based on user preferences and conversational chat inputs.',
-                        tech: ['AI/ML', 'Frontend', 'Backend', 'NLP'],
-                        github: '#',
+                        category: 'ai-web',
+                        date: '2025',
+                        tagline: 'Conversational AI Recommendation & Media Discovery Engine',
+                        description: 'Designed and developed Natya-AI, a chat-first movie and TV recommendation application leveraging conversational AI to deliver hyper-personalized entertainment suggestions.',
+                        highlights: [
+                            'Enabled interactive user flows where individuals query based on mood, genre, actors, runtime, and language to receive tailored recommendations with clear rationale.',
+                            'Engineered the backend using Python for recommendation logic and API services, while crafting an intuitive, responsive chat interface with JavaScript.',
+                            'Focused on rapid prototyping and experimentation to deliver seamless conversational experiences for dynamic media discovery.'
+                        ],
+                        tech: ['Python', 'JavaScript', 'AI / NLP', 'CSS3', 'Conversational AI', 'REST APIs'],
+                        github: 'https://github.com/PranavLabs/Natya-AI/tree/main',
                         demo: 'https://natyamv.onrender.app',
-                        icon: 'fa-solid fa-film'
+                        icon: 'fa-solid fa-film',
+                        badge: 'Live AI Web App'
+                    },
+                    {
+                        id: 'taskify',
+                        title: 'Taskify',
+                        category: 'web',
+                        date: '2024',
+                        tagline: 'Gamified Task Planner with Habit-Forming Rewards',
+                        description: 'Developed a lightweight, gamified task planner web application that enables users to create, organize, prioritize, and track daily tasks seamlessly.',
+                        highlights: [
+                            'Implemented an engaging points system to incentivize task completion, allowing users to earn and redeem points for "chill time" to build consistent productivity.',
+                            'Designed a minimal, distraction-free, mobile-friendly user interface with responsive interactions and persistent local storage.',
+                            'Engineered using clean, modular vanilla JavaScript and lightweight styling for optimal performance.'
+                        ],
+                        tech: ['HTML5', 'CSS3', 'JavaScript', 'Gamification Logic', 'Local Storage', 'UI/UX'],
+                        github: 'https://github.com/PranavLabs/taskify/tree/main',
+                        demo: null,
+                        icon: 'fa-solid fa-list-check',
+                        badge: 'Gamified Productivity'
                     }
                 ],
-                social: {
-                    github: 'https://github.com/PranavLabs',
-                    linkedin: 'https://www.linkedin.com/in/pranav-gandha-a5a27a291/',
-                    x: 'https://x.com/pranavbyte',
-                    insta: 'https://instagram.com/pranav.x.d',
-                    email: 'mailto:pranavgandha@hotmail.com'
-                },
+                certificates: [
+                    {
+                        title: 'Supervised Machine Learning: Regression and Classification',
+                        issuer: 'Coursera (DeepLearning.AI & Stanford Online)',
+                        date: 'Aug 2025',
+                        desc: 'Mastered core ML foundations, linear/logistic regression, cost functions, gradient descent, overfitting mitigation, and regularized classification.',
+                        link: 'https://coursera.org/share/823973311d59167801c78af9e7d890c7',
+                        icon: 'fa-solid fa-certificate',
+                        badge: 'Coursera Verified'
+                    },
+                    {
+                        title: 'Computer Programming & Algorithmic Problem Solving',
+                        issuer: 'NeoColab',
+                        date: 'Sep 2024',
+                        desc: 'Demonstrated high algorithmic rigor, data structure implementation, computational efficiency, and robust problem-solving in C/C++.',
+                        link: 'https://drive.google.com/file/d/1tfUuBbssScN7SY5Y4FhucPp1RfvS-YfR/view?usp=drive_link',
+                        icon: 'fa-solid fa-laptop-code',
+                        badge: 'NeoColab Verified'
+                    },
+                    {
+                        title: 'Time Management Fundamentals & Leadership',
+                        issuer: 'LinkedIn Learning',
+                        date: 'Verified Credential',
+                        desc: 'Applied professional productivity frameworks, strategic workflow prioritization, goal-setting, and execution management.',
+                        link: 'https://www.linkedin.com/learning/certificates/0df0cd22a2f15487299e6f1a225cf44fe2985451fb00282f28a02dfb9e12072a',
+                        icon: 'fa-solid fa-clock',
+                        badge: 'LinkedIn Certified'
+                    },
+                    {
+                        title: 'WorldQuant BRAIN Gold Level Achievement',
+                        issuer: 'WorldQuant Brain Quantitative Research',
+                        date: 'Recognized Consultant',
+                        desc: 'Achieved Gold Level consultant status on the WorldQuant BRAIN quantitative platform, formulating predictive mathematical alphas and data signals.',
+                        link: 'https://www.linkedin.com/in/pranavgandha/',
+                        icon: 'fa-solid fa-brain',
+                        badge: 'Gold Level Alpha'
+                    },
+                    {
+                        title: 'RCS CTF National Cybersecurity Achievement',
+                        issuer: 'RCS Hackathon & CTF',
+                        date: 'May 2024',
+                        desc: 'Ranked #2 in collegiate hackathon CTF through penetration testing, vulnerability assessment, cryptographic challenges, and problem solving.',
+                        link: 'https://www.linkedin.com/in/pranavgandha/',
+                        icon: 'fa-solid fa-shield-halved',
+                        badge: 'National Hackathon'
+                    }
+                ],
+                education: [
+                    {
+                        institution: 'Lovely Professional University',
+                        degree: 'Bachelor of Technology - Computer Science and Engineering',
+                        score: 'CGPA: 8.51',
+                        duration: 'Aug 2025 - Present',
+                        location: 'Phagwara, Punjab',
+                        icon: 'fa-solid fa-building-columns',
+                        details: 'Specializing in Artificial Intelligence, Machine Learning, and Full-Stack Software Engineering. Active participant in hackathons and technical clubs.'
+                    },
+                    {
+                        institution: 'Innocent Hearts School',
+                        degree: 'Higher Secondary Education (Class XII - Non-Medical)',
+                        score: 'Percentage: 80%',
+                        duration: 'May 2023 - May 2025',
+                        location: 'Jalandhar, Punjab',
+                        icon: 'fa-solid fa-school',
+                        details: 'Focused on Mathematics, Physics, Chemistry, and Computer Science fundamentals.'
+                    },
+                    {
+                        institution: 'Innocent Hearts School',
+                        degree: 'Secondary Education (Class X)',
+                        score: 'Percentage: 87%',
+                        duration: 'May 2022 - Mar 2023',
+                        location: 'Jalandhar, Punjab',
+                        icon: 'fa-solid fa-book-open',
+                        details: 'Graduated with academic distinction across all subjects and foundational science.'
+                    }
+                ]
+            };
+
+            const copyToClipboard = (text, type) => {
+                navigator.clipboard.writeText(text);
+                setCopiedItem(type);
+                setTimeout(() => setCopiedItem(null), 2500);
             };
 
             return (
-                <div className="relative min-h-screen pb-24">
-                    {/* Ambient Background Glows */}
-                    <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/10 blur-[120px] rounded-full pointer-events-none animate-glow-pulse z-0"></div>
-                    
-                    <div className="relative z-10 max-w-5xl mx-auto px-6 pt-24 md:pt-32">
-                        {/* Hero Section */}
-                        <header className="mb-20 animate-fade-in-up">
-                            <div className="inline-block mb-4 px-3 py-1 text-xs font-mono text-accent border border-accent/20 bg-accent/10 rounded-full">
-                                Available for opportunities
-                            </div>
-                            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-500">
-                                {portfolioData.name}
-                            </h1>
-                            <h2 className="text-2xl md:text-3xl font-medium text-textMuted mb-6">
-                                {portfolioData.tagline}
-                            </h2>
-                            <p className="text-lg text-textMuted leading-relaxed max-w-2xl">
-                                {portfolioData.intro}
-                            </p>
-                        </header>
+                <div className="relative min-h-screen">
+                    {/* Ambient Background Lights */}
+                    <div className="fixed top-[-100px] left-1/2 -translate-x-1/2 w-[900px] h-[550px] hero-glow-1 blur-[140px] rounded-full pointer-events-none animate-glow-pulse z-0"></div>
+                    <div className="fixed bottom-0 right-[-100px] w-[600px] h-[450px] hero-glow-2 blur-[140px] rounded-full pointer-events-none z-0"></div>
 
-                        {/* Bento Grid: Achievements */}
-                        <section className="mb-24 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                {portfolioData.achievements.map((ach, idx) => (
-                                    <div key={idx} className="glass-card p-6 rounded-2xl transition-all duration-300 group">
-                                        <div className="flex justify-between items-start mb-4">
-                                            <i className={`${ach.icon} text-2xl text-textMuted group-hover:text-accent transition-colors`}></i>
-                                        </div>
-                                        <h3 className="text-3xl font-bold text-white mb-1">{ach.value}</h3>
-                                        <p className="font-medium text-textMain">{ach.title}</p>
-                                        <p className="text-sm text-textMuted mt-1">{ach.desc}</p>
+                    {/* Navigation Bar */}
+                    <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
+                        <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+                            <a href="#" className="flex items-center gap-3 group">
+                                <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-500 p-[1.5px] shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
+                                    <div className="w-full h-full bg-background rounded-[10px] flex items-center justify-center font-heading font-extrabold text-lg text-white">
+                                        PG
                                     </div>
-                                ))}
-                            </div>
-                        </section>
+                                </div>
+                                <div>
+                                    <div className="font-heading font-bold text-white text-base tracking-tight group-hover:text-accent transition-colors">Pranav Gandha</div>
+                                    <div className="text-[11px] font-mono text-textMuted flex items-center gap-1.5">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                        Available for opportunities
+                                    </div>
+                                </div>
+                            </a>
 
-                        {/* Skills Section */}
-                        <section className="mb-24 opacity-0 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                                <i className="fa-solid fa-layer-group text-accent"></i> Technical Arsenal
-                            </h3>
-                            <div className="flex flex-wrap gap-3">
-                                {portfolioData.skills.map((skill, index) => (
-                                    <span key={index} className="px-4 py-2 text-sm font-medium text-textMain glass-card rounded-full hover:-translate-y-1 transition-transform cursor-default">
-                                        {skill}
-                                    </span>
-                                ))}
+                            {/* Desktop Nav Links */}
+                            <div className="hidden md:flex items-center gap-7 text-sm font-medium text-textMuted">
+                                <a href="#about" className="hover:text-white transition-colors">About</a>
+                                <a href="#achievements" className="hover:text-white transition-colors">Achievements</a>
+                                <a href="#skills" className="hover:text-white transition-colors">Skills</a>
+                                <a href="#projects" className="hover:text-white transition-colors">Projects</a>
+                                <a href="#certificates" className="hover:text-white transition-colors">Certificates</a>
+                                <a href="#education" className="hover:text-white transition-colors">Education</a>
+                                <a href="#contact" className="hover:text-white transition-colors">Contact</a>
                             </div>
-                        </section>
 
-                        {/* Projects Section */}
-                        <section className="mb-24 opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-                            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                                <i className="fa-solid fa-code text-accent"></i> Featured Work
-                            </h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {portfolioData.projects.map((project, index) => (
-                                    <div key={index} className="glass-card p-8 rounded-3xl flex flex-col h-full transition-all duration-300">
-                                        <div className="flex items-center gap-4 mb-6">
-                                            <div className="w-12 h-12 rounded-full bg-surface border border-border flex items-center justify-center">
-                                                <i className={`${project.icon} text-accent text-xl`}></i>
+                            {/* Action Buttons */}
+                            <div className="hidden md:flex items-center gap-3">
+                                <a 
+                                    href={portfolioData.cvDownloadLink} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-500 text-black font-semibold text-xs tracking-wide uppercase hover:shadow-lg hover:shadow-sky-400/25 hover:scale-[1.02] transition-all flex items-center gap-2"
+                                >
+                                    <i className="fa-solid fa-file-arrow-down text-sm"></i>
+                                    Download CV
+                                </a>
+                            </div>
+
+                            {/* Mobile Hamburger */}
+                            <button 
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                className="md:hidden text-textMuted hover:text-white p-2"
+                                aria-label="Toggle Navigation Menu"
+                            >
+                                <i className={`fa-solid ${isMobileMenuOpen ? 'fa-xmark' : 'fa-bars'} text-xl`}></i>
+                            </button>
+                        </div>
+
+                        {/* Mobile Menu Dropdown */}
+                        {isMobileMenuOpen && (
+                            <div className="md:hidden px-6 py-6 border-t border-surfaceBorder bg-background/95 backdrop-blur-xl flex flex-col gap-4">
+                                <a onClick={() => setIsMobileMenuOpen(false)} href="#about" className="text-textMuted hover:text-white py-1">About</a>
+                                <a onClick={() => setIsMobileMenuOpen(false)} href="#achievements" className="text-textMuted hover:text-white py-1">Achievements</a>
+                                <a onClick={() => setIsMobileMenuOpen(false)} href="#skills" className="text-textMuted hover:text-white py-1">Skills</a>
+                                <a onClick={() => setIsMobileMenuOpen(false)} href="#projects" className="text-textMuted hover:text-white py-1">Projects</a>
+                                <a onClick={() => setIsMobileMenuOpen(false)} href="#certificates" className="text-textMuted hover:text-white py-1">Certificates</a>
+                                <a onClick={() => setIsMobileMenuOpen(false)} href="#education" className="text-textMuted hover:text-white py-1">Education</a>
+                                <a onClick={() => setIsMobileMenuOpen(false)} href="#contact" className="text-textMuted hover:text-white py-1">Contact</a>
+                                <div className="pt-2">
+                                    <a 
+                                        href={portfolioData.cvDownloadLink} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="w-full py-3 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-500 text-black font-semibold text-center block text-sm shadow-md"
+                                    >
+                                        <i className="fa-solid fa-file-arrow-down mr-2"></i> Download CV
+                                    </a>
+                                </div>
+                            </div>
+                        )}
+                    </nav>
+
+                    {/* Main Content Container */}
+                    <main className="relative z-10 max-w-6xl mx-auto px-6 pt-32 md:pt-40 pb-24">
+                        
+                        {/* HERO & PROFILE SECTION */}
+                        <section id="about" className="mb-28 animate-fade-in-up">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                                
+                                {/* Left Content */}
+                                <div className="lg:col-span-7 space-y-6">
+                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-mono text-accent border border-accent/25 bg-accent/10 rounded-full shadow-inner">
+                                        <span className="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+                                        Available for Software & AI Roles
+                                    </div>
+                                    
+                                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-heading font-extrabold tracking-tight leading-[1.1] gradient-text">
+                                        Hi, I'm <br />
+                                        <span className="accent-gradient-text">{portfolioData.name}</span>
+                                    </h1>
+                                    
+                                    <h2 className="text-xl sm:text-2xl font-heading font-medium text-gray-300 flex items-center gap-2">
+                                        <span>{portfolioData.tagline}</span>
+                                    </h2>
+                                    
+                                    <p className="text-base sm:text-lg text-textMuted leading-relaxed max-w-2xl font-normal">
+                                        {portfolioData.bio}
+                                    </p>
+
+                                    {/* Action Buttons & Socials */}
+                                    <div className="pt-2 flex flex-wrap items-center gap-4">
+                                        <a 
+                                            href={portfolioData.cvDownloadLink} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="px-6 py-3.5 bg-white text-black font-heading font-semibold rounded-2xl hover:bg-gray-200 transition-all duration-300 flex items-center gap-2.5 shadow-lg shadow-white/10 hover:scale-[1.02]"
+                                        >
+                                            <i className="fa-solid fa-file-pdf text-red-500 text-lg"></i>
+                                            <span>Download CV</span>
+                                            <i className="fa-solid fa-arrow-up-right-from-square text-xs ml-0.5 opacity-70"></i>
+                                        </a>
+
+                                        <a 
+                                            href="#contact" 
+                                            className="px-6 py-3.5 glass-card text-white font-heading font-medium rounded-2xl hover:border-accent/40 transition-all flex items-center gap-2"
+                                        >
+                                            <i className="fa-solid fa-paper-plane text-accent text-sm"></i>
+                                            <span>Get in Touch</span>
+                                        </a>
+
+                                        <div className="flex items-center gap-2 pl-2">
+                                            <SocialIcon href={portfolioData.contact.github} icon="fa-brands fa-github" title="GitHub Profile" />
+                                            <SocialIcon href={portfolioData.contact.linkedin} icon="fa-brands fa-linkedin-in" title="LinkedIn Profile" />
+                                            <SocialIcon href={portfolioData.contact.x} icon="fa-brands fa-x-twitter" title="X (Twitter)" />
+                                            <SocialIcon href={portfolioData.contact.insta} icon="fa-brands fa-instagram" title="Instagram" />
+                                        </div>
+                                    </div>
+
+                                    {/* Direct Contact Snippets */}
+                                    <div className="pt-4 flex flex-wrap gap-4 text-xs font-mono text-textMuted">
+                                        <div 
+                                            onClick={() => copyToClipboard(portfolioData.contact.email, 'email')}
+                                            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface border border-surfaceBorder hover:border-accent/40 cursor-pointer transition-colors"
+                                            title="Click to copy Email"
+                                        >
+                                            <i className="fa-regular fa-envelope text-accent"></i>
+                                            <span>{portfolioData.contact.email}</span>
+                                            <i className={`fa-solid ${copiedItem === 'email' ? 'fa-check text-emerald-400' : 'fa-copy opacity-50'} text-xs ml-1`}></i>
+                                        </div>
+                                        <div 
+                                            onClick={() => copyToClipboard(portfolioData.contact.phone, 'phone')}
+                                            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface border border-surfaceBorder hover:border-accent/40 cursor-pointer transition-colors"
+                                            title="Click to copy Phone"
+                                        >
+                                            <i className="fa-solid fa-phone text-emerald-400"></i>
+                                            <span>{portfolioData.contact.phone}</span>
+                                            <i className={`fa-solid ${copiedItem === 'phone' ? 'fa-check text-emerald-400' : 'fa-copy opacity-50'} text-xs ml-1`}></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right Profile Card */}
+                                <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                                    <div className="relative group">
+                                        {/* Outer Glow Ring */}
+                                        <div className="absolute -inset-2 bg-gradient-to-r from-sky-500/30 via-indigo-500/30 to-purple-500/30 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                        
+                                        <div className="relative glass-card p-4 rounded-3xl border border-white/10 overflow-hidden max-w-sm">
+                                            <div className="relative aspect-square rounded-2xl overflow-hidden bg-surface mb-5 shadow-2xl">
+                                                <img 
+                                                    src={portfolioData.profilePic} 
+                                                    alt="Pranav Gandha" 
+                                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                                    onError={(e) => {
+                                                        // Fallback to local image if raw.githubusercontent is offline
+                                                        e.target.onerror = null;
+                                                        e.target.src = '1764480530308.jpg';
+                                                    }}
+                                                />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+                                                
+                                                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                                                    <span className="px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] font-mono text-white/90 border border-white/10">
+                                                        <i className="fa-solid fa-location-dot text-red-400 mr-1"></i> {portfolioData.location}
+                                                    </span>
+                                                    <span className="px-2.5 py-1 rounded-lg bg-sky-500/20 backdrop-blur-md text-[11px] font-mono text-sky-300 border border-sky-400/30">
+                                                        B.Tech CSE
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <h4 className="text-2xl font-bold text-white">{project.title}</h4>
+
+                                            <div className="space-y-2 px-2 pb-1">
+                                                <div className="flex justify-between items-center">
+                                                    <span className="text-sm font-semibold text-white">Pranav Gandha</span>
+                                                    <span className="text-xs font-mono text-accent">LPU '25-29</span>
+                                                </div>
+                                                <p className="text-xs text-textMuted leading-relaxed">
+                                                    Full-Stack & AI Engineer specializing in Python, JavaScript, PyTorch & scalable web platforms.
+                                                </p>
+                                                <div className="pt-2 flex gap-2">
+                                                    <a 
+                                                        href={portfolioData.cvDownloadLink}
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        className="w-full py-2 bg-accent/10 hover:bg-accent/20 text-accent text-xs font-medium text-center rounded-xl border border-accent/25 transition-colors flex items-center justify-center gap-1.5"
+                                                    >
+                                                        <i className="fa-solid fa-file-arrow-down"></i> View Full Resume
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <p className="text-textMuted mb-8 flex-grow leading-relaxed">
-                                            {project.description}
-                                        </p>
-                                        <div className="flex flex-wrap gap-2 mb-8">
-                                            {project.tech.map((t, i) => (
-                                                <span key={i} className="text-xs font-mono px-2 py-1 bg-surface border border-border rounded text-textMuted">
-                                                    {t}
-                                                </span>
-                                            ))}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        {/* BENTO GRID: KEY HIGHLIGHTS & ACHIEVEMENTS */}
+                        <section id="achievements" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.15s'}}>
+                            <div className="flex items-center justify-between mb-8">
+                                <div>
+                                    <span className="text-xs font-mono text-accent uppercase tracking-wider">Milestones & Highlights</span>
+                                    <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
+                                        <i className="fa-solid fa-trophy text-amber-400 text-xl"></i> Key Achievements
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                                {portfolioData.highlights.map((item, idx) => (
+                                    <div 
+                                        key={idx} 
+                                        className="glass-card p-6 rounded-3xl relative overflow-hidden group flex flex-col justify-between"
+                                    >
+                                        <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.color} blur-2xl rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-500`}></div>
+                                        
+                                        <div className="flex justify-between items-start mb-6 relative z-10">
+                                            <div className="w-12 h-12 rounded-2xl bg-surface border border-surfaceBorder flex items-center justify-center group-hover:border-accent/40 transition-colors">
+                                                <i className={`${item.icon} text-xl ${item.accentColor}`}></i>
+                                            </div>
+                                            <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-surface border border-surfaceBorder text-textMuted">
+                                                {item.label}
+                                            </span>
                                         </div>
-                                        <div className="flex gap-4 mt-auto">
-                                            <a href={project.demo} target="_blank" rel="noopener noreferrer" 
-                                               className="flex-1 text-center py-3 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition-colors">
-                                                Live Demo <i className="fa-solid fa-arrow-up-right-from-square ml-1 text-sm"></i>
-                                            </a>
-                                            <a href={project.github} target="_blank" rel="noopener noreferrer"
-                                               className="px-6 py-3 bg-surface border border-border text-white rounded-xl hover:bg-surfaceHover transition-colors flex items-center justify-center">
-                                                <i className="fa-brands fa-github text-lg"></i>
-                                            </a>
+
+                                        <div className="relative z-10">
+                                            <div className="text-3xl sm:text-4xl font-heading font-extrabold text-white mb-1 tracking-tight">
+                                                {item.number}
+                                            </div>
+                                            <div className="font-medium text-sm text-gray-200 mb-1">{item.title}</div>
+                                            <div className="text-xs text-textMuted leading-relaxed">{item.desc}</div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </section>
 
-                        {/* Footer / Socials */}
-                        <footer className="pt-12 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-6 opacity-0 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-                            <div className="text-textMuted text-sm">
-                                © {new Date().getFullYear()} Pranav Gandha. Building the future.
+                        {/* TECHNICAL ARSENAL / SKILLS SECTION */}
+                        <section id="skills" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
+                            <div className="mb-8">
+                                <span className="text-xs font-mono text-accent uppercase tracking-wider">Expertise & Tools</span>
+                                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
+                                    <i className="fa-solid fa-layer-group text-accent text-xl"></i> Technical Arsenal
+                                </h3>
                             </div>
-                            <div className="flex gap-4">
-                                <SocialLink href={portfolioData.social.x} icon="fa-brands fa-x-twitter" />
-                                <SocialLink href={portfolioData.social.github} icon="fa-brands fa-github" />
-                                <SocialLink href={portfolioData.social.linkedin} icon="fa-brands fa-linkedin-in" />
-                                <SocialLink href={portfolioData.social.insta} icon="fa-brands fa-instagram" />
-                                <SocialLink href={portfolioData.social.email} icon="fa-regular fa-envelope" />
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {portfolioData.skillCategories.map((cat, idx) => (
+                                    <div key={idx} className="glass-card p-6 rounded-3xl flex flex-col justify-between">
+                                        <div>
+                                            <div className="flex items-center gap-3 mb-5">
+                                                <div className="w-10 h-10 rounded-xl bg-surface border border-surfaceBorder flex items-center justify-center text-accent text-lg">
+                                                    <i className={cat.icon}></i>
+                                                </div>
+                                                <h4 className="font-heading font-bold text-white text-base">{cat.category}</h4>
+                                            </div>
+
+                                            <div className="flex flex-wrap gap-2">
+                                                {cat.items.map((skill, sIdx) => (
+                                                    <span 
+                                                        key={sIdx} 
+                                                        className="px-3 py-1.5 text-xs font-medium text-gray-200 bg-surface/90 border border-surfaceBorder rounded-xl hover:border-accent/40 hover:text-white hover:-translate-y-0.5 transition-all cursor-default"
+                                                    >
+                                                        {skill}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* FEATURED PROJECTS SECTION */}
+                        <section id="projects" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.35s'}}>
+                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+                                <div>
+                                    <span className="text-xs font-mono text-accent uppercase tracking-wider">Showcase</span>
+                                    <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
+                                        <i className="fa-solid fa-code-branch text-accent text-xl"></i> Featured Projects
+                                    </h3>
+                                </div>
+                                <div className="text-xs font-mono text-textMuted">
+                                    Engineering robust solutions with AI & Modern Web Stacks
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                                {portfolioData.projects.map((project) => (
+                                    <div 
+                                        key={project.id} 
+                                        className="glass-card p-7 rounded-3xl flex flex-col justify-between group h-full relative"
+                                    >
+                                        <div>
+                                            {/* Header */}
+                                            <div className="flex items-start justify-between gap-3 mb-5">
+                                                <div className="w-12 h-12 rounded-2xl bg-surface border border-surfaceBorder flex items-center justify-center group-hover:border-accent/40 group-hover:bg-accent/10 transition-colors">
+                                                    <i className={`${project.icon} text-accent text-xl`}></i>
+                                                </div>
+                                                <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-medium">
+                                                    {project.badge}
+                                                </span>
+                                            </div>
+
+                                            <div className="text-xs font-mono text-textMuted mb-1">{project.date}</div>
+                                            <h4 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-accent transition-colors">
+                                                {project.title}
+                                            </h4>
+                                            <p className="text-xs font-medium text-sky-400/90 mb-4">{project.tagline}</p>
+
+                                            <p className="text-sm text-textMuted leading-relaxed mb-6">
+                                                {project.description}
+                                            </p>
+
+                                            {/* Key Bullet Highlights */}
+                                            <div className="space-y-2.5 mb-6 text-xs text-gray-300">
+                                                {project.highlights.map((point, pIdx) => (
+                                                    <div key={pIdx} className="flex items-start gap-2">
+                                                        <i className="fa-solid fa-check text-accent text-[11px] mt-0.5 shrink-0"></i>
+                                                        <span className="leading-relaxed">{point}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            {/* Tech Stack Pills */}
+                                            <div className="flex flex-wrap gap-1.5 mb-6 pt-4 border-t border-surfaceBorder">
+                                                {project.tech.map((t, tIdx) => (
+                                                    <span key={tIdx} className="text-[11px] font-mono px-2.5 py-1 bg-surface border border-surfaceBorder rounded-lg text-textMuted">
+                                                        {t}
+                                                    </span>
+                                                ))}
+                                            </div>
+
+                                            {/* Action Links */}
+                                            <div className="flex gap-3 pt-2">
+                                                {project.demo && (
+                                                    <a 
+                                                        href={project.demo} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer" 
+                                                        className="flex-1 py-2.5 px-4 bg-white text-black font-heading font-semibold text-xs rounded-xl hover:bg-gray-200 transition-all flex items-center justify-center gap-1.5 shadow-md shadow-white/5"
+                                                    >
+                                                        <span>Live Demo</span>
+                                                        <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                                    </a>
+                                                )}
+                                                {project.github && (
+                                                    <a 
+                                                        href={project.github} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer" 
+                                                        className={`${project.demo ? 'px-4' : 'flex-1'} py-2.5 bg-surface border border-surfaceBorder hover:border-accent/40 text-white font-heading font-medium text-xs rounded-xl hover:bg-surfaceHover transition-all flex items-center justify-center gap-2`}
+                                                    >
+                                                        <i className="fa-brands fa-github text-sm"></i>
+                                                        <span>{project.demo ? 'Repo' : 'View on GitHub'}</span>
+                                                        <i className="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+                                                    </a>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* CERTIFICATIONS & CREDENTIALS SECTION */}
+                        <section id="certificates" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.45s'}}>
+                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-2">
+                                <div>
+                                    <span className="text-xs font-mono text-accent uppercase tracking-wider">Verified Qualifications</span>
+                                    <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
+                                        <i className="fa-solid fa-certificate text-purple-400 text-xl"></i> Certifications & Honors
+                                    </h3>
+                                </div>
+                                <span className="text-xs font-mono text-textMuted">Click credentials to verify online</span>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                                {portfolioData.certificates.map((cert, cIdx) => (
+                                    <a 
+                                        key={cIdx} 
+                                        href={cert.link} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="glass-card p-6 rounded-3xl flex flex-col justify-between group hover:scale-[1.02] transition-all duration-300 block"
+                                    >
+                                        <div>
+                                            <div className="flex items-start justify-between gap-3 mb-4">
+                                                <div className="w-10 h-10 rounded-xl bg-surface border border-surfaceBorder flex items-center justify-center group-hover:border-purple-400/40 text-purple-400 transition-colors">
+                                                    <i className={cert.icon}></i>
+                                                </div>
+                                                <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300">
+                                                    {cert.badge}
+                                                </span>
+                                            </div>
+
+                                            <h4 className="font-heading font-bold text-white text-base mb-1 group-hover:text-purple-300 transition-colors">
+                                                {cert.title}
+                                            </h4>
+                                            
+                                            <div className="text-xs font-medium text-textMuted mb-3 flex items-center gap-2">
+                                                <span>{cert.issuer}</span>
+                                                <span>•</span>
+                                                <span className="text-accent">{cert.date}</span>
+                                            </div>
+
+                                            <p className="text-xs text-textMuted leading-relaxed mb-4">
+                                                {cert.desc}
+                                            </p>
+                                        </div>
+
+                                        <div className="pt-3 border-t border-surfaceBorder flex items-center justify-between text-xs font-mono text-purple-300 group-hover:text-white transition-colors">
+                                            <span>Verify Credential</span>
+                                            <i className="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* EDUCATION TIMELINE */}
+                        <section id="education" className="mb-28 opacity-0 animate-fade-in-up" style={{animationDelay: '0.55s'}}>
+                            <div className="mb-8">
+                                <span className="text-xs font-mono text-accent uppercase tracking-wider">Academic Background</span>
+                                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white flex items-center gap-2 mt-1">
+                                    <i className="fa-solid fa-graduation-cap text-sky-400 text-xl"></i> Education Journey
+                                </h3>
+                            </div>
+
+                            <div className="space-y-5">
+                                {portfolioData.education.map((edu, eIdx) => (
+                                    <div key={eIdx} className="glass-card p-6 sm:p-7 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-12 h-12 rounded-2xl bg-surface border border-surfaceBorder flex items-center justify-center text-sky-400 text-xl shrink-0 mt-1">
+                                                <i className={edu.icon}></i>
+                                            </div>
+                                            <div>
+                                                <div className="flex flex-wrap items-center gap-2 mb-1">
+                                                    <h4 className="font-heading font-bold text-white text-lg">{edu.institution}</h4>
+                                                    <span className="text-xs font-mono text-textMuted">• {edu.location}</span>
+                                                </div>
+                                                <p className="text-sm font-medium text-gray-300 mb-2">{edu.degree}</p>
+                                                <p className="text-xs text-textMuted leading-relaxed max-w-2xl">{edu.details}</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex md:flex-col md:items-end justify-between items-center gap-2 shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-surfaceBorder">
+                                            <span className="px-3.5 py-1.5 rounded-xl bg-accent/10 border border-accent/25 text-accent font-heading font-bold text-sm">
+                                                {edu.score}
+                                            </span>
+                                            <span className="text-xs font-mono text-textMuted">
+                                                {edu.duration}
+                                            </span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* CONTACT & CONNECT SECTION */}
+                        <section id="contact" className="mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '0.65s'}}>
+                            <div className="glass-card p-8 sm:p-12 rounded-3xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-80 h-80 bg-accent/10 blur-3xl rounded-full pointer-events-none"></div>
+
+                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                                    <div className="lg:col-span-7 space-y-4">
+                                        <span className="text-xs font-mono text-accent uppercase tracking-wider">Let's Connect</span>
+                                        <h3 className="text-3xl sm:text-4xl font-heading font-extrabold text-white tracking-tight">
+                                            Let's build something exceptional together.
+                                        </h3>
+                                        <p className="text-sm sm:text-base text-textMuted leading-relaxed max-w-xl">
+                                            Whether you're looking for an ambitious developer for an innovative AI role, full-stack development, or open-source collaboration, my inbox is always open.
+                                        </p>
+
+                                        <div className="pt-2 flex flex-wrap gap-3">
+                                            <a 
+                                                href={`mailto:${portfolioData.contact.email}`} 
+                                                className="px-6 py-3 bg-white text-black font-heading font-semibold text-sm rounded-xl hover:bg-gray-200 transition-all flex items-center gap-2 shadow-lg"
+                                            >
+                                                <i className="fa-regular fa-envelope text-base"></i>
+                                                <span>Send Email</span>
+                                            </a>
+                                            <a 
+                                                href={portfolioData.cvDownloadLink}
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="px-6 py-3 glass-card text-white font-heading font-medium text-sm rounded-xl hover:border-accent/40 transition-all flex items-center gap-2"
+                                            >
+                                                <i className="fa-solid fa-file-arrow-down text-accent"></i>
+                                                <span>Download CV</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div className="lg:col-span-5 space-y-3">
+                                        <div 
+                                            onClick={() => copyToClipboard(portfolioData.contact.email, 'email_box')}
+                                            className="p-4 rounded-2xl bg-surface border border-surfaceBorder hover:border-accent/40 cursor-pointer transition-all flex items-center justify-between"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
+                                                    <i className="fa-regular fa-envelope"></i>
+                                                </div>
+                                                <div>
+                                                    <div className="text-[11px] font-mono text-textMuted">Email Address</div>
+                                                    <div className="text-sm font-medium text-white">{portfolioData.contact.email}</div>
+                                                </div>
+                                            </div>
+                                            <i className={`fa-solid ${copiedItem === 'email_box' ? 'fa-check text-emerald-400' : 'fa-copy text-textMuted'} text-sm`}></i>
+                                        </div>
+
+                                        <div 
+                                            onClick={() => copyToClipboard(portfolioData.contact.phone, 'phone_box')}
+                                            className="p-4 rounded-2xl bg-surface border border-surfaceBorder hover:border-accent/40 cursor-pointer transition-all flex items-center justify-between"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                                                    <i className="fa-solid fa-phone"></i>
+                                                </div>
+                                                <div>
+                                                    <div className="text-[11px] font-mono text-textMuted">Phone / WhatsApp</div>
+                                                    <div className="text-sm font-medium text-white">{portfolioData.contact.phone}</div>
+                                                </div>
+                                            </div>
+                                            <i className={`fa-solid ${copiedItem === 'phone_box' ? 'fa-check text-emerald-400' : 'fa-copy text-textMuted'} text-sm`}></i>
+                                        </div>
+
+                                        <a 
+                                            href={portfolioData.contact.linkedin}
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="p-4 rounded-2xl bg-surface border border-surfaceBorder hover:border-accent/40 transition-all flex items-center justify-between group"
+                                        >
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-sky-400">
+                                                    <i className="fa-brands fa-linkedin-in"></i>
+                                                </div>
+                                                <div>
+                                                    <div className="text-[11px] font-mono text-textMuted">LinkedIn Connection</div>
+                                                    <div className="text-sm font-medium text-white">in/pranavgandha</div>
+                                                </div>
+                                            </div>
+                                            <i className="fa-solid fa-arrow-up-right-from-square text-xs text-textMuted group-hover:text-accent group-hover:translate-x-0.5 transition-all"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* FOOTER */}
+                        <footer className="pt-10 border-t border-surfaceBorder flex flex-col sm:flex-row justify-between items-center gap-6 text-sm text-textMuted">
+                            <div className="flex items-center gap-2">
+                                <span>© {new Date().getFullYear()} Pranav Gandha. Designed & Built with passion.</span>
+                            </div>
+
+                            <div className="flex items-center gap-3">
+                                <SocialIcon href={portfolioData.contact.github} icon="fa-brands fa-github" title="GitHub" />
+                                <SocialIcon href={portfolioData.contact.linkedin} icon="fa-brands fa-linkedin-in" title="LinkedIn" />
+                                <SocialIcon href={portfolioData.contact.x} icon="fa-brands fa-x-twitter" title="X (Twitter)" />
+                                <SocialIcon href={portfolioData.contact.insta} icon="fa-brands fa-instagram" title="Instagram" />
+                                <SocialIcon href={`mailto:${portfolioData.contact.email}`} icon="fa-regular fa-envelope" title="Email" />
                             </div>
                         </footer>
-                    </div>
+
+                    </main>
                 </div>
             );
         };
 
-        const SocialLink = ({ href, icon }) => (
-            <a href={href} target="_blank" rel="noopener noreferrer" 
-               className="w-10 h-10 flex items-center justify-center rounded-full glass-card text-textMuted hover:text-white hover:scale-110 transition-all duration-300">
+        const SocialIcon = ({ href, icon, title }) => (
+            <a 
+                href={href} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                title={title}
+                className="w-10 h-10 flex items-center justify-center rounded-xl glass-card text-textMuted hover:text-white hover:border-accent/40 hover:scale-110 transition-all duration-300"
+            >
                 <i className={icon}></i>
             </a>
         );

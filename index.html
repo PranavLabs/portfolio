@@ -12,7 +12,7 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/PranavLabs/portfolio/refs/heads/main/1764480530308.jpg">
     <meta property="og:type" content="website">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,11 +26,8 @@
                     colors: {
                         baseBg: '#030508',
                         panelBg: 'rgba(9, 13, 20, 0.72)',
-                        panelHover: 'rgba(15, 23, 36, 0.88)',
                         cyanNeon: '#00F2FE',
-                        cyanGlow: 'rgba(0, 242, 254, 0.35)',
                         mintNeon: '#00FFA3',
-                        mintGlow: 'rgba(0, 255, 163, 0.3)',
                         slateMuted: '#94A3B8',
                         slateLight: '#E2E8F0',
                     },
@@ -71,11 +68,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        :root {
-            --cyan-glow: #00F2FE;
-            --mint-glow: #00FFA3;
-        }
-
         body { 
             background-color: #030508; 
             color: #F8FAFC; 
@@ -85,60 +77,47 @@
 
         /* Liquid Glass Card Core */
         .liquid-glass {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%), rgba(7, 11, 18, 0.65);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%), rgba(7, 11, 18, 0.72);
             backdrop-filter: blur(24px) saturate(200%);
             -webkit-backdrop-filter: blur(24px) saturate(200%);
-            border: 1px solid rgba(255, 255, 255, 0.09);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 
-                inset 0 1px 0 0 rgba(255, 255, 255, 0.16),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.18),
                 inset 0 0 20px 0 rgba(0, 242, 254, 0.02),
-                0 20px 40px -15px rgba(0, 0, 0, 0.8);
+                0 20px 40px -15px rgba(0, 0, 0, 0.85);
             transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
         }
 
-        .liquid-glass::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            padding: 1px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(0, 242, 254, 0.1), transparent 60%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-        }
-
         .liquid-glass:hover {
-            border-color: rgba(0, 242, 254, 0.35);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%), rgba(11, 17, 28, 0.85);
+            border-color: rgba(0, 242, 254, 0.4);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%), rgba(11, 17, 28, 0.9);
             box-shadow: 
-                inset 0 1px 0 0 rgba(255, 255, 255, 0.28),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
                 inset 0 0 30px 0 rgba(0, 242, 254, 0.08),
-                0 25px 50px -12px rgba(0, 0, 0, 0.85),
-                0 0 30px -5px rgba(0, 242, 254, 0.2);
+                0 25px 50px -12px rgba(0, 0, 0, 0.9),
+                0 0 25px -5px rgba(0, 242, 254, 0.25);
             transform: translateY(-2px);
         }
 
         /* Liquid Dock Floating Navigation */
         .liquid-dock {
-            background: rgba(6, 10, 16, 0.7);
+            background: rgba(6, 10, 16, 0.78);
             backdrop-filter: blur(28px) saturate(210%);
             -webkit-backdrop-filter: blur(28px) saturate(210%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             box-shadow: 
                 inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
-                0 20px 40px -10px rgba(0, 0, 0, 0.7);
+                0 20px 40px -10px rgba(0, 0, 0, 0.8);
         }
 
-        /* High-End Fluid Mesh Glows (No Generic Purple) */
+        /* High-End Fluid Mesh Glows */
         .liquid-mesh-cyan {
-            background: radial-gradient(circle, rgba(0, 242, 254, 0.16) 0%, rgba(0, 180, 216, 0.05) 50%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.18) 0%, rgba(0, 180, 216, 0.06) 50%, transparent 70%);
         }
 
         .liquid-mesh-mint {
-            background: radial-gradient(circle, rgba(0, 255, 163, 0.13) 0%, rgba(16, 185, 129, 0.04) 50%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 255, 163, 0.14) 0%, rgba(16, 185, 129, 0.04) 50%, transparent 70%);
         }
 
         .liquid-mesh-carbon {
@@ -162,12 +141,6 @@
 
         .accent-liquid-gradient {
             background: linear-gradient(120deg, #00F2FE 0%, #00FFA3 60%, #38BDF8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .titanium-gradient {
-            background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -201,958 +174,1173 @@
             transform: translateY(-2px);
         }
 
-        /* Subtle Sleek Scrollbar */
+        /* Sleek Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #030508; }
         ::-webkit-scrollbar-thumb { background: #16202e; border-radius: 9999px; }
         ::-webkit-scrollbar-thumb:hover { background: #00F2FE; }
     </style>
 </head>
-<body class="font-sans antialiased selection:bg-cyanNeon selection:text-black grid-matrix">
-    <div id="root"></div>
+<body class="font-sans antialiased selection:bg-cyanNeon selection:text-black grid-matrix relative min-h-screen">
 
-    <!-- React 18 & Babel CDN -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Ambient Dynamic Liquid Lights -->
+    <div class="fixed top-[-140px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] liquid-mesh-cyan blur-[150px] rounded-full pointer-events-none animate-liquid-drift z-0"></div>
+    <div class="fixed top-[40%] right-[-100px] w-[700px] h-[600px] liquid-mesh-mint blur-[160px] rounded-full pointer-events-none animate-liquid-drift-slow z-0"></div>
+    <div class="fixed bottom-[-100px] left-[-100px] w-[600px] h-[500px] liquid-mesh-carbon blur-[140px] rounded-full pointer-events-none z-0"></div>
 
-    <script type="text/babel">
-        const { useState, useEffect, useRef } = React;
+    <!-- Floating Liquid Glass Dock Navigation -->
+    <header class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+        <nav id="navbar" class="liquid-dock rounded-full px-5 py-3 flex items-center justify-between gap-6 transition-all duration-300">
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyanNeon to-mintNeon p-[1.5px] group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-baseBg rounded-full flex items-center justify-center font-display font-bold text-xs text-white">
+                        PG
+                    </div>
+                </div>
+                <span class="font-display font-bold text-sm tracking-tight text-white hidden sm:inline-block group-hover:text-cyanNeon transition-colors">
+                    Pranav Gandha
+                </span>
+            </a>
 
-        // Custom Mouse Spotlight Hook for Liquid Glass Glow
-        const useCardSpotlight = () => {
-            const handleMouseMove = (e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
-                e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
-            };
-            return { onMouseMove: handleMouseMove };
-        };
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-6 text-xs font-medium text-slateMuted">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#highlights" class="hover:text-white transition-colors">Highlights</a>
+                <a href="#skills" class="hover:text-white transition-colors">Arsenal</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#certifications" class="hover:text-white transition-colors">Credentials</a>
+                <a href="#education" class="hover:text-white transition-colors">Education</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
 
-        const App = () => {
-            const [copiedKey, setCopiedKey] = useState(null);
-            const [activeTab, setActiveTab] = useState('all');
-            const [isNavScrolled, setIsNavScrolled] = useState(false);
-            const [terminalPrompt, setTerminalPrompt] = useState('');
-            const [terminalLogs, setTerminalLogs] = useState([
-                { user: false, text: 'System initialized. Pranav Gandha profile loaded.' },
-                { user: false, text: 'Type "skills", "projects", "status", or "contact" for quick telemetry.' }
-            ]);
+            <!-- Resume Action -->
+            <a 
+                href="https://drive.google.com/file/d/1YA_xPwQs9Iu1ZfzjHNWtJxDz1XjTIRpn/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-liquid-primary px-4 py-1.5 rounded-full text-xs font-display flex items-center gap-2"
+            >
+                <i class="fa-solid fa-file-arrow-down text-[11px]"></i>
+                <span>Download CV</span>
+            </a>
+        </nav>
+    </header>
 
-            useEffect(() => {
-                const handleScroll = () => {
-                    setIsNavScrolled(window.scrollY > 40);
-                };
-                window.addEventListener('scroll', handleScroll);
-                return () => window.removeEventListener('scroll', handleScroll);
-            }, []);
+    <!-- Main Content Area -->
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pt-36 md:pt-44 pb-24">
+        
+        <!-- HERO SECTION -->
+        <section id="about" class="mb-32">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Copy -->
+                <div class="lg:col-span-7 space-y-7">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full liquid-glass border-cyanNeon/30 text-xs font-mono text-cyanNeon">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-badge-ping absolute inline-flex h-full w-full rounded-full bg-mintNeon opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-mintNeon"></span>
+                        </span>
+                        <span>Open for AI, Full-Stack & Engineering Roles</span>
+                    </div>
 
-            const portfolioData = {
-                name: 'Pranav Gandha',
-                tagline: 'Full-Stack Developer & AI Innovator',
-                location: 'Phagwara / Jalandhar, Punjab',
-                status: 'Open for AI, Full-Stack & Engineering Roles',
-                profilePic: 'https://raw.githubusercontent.com/PranavLabs/portfolio/refs/heads/main/1764480530308.jpg',
-                cvDownloadLink: 'https://drive.google.com/file/d/1YA_xPwQs9Iu1ZfzjHNWtJxDz1XjTIRpn/view?usp=sharing',
-                bio: 'B.Tech Computer Science student at Lovely Professional University and freelance AI Generalist. Passionate about engineering high-precision AI/ML workflows, scalable full-stack web applications, and low-latency systems that solve real-world problems with maximum computational efficiency.',
-                contact: {
-                    email: 'pranavgandha@outlook.com',
-                    emailSecondary: 'pranavgandha@hotmail.com',
-                    phone: '+91-6280326280',
-                    phoneHref: 'tel:+916280326280',
-                    linkedin: 'https://www.linkedin.com/in/pranavgandha/',
-                    github: 'https://github.com/PranavLabs',
-                    x: 'https://x.com/pranavbyte',
-                    insta: 'https://instagram.com/pranav.x.d',
-                },
-                highlights: [
-                    {
-                        number: '8.51',
-                        label: 'CGPA',
-                        title: 'Academic Record',
-                        desc: 'B.Tech CSE at Lovely Professional University',
-                        icon: 'fa-solid fa-graduation-cap',
-                        color: 'text-cyanNeon',
-                        tag: 'LPU Honors'
-                    },
-                    {
-                        number: '300+',
-                        label: 'Problems',
-                        title: 'Algorithm Rigor',
-                        desc: 'Solved across competitive programming platforms',
-                        icon: 'fa-solid fa-code',
-                        color: 'text-mintNeon',
-                        tag: 'DSA & Code'
-                    },
-                    {
-                        number: 'Gold',
-                        label: 'Consultant',
-                        title: 'WorldQuant BRAIN',
-                        desc: 'Quantitative alpha formulation & data signaling',
-                        icon: 'fa-solid fa-brain',
-                        color: 'text-amber-400',
-                        tag: 'Quant Alpha'
-                    },
-                    {
-                        number: 'Rank #2',
-                        label: 'Winner',
-                        title: 'RCS CTF Hackathon',
-                        desc: 'National-level cybersecurity & hackathon challenge',
-                        icon: 'fa-solid fa-shield-halved',
-                        color: 'text-cyanNeon',
-                        tag: 'Cybersec'
-                    }
-                ],
-                skillCategories: [
-                    {
-                        category: 'Core Languages',
-                        icon: 'fa-solid fa-terminal',
-                        gradient: 'from-cyanNeon to-blue-400',
-                        items: ['Python', 'JavaScript', 'C', 'C++', 'SQL', 'HTML5', 'CSS3']
-                    },
-                    {
-                        category: 'AI / Machine Learning & CV',
-                        icon: 'fa-solid fa-brain',
-                        gradient: 'from-mintNeon to-emerald-400',
-                        items: ['Machine Learning', 'Artificial Intelligence', 'PyTorch', 'Computer Vision', 'Conversational AI / NLP', 'Model Optimization', 'Streamlit']
-                    },
-                    {
-                        category: 'Full-Stack & Web Engineering',
-                        icon: 'fa-solid fa-layer-group',
-                        gradient: 'from-sky-400 to-indigo-400',
-                        items: ['React.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'REST APIs', 'Babel / Modern Tooling', 'State Architecture']
-                    },
-                    {
-                        category: 'Databases, Cloud & DevOps',
-                        icon: 'fa-solid fa-database',
-                        gradient: 'from-teal-400 to-cyanNeon',
-                        items: ['MySQL', 'MongoDB', 'PostgreSQL', 'Git', 'GitHub', 'Figma', 'AWS', 'Linux']
-                    },
-                    {
-                        category: 'Strategic Soft Skills',
-                        icon: 'fa-solid fa-bolt',
-                        gradient: 'from-amber-400 to-yellow-300',
-                        items: ['Problem Solving', 'Technical Leadership', 'Team Collaboration', 'Time Management', 'Adaptability', 'Communication (IELTS 7.5)']
-                    }
-                ],
-                projects: [
-                    {
-                        id: 'ecocheck',
-                        title: 'Ecocheck (Eco-Gram)',
-                        category: 'ai',
-                        date: 'Dec 2025 - Jan 2026',
-                        tagline: 'Automated Green Computing & Eco-Efficiency Code Analysis',
-                        description: 'Engineered an automated eco-efficiency and code quality analysis tool designed to identify performance bottlenecks, reduce computational resource consumption, and enforce green software engineering practices.',
-                        highlights: [
-                            'Implemented static code parsing routines and automated metric checks across client-server workflows to analyze runtime overhead, memory utilization, and redundant asset loading.',
-                            'Accelerated execution efficiency by optimizing resource-heavy operations to lower carbon footprint across target web applications.',
-                            'Equipped with computer vision modules to quantify biodiversity, transport modes, and e-waste for an urban sustainability score.'
-                        ],
-                        tech: ['Node.js', 'Express.js', 'JavaScript', 'React.js', 'Tailwind CSS', 'REST APIs', 'Computer Vision', 'Streamlit', 'Python', 'Git'],
-                        github: 'https://github.com/manudeep07/Collaborative-online-notepad',
-                        demo: 'https://ecocheck.streamlit.app',
-                        icon: 'fa-solid fa-leaf',
-                        badge: 'Featured Green AI',
-                        status: 'Live & Operational'
-                    },
-                    {
-                        id: 'natya-ai',
-                        title: 'Natya-AI',
-                        category: 'ai',
-                        date: '2025',
-                        tagline: 'Conversational AI Recommendation & Media Discovery Engine',
-                        description: 'Designed and developed Natya-AI, a chat-first movie and TV recommendation application leveraging conversational AI to deliver hyper-personalized entertainment suggestions.',
-                        highlights: [
-                            'Enabled interactive user flows where individuals query based on mood, genre, actors, runtime, and language to receive tailored recommendations with clear rationale.',
-                            'Engineered the backend using Python for recommendation logic and API services, while crafting an intuitive, responsive chat interface with JavaScript.',
-                            'Focused on rapid prototyping and experimentation to deliver seamless conversational experiences for dynamic media discovery.'
-                        ],
-                        tech: ['Python', 'JavaScript', 'AI / NLP', 'CSS3', 'Conversational AI', 'REST APIs'],
-                        github: 'https://github.com/PranavLabs/Natya-AI/tree/main',
-                        demo: 'https://natyamv.onrender.app',
-                        icon: 'fa-solid fa-film',
-                        badge: 'Live AI App',
-                        status: 'Live on Render'
-                    },
-                    {
-                        id: 'taskify',
-                        title: 'Taskify',
-                        category: 'web',
-                        date: '2024',
-                        tagline: 'Gamified Task Planner with Habit-Forming Rewards',
-                        description: 'Developed a lightweight, gamified task planner web application that enables users to create, organize, prioritize, and track daily tasks seamlessly.',
-                        highlights: [
-                            'Implemented an engaging points system to incentivize task completion, allowing users to earn and redeem points for "chill time" to build consistent productivity.',
-                            'Designed a minimal, distraction-free, mobile-friendly user interface with responsive interactions and persistent local storage.',
-                            'Engineered using clean, modular vanilla JavaScript and lightweight styling for maximum speed and zero friction.'
-                        ],
-                        tech: ['HTML5', 'CSS3', 'JavaScript', 'Gamification Logic', 'Local Storage', 'UI/UX'],
-                        github: 'https://github.com/PranavLabs/taskify/tree/main',
-                        demo: null,
-                        icon: 'fa-solid fa-list-check',
-                        badge: 'Gamified Productivity',
-                        status: 'Active Repo'
-                    }
-                ],
-                certificates: [
-                    {
-                        title: 'Supervised Machine Learning: Regression and Classification',
-                        issuer: 'Coursera (DeepLearning.AI & Stanford Online)',
-                        date: 'Aug 2025',
-                        desc: 'Rigorous foundation in machine learning, cost minimization, linear & logistic regression, gradient descent optimization, and classification regularizations.',
-                        link: 'https://coursera.org/share/823973311d59167801c78af9e7d890c7',
-                        icon: 'fa-solid fa-certificate',
-                        badge: 'Coursera Verified'
-                    },
-                    {
-                        title: 'Computer Programming & Algorithmic Problem Solving',
-                        issuer: 'NeoColab',
-                        date: 'Sep 2024',
-                        desc: 'Demonstrated high algorithmic rigor, efficient data structures, computational speed, and problem-solving mastery in C/C++.',
-                        link: 'https://drive.google.com/file/d/1tfUuBbssScN7SY5Y4FhucPp1RfvS-YfR/view?usp=drive_link',
-                        icon: 'fa-solid fa-laptop-code',
-                        badge: 'NeoColab Verified'
-                    },
-                    {
-                        title: 'Time Management Fundamentals & Professional Execution',
-                        issuer: 'LinkedIn Learning',
-                        date: 'Verified Credential',
-                        desc: 'Applied professional productivity frameworks, strategic workflow prioritization, deep work scheduling, and goal architecture.',
-                        link: 'https://www.linkedin.com/learning/certificates/0df0cd22a2f15487299e6f1a225cf44fe2985451fb00282f28a02dfb9e12072a',
-                        icon: 'fa-solid fa-clock',
-                        badge: 'LinkedIn Certified'
-                    },
-                    {
-                        title: 'WorldQuant BRAIN Gold Level Achievement',
-                        issuer: 'WorldQuant Brain Quantitative Research',
-                        date: 'Recognized Consultant',
-                        desc: 'Achieved Gold Level consultant status on the WorldQuant BRAIN quantitative platform, formulating predictive mathematical alphas and data signals.',
-                        link: 'https://www.linkedin.com/in/pranavgandha/',
-                        icon: 'fa-solid fa-brain',
-                        badge: 'Gold Level Alpha'
-                    },
-                    {
-                        title: 'RCS CTF National Cybersecurity Achievement',
-                        issuer: 'RCS Hackathon & CTF',
-                        date: 'May 2024',
-                        desc: 'Ranked #2 in collegiate hackathon CTF through penetration testing, vulnerability assessment, cryptographic challenges, and system exploitation.',
-                        link: 'https://www.linkedin.com/in/pranavgandha/',
-                        icon: 'fa-solid fa-shield-halved',
-                        badge: 'National Hackathon'
-                    }
-                ],
-                education: [
-                    {
-                        institution: 'Lovely Professional University',
-                        degree: 'Bachelor of Technology — Computer Science & Engineering',
-                        score: 'CGPA: 8.51',
-                        duration: 'Aug 2025 - Present',
-                        location: 'Phagwara, Punjab',
-                        icon: 'fa-solid fa-building-columns',
-                        details: 'Specializing in Artificial Intelligence, Machine Learning, and Full-Stack Engineering. Active participant in hackathons and technical clubs.'
-                    },
-                    {
-                        institution: 'Innocent Hearts School',
-                        degree: 'Higher Secondary Education (Class XII - Non-Medical)',
-                        score: 'Percentage: 80%',
-                        duration: 'May 2023 - May 2025',
-                        location: 'Jalandhar, Punjab',
-                        icon: 'fa-solid fa-school',
-                        details: 'Focused on Mathematics, Physics, Chemistry, and Computer Science fundamentals.'
-                    },
-                    {
-                        institution: 'Innocent Hearts School',
-                        degree: 'Secondary Education (Class X)',
-                        score: 'Percentage: 87%',
-                        duration: 'May 2022 - Mar 2023',
-                        location: 'Jalandhar, Punjab',
-                        icon: 'fa-solid fa-book-open',
-                        details: 'Graduated with academic distinction across all foundational sciences and mathematics.'
-                    }
-                ]
-            };
+                    <!-- Headline -->
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold tracking-[-0.03em] leading-[1.08] hero-title-gradient">
+                        Engineering <br />
+                        <span class="accent-liquid-gradient">Intelligent Systems</span> <br />
+                        & Full-Stack Web.
+                    </h1>
 
-            const copyToClipboard = (text, key) => {
-                navigator.clipboard.writeText(text);
-                setCopiedKey(key);
-                setTimeout(() => setCopiedKey(null), 2500);
-            };
+                    <h2 class="text-lg sm:text-xl font-display font-medium text-slateLight/90 flex items-center gap-2">
+                        <span>Pranav Gandha</span>
+                        <span class="text-cyanNeon">•</span>
+                        <span class="text-slateMuted text-base">Full-Stack Developer & AI Innovator</span>
+                    </h2>
 
-            const handleTerminalSubmit = (e) => {
-                e.preventDefault();
-                const cmd = terminalPrompt.trim().toLowerCase();
-                if (!cmd) return;
+                    <p class="text-base sm:text-lg text-slateMuted leading-relaxed max-w-2xl font-normal">
+                        B.Tech Computer Science student at Lovely Professional University and freelance AI Generalist. Passionate about engineering high-precision AI/ML workflows, scalable full-stack web applications, and low-latency systems that solve real-world problems with maximum computational efficiency.
+                    </p>
 
-                let response = '';
-                if (cmd === 'help' || cmd === '?') {
-                    response = 'Commands: bio, skills, projects, cv, contact, clear';
-                } else if (cmd === 'bio') {
-                    response = portfolioData.bio;
-                } else if (cmd === 'skills') {
-                    response = 'Skills: Python, JavaScript, C++, PyTorch, React, Node.js, Computer Vision, REST APIs, SQL, AWS, IELTS 7.5';
-                } else if (cmd === 'projects') {
-                    response = 'Projects: Ecocheck (Green AI CV analysis), Natya-AI (Conversational Recommender), Taskify (Gamified Planner)';
-                } else if (cmd === 'cv') {
-                    window.open(portfolioData.cvDownloadLink, '_blank');
-                    response = 'Opening official CV in new tab...';
-                } else if (cmd === 'contact') {
-                    response = `Email: ${portfolioData.contact.email} | Mobile: ${portfolioData.contact.phone} | LinkedIn: in/pranavgandha`;
-                } else if (cmd === 'clear') {
-                    setTerminalLogs([]);
-                    setTerminalPrompt('');
-                    return;
-                } else {
-                    response = `Unknown command "${cmd}". Type "help" for available directives.`;
-                }
+                    <!-- Primary CTA Bar -->
+                    <div class="pt-2 flex flex-wrap items-center gap-4">
+                        <a 
+                            href="https://drive.google.com/file/d/1YA_xPwQs9Iu1ZfzjHNWtJxDz1XjTIRpn/view?usp=sharing" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            class="btn-liquid-primary px-7 py-3.5 rounded-2xl font-display text-sm tracking-wide flex items-center gap-2.5"
+                        >
+                            <i class="fa-solid fa-file-pdf text-black text-base"></i>
+                            <span>Download Official CV</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-0.5 opacity-80"></i>
+                        </a>
 
-                setTerminalLogs(prev => [
-                    ...prev,
-                    { user: true, text: terminalPrompt },
-                    { user: false, text: response }
-                ]);
-                setTerminalPrompt('');
-            };
+                        <a 
+                            href="#contact" 
+                            class="btn-liquid-secondary px-6 py-3.5 rounded-2xl font-display text-sm text-white flex items-center gap-2"
+                        >
+                            <i class="fa-solid fa-bolt text-cyanNeon text-sm"></i>
+                            <span>Get in Touch</span>
+                        </a>
 
-            return (
-                <div className="relative min-h-screen">
-                    {/* Ambient Dynamic Liquid Lights (Cyan & Acid Mint Mesh) */}
-                    <div className="fixed top-[-140px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] liquid-mesh-cyan blur-[150px] rounded-full pointer-events-none animate-liquid-drift z-0"></div>
-                    <div className="fixed top-[40%] right-[-100px] w-[700px] h-[600px] liquid-mesh-mint blur-[160px] rounded-full pointer-events-none animate-liquid-drift-slow z-0"></div>
-                    <div className="fixed bottom-[-100px] left-[-100px] w-[600px] h-[500px] liquid-mesh-carbon blur-[140px] rounded-full pointer-events-none z-0"></div>
-
-                    {/* Floating Liquid Glass Dock Navigation */}
-                    <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-                        <nav className={`liquid-dock rounded-full px-5 py-3 flex items-center justify-between gap-6 transition-all duration-300 ${isNavScrolled ? 'shadow-2xl shadow-cyanNeon/10 border-cyanNeon/30' : ''}`}>
-                            <a href="#" className="flex items-center gap-2.5 group">
-                                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-cyanNeon to-mintNeon p-[1.5px] group-hover:scale-105 transition-transform">
-                                    <div className="w-full h-full bg-baseBg rounded-full flex items-center justify-center font-display font-bold text-xs text-white">
-                                        PG
-                                    </div>
-                                </div>
-                                <span className="font-display font-bold text-sm tracking-tight text-white hidden sm:inline-block group-hover:text-cyanNeon transition-colors">
-                                    Pranav Gandha
-                                </span>
+                        <!-- Social Icons -->
+                        <div class="flex items-center gap-2 pl-1">
+                            <a href="https://github.com/PranavLabs" target="_blank" rel="noopener noreferrer" title="GitHub Profile" class="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300">
+                                <i class="fa-brands fa-github"></i>
                             </a>
-
-                            {/* Desktop Links */}
-                            <div className="hidden md:flex items-center gap-6 text-xs font-medium text-slateMuted">
-                                <a href="#about" className="hover:text-white transition-colors">About</a>
-                                <a href="#highlights" className="hover:text-white transition-colors">Highlights</a>
-                                <a href="#skills" className="hover:text-white transition-colors">Arsenal</a>
-                                <a href="#projects" className="hover:text-white transition-colors">Projects</a>
-                                <a href="#certifications" className="hover:text-white transition-colors">Credentials</a>
-                                <a href="#education" className="hover:text-white transition-colors">Education</a>
-                                <a href="#contact" className="hover:text-white transition-colors">Contact</a>
-                            </div>
-
-                            {/* Resume Action */}
-                            <a 
-                                href={portfolioData.cvDownloadLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn-liquid-primary px-4 py-1.5 rounded-full text-xs font-display flex items-center gap-2"
-                            >
-                                <i className="fa-solid fa-file-arrow-down text-[11px]"></i>
-                                <span>Download CV</span>
+                            <a href="https://www.linkedin.com/in/pranavgandha/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" class="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300">
+                                <i class="fa-brands fa-linkedin-in"></i>
                             </a>
-                        </nav>
-                    </header>
+                            <a href="https://x.com/pranavbyte" target="_blank" rel="noopener noreferrer" title="X (Twitter)" class="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/pranav.x.d" target="_blank" rel="noopener noreferrer" title="Instagram" class="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
 
-                    {/* Main Content Area */}
-                    <main className="relative z-10 max-w-6xl mx-auto px-6 pt-36 md:pt-44 pb-24">
+                    <!-- Direct Contact Badges -->
+                    <div class="pt-3 flex flex-wrap gap-3 text-xs font-mono">
+                        <div 
+                            onclick="copyText('pranavgandha@outlook.com', this)"
+                            class="flex items-center gap-2 px-3.5 py-2 rounded-xl liquid-glass hover:border-cyanNeon/50 cursor-pointer transition-all"
+                            title="Click to copy email address"
+                        >
+                            <i class="fa-regular fa-envelope text-cyanNeon"></i>
+                            <span class="text-slateLight">pranavgandha@outlook.com</span>
+                            <i class="fa-solid fa-copy opacity-50 text-xs ml-1 copy-icon"></i>
+                        </div>
+                        <div 
+                            onclick="copyText('+91-6280326280', this)"
+                            class="flex items-center gap-2 px-3.5 py-2 rounded-xl liquid-glass hover:border-mintNeon/50 cursor-pointer transition-all"
+                            title="Click to copy mobile number"
+                        >
+                            <i class="fa-solid fa-phone text-mintNeon"></i>
+                            <span class="text-slateLight">+91-6280326280</span>
+                            <i class="fa-solid fa-copy opacity-50 text-xs ml-1 copy-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Profile Card -->
+                <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                    <div class="relative group max-w-sm w-full">
+                        <!-- Specular Ambient Glow -->
+                        <div class="absolute -inset-2 bg-gradient-to-tr from-cyanNeon/25 via-mintNeon/15 to-blue-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
                         
-                        {/* HERO SECTION */}
-                        <section id="about" className="mb-32">
-                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="relative liquid-glass p-5 rounded-3xl overflow-hidden">
+                            <!-- Photo Canvas -->
+                            <div class="relative aspect-[4/4.5] rounded-2xl overflow-hidden bg-baseBg mb-5 shadow-2xl border border-white/10">
+                                <img 
+                                    src="https://raw.githubusercontent.com/PranavLabs/portfolio/refs/heads/main/1764480530308.jpg" 
+                                    alt="Pranav Gandha" 
+                                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                                    onerror="this.onerror=null; this.src='1764480530308.jpg';"
+                                />
                                 
-                                {/* Left Hero Copy */}
-                                <div className="lg:col-span-7 space-y-7">
-                                    {/* Status Badge */}
-                                    <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full liquid-glass border-cyanNeon/30 text-xs font-mono text-cyanNeon">
-                                        <span className="relative flex h-2 w-2">
-                                            <span className="animate-badge-ping absolute inline-flex h-full w-full rounded-full bg-mintNeon opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-mintNeon"></span>
-                                        </span>
-                                        <span>{portfolioData.status}</span>
-                                    </div>
-
-                                    {/* Headline */}
-                                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold tracking-[-0.03em] leading-[1.08] hero-title-gradient">
-                                        Engineering <br />
-                                        <span className="accent-liquid-gradient">Intelligent Systems</span> <br />
-                                        & Full-Stack Web.
-                                    </h1>
-
-                                    <h2 className="text-lg sm:text-xl font-display font-medium text-slateLight/90 flex items-center gap-2">
-                                        <span>{portfolioData.name}</span>
-                                        <span className="text-cyanNeon">•</span>
-                                        <span className="text-slateMuted text-base">{portfolioData.tagline}</span>
-                                    </h2>
-
-                                    <p className="text-base sm:text-lg text-slateMuted leading-relaxed max-w-2xl font-normal">
-                                        {portfolioData.bio}
-                                    </p>
-
-                                    {/* Primary CTA Bar */}
-                                    <div className="pt-2 flex flex-wrap items-center gap-4">
-                                        <a 
-                                            href={portfolioData.cvDownloadLink} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer" 
-                                            className="btn-liquid-primary px-7 py-3.5 rounded-2xl font-display text-sm tracking-wide flex items-center gap-2.5"
-                                        >
-                                            <i className="fa-solid fa-file-pdf text-black text-base"></i>
-                                            <span>Download Official CV</span>
-                                            <i className="fa-solid fa-arrow-up-right-from-square text-xs ml-0.5 opacity-80"></i>
-                                        </a>
-
-                                        <a 
-                                            href="#contact" 
-                                            className="btn-liquid-secondary px-6 py-3.5 rounded-2xl font-display text-sm text-white flex items-center gap-2"
-                                        >
-                                            <i className="fa-solid fa-bolt text-cyanNeon text-sm"></i>
-                                            <span>Get in Touch</span>
-                                        </a>
-
-                                        {/* Social Icons */}
-                                        <div className="flex items-center gap-2 pl-1">
-                                            <LiquidSocial href={portfolioData.contact.github} icon="fa-brands fa-github" title="GitHub Profile" />
-                                            <LiquidSocial href={portfolioData.contact.linkedin} icon="fa-brands fa-linkedin-in" title="LinkedIn Profile" />
-                                            <LiquidSocial href={portfolioData.contact.x} icon="fa-brands fa-x-twitter" title="X (Twitter)" />
-                                            <LiquidSocial href={portfolioData.contact.insta} icon="fa-brands fa-instagram" title="Instagram" />
-                                        </div>
-                                    </div>
-
-                                    {/* Copy Direct Contact Badges */}
-                                    <div className="pt-3 flex flex-wrap gap-3 text-xs font-mono">
-                                        <div 
-                                            onClick={() => copyToClipboard(portfolioData.contact.email, 'email')}
-                                            className="flex items-center gap-2 px-3.5 py-2 rounded-xl liquid-glass hover:border-cyanNeon/50 cursor-pointer transition-all"
-                                            title="Click to copy email address"
-                                        >
-                                            <i className="fa-regular fa-envelope text-cyanNeon"></i>
-                                            <span className="text-slateLight">{portfolioData.contact.email}</span>
-                                            <i className={`fa-solid ${copiedKey === 'email' ? 'fa-check text-mintNeon' : 'fa-copy opacity-50'} text-xs ml-1`}></i>
-                                        </div>
-                                        <div 
-                                            onClick={() => copyToClipboard(portfolioData.contact.phone, 'phone')}
-                                            className="flex items-center gap-2 px-3.5 py-2 rounded-xl liquid-glass hover:border-mintNeon/50 cursor-pointer transition-all"
-                                            title="Click to copy mobile number"
-                                        >
-                                            <i className="fa-solid fa-phone text-mintNeon"></i>
-                                            <span className="text-slateLight">{portfolioData.contact.phone}</span>
-                                            <i className={`fa-solid ${copiedKey === 'phone' ? 'fa-check text-mintNeon' : 'fa-copy opacity-50'} text-xs ml-1`}></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Right Hero Interactive Profile Card */}
-                                <div className="lg:col-span-5 flex justify-center lg:justify-end">
-                                    <div className="relative group max-w-sm w-full">
-                                        {/* Specular Liquid Ambient Glow */}
-                                        <div className="absolute -inset-2 bg-gradient-to-tr from-cyanNeon/25 via-mintNeon/15 to-blue-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                        
-                                        <div className="relative liquid-glass p-5 rounded-3xl overflow-hidden">
-                                            {/* Photo Canvas */}
-                                            <div className="relative aspect-[4/4.5] rounded-2xl overflow-hidden bg-baseBg mb-5 shadow-2xl border border-white/10">
-                                                <img 
-                                                    src={portfolioData.profilePic} 
-                                                    alt="Pranav Gandha" 
-                                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
-                                                    onError={(e) => {
-                                                        e.target.onerror = null;
-                                                        e.target.src = '1764480530308.jpg';
-                                                    }}
-                                                />
-                                                
-                                                {/* Liquid Overlays */}
-                                                <div className="absolute inset-0 bg-gradient-to-t from-baseBg/90 via-transparent to-transparent"></div>
-                                                
-                                                {/* Floating Badges */}
-                                                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
-                                                    <span className="px-3 py-1 rounded-xl liquid-glass text-[11px] font-mono text-white flex items-center gap-1.5 border-white/20">
-                                                        <i className="fa-solid fa-location-dot text-cyanNeon"></i>
-                                                        <span>Punjab, IN</span>
-                                                    </span>
-                                                    <span className="px-3 py-1 rounded-xl liquid-glass text-[11px] font-mono text-mintNeon border-mintNeon/30">
-                                                        8.51 CGPA
-                                                    </span>
-                                                </div>
-                                            </div>
-
-                                            {/* Profile Meta Deck */}
-                                            <div className="space-y-3 px-1">
-                                                <div className="flex items-center justify-between">
-                                                    <div className="font-display font-bold text-white text-base">Pranav Gandha</div>
-                                                    <span className="text-[11px] font-mono text-cyanNeon px-2 py-0.5 rounded-md bg-cyanNeon/10 border border-cyanNeon/20">
-                                                        AI & Full-Stack
-                                                    </span>
-                                                </div>
-                                                <p className="text-xs text-slateMuted leading-relaxed">
-                                                    Specializing in high-performance PyTorch models, conversational AI engines & modern web applications.
-                                                </p>
-                                                <div className="pt-1">
-                                                    <a 
-                                                        href={portfolioData.cvDownloadLink}
-                                                        target="_blank" 
-                                                        rel="noopener noreferrer"
-                                                        className="w-full py-2.5 rounded-xl btn-liquid-secondary text-xs font-display text-cyanNeon text-center flex items-center justify-center gap-2 group-hover:border-cyanNeon/40 transition-colors"
-                                                    >
-                                                        <i className="fa-solid fa-file-arrow-down"></i>
-                                                        <span>View Verified Resume</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </section>
-
-                        {/* HIGHLIGHTS & ACHIEVEMENTS BENTO */}
-                        <section id="highlights" className="mb-32">
-                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
-                                <div>
-                                    <span className="text-xs font-mono text-cyanNeon uppercase tracking-widest">Key Milestones</span>
-                                    <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
-                                        Proven Impact & Metrics
-                                    </h3>
-                                </div>
-                                <span className="text-xs font-mono text-slateMuted">Verified Academic & Competitive Credentials</span>
-                            </div>
-
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                                {portfolioData.highlights.map((item, idx) => (
-                                    <div 
-                                        key={idx} 
-                                        className="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/40"
-                                    >
-                                        <div>
-                                            <div className="flex items-start justify-between mb-8">
-                                                <div className="w-12 h-12 rounded-2xl liquid-glass flex items-center justify-center text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors">
-                                                    <i className={`${item.icon} ${item.color}`}></i>
-                                                </div>
-                                                <span className="text-[10px] font-mono px-2.5 py-1 rounded-full liquid-glass text-slateMuted border-white/10">
-                                                    {item.tag}
-                                                </span>
-                                            </div>
-
-                                            <div className="text-4xl font-display font-extrabold text-white mb-2 tracking-tight">
-                                                {item.number}
-                                            </div>
-                                            <div className="font-display font-semibold text-sm text-slateLight mb-1">
-                                                {item.title}
-                                            </div>
-                                            <p className="text-xs text-slateMuted leading-relaxed">
-                                                {item.desc}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* TECHNICAL ARSENAL */}
-                        <section id="skills" className="mb-32">
-                            <div className="mb-10">
-                                <span className="text-xs font-mono text-mintNeon uppercase tracking-widest">Core Capabilities</span>
-                                <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
-                                    Technical Arsenal & Stacks
-                                </h3>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {portfolioData.skillCategories.map((cat, idx) => (
-                                    <div key={idx} className="liquid-glass p-7 rounded-3xl flex flex-col justify-between group">
-                                        <div>
-                                            <div className="flex items-center gap-3.5 mb-6">
-                                                <div className="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-lg border-cyanNeon/20">
-                                                    <i className={cat.icon}></i>
-                                                </div>
-                                                <div>
-                                                    <h4 className="font-display font-bold text-white text-base">{cat.category}</h4>
-                                                    <div className="h-[2px] w-10 bg-gradient-to-r from-cyanNeon to-transparent mt-1"></div>
-                                                </div>
-                                            </div>
-
-                                            <div className="flex flex-wrap gap-2">
-                                                {cat.items.map((skill, sIdx) => (
-                                                    <span 
-                                                        key={sIdx} 
-                                                        className="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl hover:border-cyanNeon/50 hover:text-cyanNeon hover:bg-cyanNeon/5 transition-all cursor-default"
-                                                    >
-                                                        {skill}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* FEATURED PROJECTS SHOWCASE */}
-                        <section id="projects" className="mb-32">
-                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
-                                <div>
-                                    <span className="text-xs font-mono text-cyanNeon uppercase tracking-widest">Selected Works</span>
-                                    <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
-                                        Featured Engineering Projects
-                                    </h3>
-                                </div>
-                                <div className="text-xs font-mono text-slateMuted">
-                                    Production-ready AI & scalable web systems
+                                <!-- Liquid Overlays -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-baseBg/90 via-transparent to-transparent"></div>
+                                
+                                <!-- Floating Badges -->
+                                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
+                                    <span class="px-3 py-1 rounded-xl liquid-glass text-[11px] font-mono text-white flex items-center gap-1.5 border-white/20">
+                                        <i class="fa-solid fa-location-dot text-cyanNeon"></i>
+                                        <span>Punjab, IN</span>
+                                    </span>
+                                    <span class="px-3 py-1 rounded-xl liquid-glass text-[11px] font-mono text-mintNeon border-mintNeon/30">
+                                        8.51 CGPA
+                                    </span>
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                                {portfolioData.projects.map((project) => (
-                                    <div 
-                                        key={project.id} 
-                                        className="liquid-glass p-8 rounded-3xl flex flex-col justify-between group relative overflow-hidden"
-                                    >
-                                        {/* Subtle Corner Accent */}
-                                        <div className="absolute top-0 right-0 w-32 h-32 bg-cyanNeon/5 blur-2xl pointer-events-none group-hover:bg-cyanNeon/15 transition-colors"></div>
-
-                                        <div>
-                                            {/* Header Meta */}
-                                            <div className="flex items-start justify-between gap-3 mb-6 relative z-10">
-                                                <div className="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-xl text-cyanNeon border-cyanNeon/25 group-hover:border-cyanNeon/60 transition-colors">
-                                                    <i className={project.icon}></i>
-                                                </div>
-                                                <div className="flex flex-col items-end gap-1">
-                                                    <span className="text-[10px] font-mono px-3 py-1 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 text-cyanNeon font-semibold">
-                                                        {project.badge}
-                                                    </span>
-                                                    <span className="text-[10px] font-mono text-slateMuted">{project.date}</span>
-                                                </div>
-                                            </div>
-
-                                            <h4 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-cyanNeon transition-colors">
-                                                {project.title}
-                                            </h4>
-                                            <p className="text-xs font-medium text-mintNeon/90 mb-4">{project.tagline}</p>
-
-                                            <p className="text-sm text-slateMuted leading-relaxed mb-6">
-                                                {project.description}
-                                            </p>
-
-                                            {/* Bullet Highlights */}
-                                            <div className="space-y-3 mb-8 text-xs text-slateLight/90">
-                                                {project.highlights.map((pt, pIdx) => (
-                                                    <div key={pIdx} className="flex items-start gap-2.5">
-                                                        <i className="fa-solid fa-chevron-right text-cyanNeon text-[10px] mt-1 shrink-0"></i>
-                                                        <span className="leading-relaxed">{pt}</span>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        <div className="pt-4 border-t border-white/10">
-                                            {/* Tech Pills */}
-                                            <div className="flex flex-wrap gap-1.5 mb-6">
-                                                {project.tech.map((t, tIdx) => (
-                                                    <span key={tIdx} className="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">
-                                                        {t}
-                                                    </span>
-                                                ))}
-                                            </div>
-
-                                            {/* Links */}
-                                            <div className="flex gap-3">
-                                                {project.demo && (
-                                                    <a 
-                                                        href={project.demo} 
-                                                        target="_blank" 
-                                                        rel="noopener noreferrer" 
-                                                        className="flex-1 btn-liquid-primary py-3 px-4 rounded-xl text-xs font-display text-center flex items-center justify-center gap-2"
-                                                    >
-                                                        <span>Live Demo</span>
-                                                        <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                                                    </a>
-                                                )}
-                                                {project.github && (
-                                                    <a 
-                                                        href={project.github} 
-                                                        target="_blank" 
-                                                        rel="noopener noreferrer" 
-                                                        className={`${project.demo ? 'px-4' : 'flex-1'} btn-liquid-secondary py-3 text-white text-xs font-display rounded-xl flex items-center justify-center gap-2`}
-                                                    >
-                                                        <i className="fa-brands fa-github text-sm"></i>
-                                                        <span>{project.demo ? 'Repo' : 'View on GitHub'}</span>
-                                                        <i className="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
-                                                    </a>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* INTERACTIVE TELEMETRY / TERMINAL WIDGET */}
-                        <section className="mb-32">
-                            <div className="liquid-glass p-6 sm:p-8 rounded-3xl border-cyanNeon/20">
-                                <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
-                                    <div className="flex items-center gap-2">
-                                        <span className="w-3 h-3 rounded-full bg-red-500/80"></span>
-                                        <span className="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                                        <span className="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-                                        <span className="text-xs font-mono text-slateMuted ml-2">pranav@antigravity-os: ~$</span>
-                                    </div>
-                                    <span className="text-[11px] font-mono text-cyanNeon">Interactive Terminal v2.4</span>
+                            <!-- Profile Meta Deck -->
+                            <div class="space-y-3 px-1">
+                                <div class="flex items-center justify-between">
+                                    <div class="font-display font-bold text-white text-base">Pranav Gandha</div>
+                                    <span class="text-[11px] font-mono text-cyanNeon px-2 py-0.5 rounded-md bg-cyanNeon/10 border border-cyanNeon/20">
+                                        AI & Full-Stack
+                                    </span>
                                 </div>
-
-                                <div className="space-y-2 mb-4 max-h-48 overflow-y-auto font-mono text-xs text-slateMuted">
-                                    {terminalLogs.map((log, lIdx) => (
-                                        <div key={lIdx} className={log.user ? 'text-cyanNeon' : 'text-slateLight'}>
-                                            {log.user ? `> ${log.text}` : log.text}
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <form onSubmit={handleTerminalSubmit} className="flex gap-3">
-                                    <div className="relative flex-1">
-                                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-cyanNeon font-mono text-xs">></span>
-                                        <input 
-                                            type="text" 
-                                            value={terminalPrompt}
-                                            onChange={(e) => setTerminalPrompt(e.target.value)}
-                                            placeholder="Type command: bio, skills, projects, cv, contact..."
-                                            className="w-full pl-8 pr-4 py-2.5 rounded-xl bg-baseBg/90 border border-white/10 text-xs font-mono text-white focus:outline-none focus:border-cyanNeon/60"
-                                        />
-                                    </div>
-                                    <button 
-                                        type="submit"
-                                        className="btn-liquid-secondary px-5 py-2.5 rounded-xl text-xs font-mono text-cyanNeon hover:text-white"
-                                    >
-                                        Execute
-                                    </button>
-                                </form>
-                            </div>
-                        </section>
-
-                        {/* VERIFIED CREDENTIALS & CERTIFICATIONS */}
-                        <section id="certifications" className="mb-32">
-                            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
-                                <div>
-                                    <span className="text-xs font-mono text-mintNeon uppercase tracking-widest">Verified Credentials</span>
-                                    <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
-                                        Certifications & Honors
-                                    </h3>
-                                </div>
-                                <span className="text-xs font-mono text-slateMuted">Click card to verify certification online</span>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {portfolioData.certificates.map((cert, cIdx) => (
+                                <p class="text-xs text-slateMuted leading-relaxed">
+                                    Specializing in high-performance PyTorch models, conversational AI engines & modern web applications.
+                                </p>
+                                <div class="pt-1">
                                     <a 
-                                        key={cIdx} 
-                                        href={cert.link} 
+                                        href="https://drive.google.com/file/d/1YA_xPwQs9Iu1ZfzjHNWtJxDz1XjTIRpn/view?usp=sharing"
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/50 transition-all block"
+                                        class="w-full py-2.5 rounded-xl btn-liquid-secondary text-xs font-display text-cyanNeon text-center flex items-center justify-center gap-2 group-hover:border-cyanNeon/40 transition-colors"
                                     >
-                                        <div>
-                                            <div className="flex items-start justify-between gap-3 mb-5">
-                                                <div className="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors">
-                                                    <i className={cert.icon}></i>
-                                                </div>
-                                                <span className="text-[10px] font-mono px-3 py-1 rounded-full liquid-glass text-mintNeon border-mintNeon/30 font-medium">
-                                                    {cert.badge}
-                                                </span>
-                                            </div>
-
-                                            <h4 className="font-display font-bold text-white text-base mb-1.5 group-hover:text-cyanNeon transition-colors">
-                                                {cert.title}
-                                            </h4>
-                                            
-                                            <div className="text-xs font-mono text-slateMuted mb-3 flex items-center gap-2">
-                                                <span>{cert.issuer}</span>
-                                                <span>•</span>
-                                                <span className="text-cyanNeon">{cert.date}</span>
-                                            </div>
-
-                                            <p className="text-xs text-slateMuted leading-relaxed mb-6">
-                                                {cert.desc}
-                                            </p>
-                                        </div>
-
-                                        <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-cyanNeon group-hover:text-white transition-colors">
-                                            <span>Verify Credential Link</span>
-                                            <i className="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-                                        </div>
+                                        <i class="fa-solid fa-file-arrow-down"></i>
+                                        <span>View Verified Resume</span>
                                     </a>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* EDUCATION JOURNEY */}
-                        <section id="education" className="mb-32">
-                            <div className="mb-10">
-                                <span className="text-xs font-mono text-cyanNeon uppercase tracking-widest">Academic Foundations</span>
-                                <h3 className="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
-                                    Education Journey
-                                </h3>
-                            </div>
-
-                            <div className="space-y-6">
-                                {portfolioData.education.map((edu, eIdx) => (
-                                    <div key={eIdx} className="liquid-glass p-7 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-cyanNeon/30">
-                                        <div className="flex items-start gap-4">
-                                            <div className="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-xl shrink-0 mt-1 border-white/10">
-                                                <i className={edu.icon}></i>
-                                            </div>
-                                            <div>
-                                                <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                                                    <h4 className="font-display font-bold text-white text-lg">{edu.institution}</h4>
-                                                    <span className="text-xs font-mono text-slateMuted">• {edu.location}</span>
-                                                </div>
-                                                <p className="text-sm font-medium text-slateLight mb-2">{edu.degree}</p>
-                                                <p className="text-xs text-slateMuted leading-relaxed max-w-2xl">{edu.details}</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex md:flex-col md:items-end justify-between items-center gap-2 shrink-0 border-t md:border-t-0 pt-4 md:pt-0 border-white/10">
-                                            <span className="px-4 py-1.5 rounded-full liquid-glass border-cyanNeon/40 text-cyanNeon font-display font-bold text-sm shadow-sm">
-                                                {edu.score}
-                                            </span>
-                                            <span className="text-xs font-mono text-slateMuted">
-                                                {edu.duration}
-                                            </span>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* CONTACT & CONNECT CONSOLE */}
-                        <section id="contact" className="mb-20">
-                            <div className="liquid-glass p-8 sm:p-14 rounded-3xl relative overflow-hidden border-cyanNeon/25">
-                                <div className="absolute top-0 right-0 w-96 h-96 liquid-mesh-cyan blur-3xl rounded-full pointer-events-none"></div>
-
-                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
-                                    <div className="lg:col-span-7 space-y-5">
-                                        <span className="text-xs font-mono text-mintNeon uppercase tracking-widest">Connect Console</span>
-                                        <h3 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
-                                            Let's engineer the future together.
-                                        </h3>
-                                        <p className="text-sm sm:text-base text-slateMuted leading-relaxed max-w-xl">
-                                            I'm open for high-impact AI/ML engineering roles, full-stack architecture opportunities, and ambitious software collaborations.
-                                        </p>
-
-                                        <div className="pt-2 flex flex-wrap gap-4">
-                                            <a 
-                                                href={`mailto:${portfolioData.contact.email}`} 
-                                                className="btn-liquid-primary px-7 py-3.5 rounded-2xl font-display text-sm flex items-center gap-2.5"
-                                            >
-                                                <i className="fa-regular fa-envelope text-base text-black"></i>
-                                                <span>Send Email</span>
-                                            </a>
-                                            <a 
-                                                href={portfolioData.cvDownloadLink}
-                                                target="_blank" 
-                                                rel="noopener noreferrer"
-                                                className="btn-liquid-secondary px-6 py-3.5 rounded-2xl font-display text-sm text-white flex items-center gap-2"
-                                            >
-                                                <i className="fa-solid fa-file-arrow-down text-cyanNeon"></i>
-                                                <span>Download CV</span>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    {/* Direct Interactive Cards */}
-                                    <div className="lg:col-span-5 space-y-3.5">
-                                        <div 
-                                            onClick={() => copyToClipboard(portfolioData.contact.email, 'email_card')}
-                                            className="p-4 rounded-2xl liquid-glass hover:border-cyanNeon/50 cursor-pointer transition-all flex items-center justify-between"
-                                        >
-                                            <div className="flex items-center gap-3.5">
-                                                <div className="w-10 h-10 rounded-xl liquid-glass flex items-center justify-center text-cyanNeon">
-                                                    <i className="fa-regular fa-envelope"></i>
-                                                </div>
-                                                <div>
-                                                    <div className="text-[10px] font-mono text-slateMuted">Email Address</div>
-                                                    <div className="text-sm font-medium text-white">{portfolioData.contact.email}</div>
-                                                </div>
-                                            </div>
-                                            <i className={`fa-solid ${copiedKey === 'email_card' ? 'fa-check text-mintNeon' : 'fa-copy text-slateMuted'} text-sm`}></i>
-                                        </div>
-
-                                        <div 
-                                            onClick={() => copyToClipboard(portfolioData.contact.phone, 'phone_card')}
-                                            className="p-4 rounded-2xl liquid-glass hover:border-mintNeon/50 cursor-pointer transition-all flex items-center justify-between"
-                                        >
-                                            <div className="flex items-center gap-3.5">
-                                                <div className="w-10 h-10 rounded-xl liquid-glass flex items-center justify-center text-mintNeon">
-                                                    <i className="fa-solid fa-phone"></i>
-                                                </div>
-                                                <div>
-                                                    <div className="text-[10px] font-mono text-slateMuted">Phone / WhatsApp</div>
-                                                    <div className="text-sm font-medium text-white">{portfolioData.contact.phone}</div>
-                                                </div>
-                                            </div>
-                                            <i className={`fa-solid ${copiedKey === 'phone_card' ? 'fa-check text-mintNeon' : 'fa-copy text-slateMuted'} text-sm`}></i>
-                                        </div>
-
-                                        <a 
-                                            href={portfolioData.contact.linkedin}
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            className="p-4 rounded-2xl liquid-glass hover:border-cyanNeon/50 transition-all flex items-center justify-between group"
-                                        >
-                                            <div className="flex items-center gap-3.5">
-                                                <div className="w-10 h-10 rounded-xl liquid-glass flex items-center justify-center text-cyanNeon">
-                                                    <i className="fa-brands fa-linkedin-in"></i>
-                                                </div>
-                                                <div>
-                                                    <div className="text-[10px] font-mono text-slateMuted">LinkedIn Network</div>
-                                                    <div className="text-sm font-medium text-white">in/pranavgandha</div>
-                                                </div>
-                                            </div>
-                                            <i className="fa-solid fa-arrow-up-right-from-square text-xs text-slateMuted group-hover:text-cyanNeon group-hover:translate-x-0.5 transition-all"></i>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
-                        </section>
-
-                        {/* FOOTER */}
-                        <footer className="pt-10 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs font-mono text-slateMuted">
-                            <div>
-                                © {new Date().getFullYear()} Pranav Gandha. Designed with Liquid Glass UI.
-                            </div>
-
-                            <div className="flex items-center gap-3">
-                                <LiquidSocial href={portfolioData.contact.github} icon="fa-brands fa-github" title="GitHub" />
-                                <LiquidSocial href={portfolioData.contact.linkedin} icon="fa-brands fa-linkedin-in" title="LinkedIn" />
-                                <LiquidSocial href={portfolioData.contact.x} icon="fa-brands fa-x-twitter" title="X (Twitter)" />
-                                <LiquidSocial href={portfolioData.contact.insta} icon="fa-brands fa-instagram" title="Instagram" />
-                                <LiquidSocial href={`mailto:${portfolioData.contact.email}`} icon="fa-regular fa-envelope" title="Email" />
-                            </div>
-                        </footer>
-
-                    </main>
+                        </div>
+                    </div>
                 </div>
-            );
-        };
 
-        const LiquidSocial = ({ href, icon, title }) => (
-            <a 
-                href={href} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                title={title}
-                className="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300"
-            >
-                <i className={icon}></i>
-            </a>
-        );
+            </div>
+        </section>
 
-        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+        <!-- HIGHLIGHTS & ACHIEVEMENTS BENTO -->
+        <section id="highlights" class="mb-32">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
+                <div>
+                    <span class="text-xs font-mono text-cyanNeon uppercase tracking-widest">Key Milestones</span>
+                    <h3 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                        Proven Impact & Metrics
+                    </h3>
+                </div>
+                <span class="text-xs font-mono text-slateMuted">Verified Academic & Competitive Credentials</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 1. CGPA -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/40">
+                    <div>
+                        <div class="flex items-start justify-between mb-8">
+                            <div class="w-12 h-12 rounded-2xl liquid-glass flex items-center justify-center text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors text-cyanNeon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <span class="text-[10px] font-mono px-2.5 py-1 rounded-full liquid-glass text-slateMuted border-white/10">
+                                LPU Honors
+                            </span>
+                        </div>
+                        <div class="text-4xl font-display font-extrabold text-white mb-2 tracking-tight">8.51</div>
+                        <div class="font-display font-semibold text-sm text-slateLight mb-1">Academic Record</div>
+                        <p class="text-xs text-slateMuted leading-relaxed">B.Tech CSE at Lovely Professional University</p>
+                    </div>
+                </div>
+
+                <!-- 2. Problems -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-mintNeon/40">
+                    <div>
+                        <div class="flex items-start justify-between mb-8">
+                            <div class="w-12 h-12 rounded-2xl liquid-glass flex items-center justify-center text-lg border-white/10 group-hover:border-mintNeon/40 transition-colors text-mintNeon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <span class="text-[10px] font-mono px-2.5 py-1 rounded-full liquid-glass text-slateMuted border-white/10">
+                                DSA & Code
+                            </span>
+                        </div>
+                        <div class="text-4xl font-display font-extrabold text-white mb-2 tracking-tight">300+</div>
+                        <div class="font-display font-semibold text-sm text-slateLight mb-1">Algorithm Rigor</div>
+                        <p class="text-xs text-slateMuted leading-relaxed">Solved across competitive programming platforms</p>
+                    </div>
+                </div>
+
+                <!-- 3. WorldQuant BRAIN -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-amber-400/40">
+                    <div>
+                        <div class="flex items-start justify-between mb-8">
+                            <div class="w-12 h-12 rounded-2xl liquid-glass flex items-center justify-center text-lg border-white/10 group-hover:border-amber-400/40 transition-colors text-amber-400">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <span class="text-[10px] font-mono px-2.5 py-1 rounded-full liquid-glass text-slateMuted border-white/10">
+                                Quant Alpha
+                            </span>
+                        </div>
+                        <div class="text-4xl font-display font-extrabold text-white mb-2 tracking-tight">Gold</div>
+                        <div class="font-display font-semibold text-sm text-slateLight mb-1">WorldQuant BRAIN</div>
+                        <p class="text-xs text-slateMuted leading-relaxed">Quantitative alpha formulation & data consultant</p>
+                    </div>
+                </div>
+
+                <!-- 4. CTF Hackathon -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/40">
+                    <div>
+                        <div class="flex items-start justify-between mb-8">
+                            <div class="w-12 h-12 rounded-2xl liquid-glass flex items-center justify-center text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors text-cyanNeon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <span class="text-[10px] font-mono px-2.5 py-1 rounded-full liquid-glass text-slateMuted border-white/10">
+                                Cybersec
+                            </span>
+                        </div>
+                        <div class="text-4xl font-display font-extrabold text-white mb-2 tracking-tight">Rank #2</div>
+                        <div class="font-display font-semibold text-sm text-slateLight mb-1">RCS CTF Hackathon</div>
+                        <p class="text-xs text-slateMuted leading-relaxed">National-level cybersecurity & hackathon challenge</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNICAL ARSENAL -->
+        <section id="skills" class="mb-32">
+            <div class="mb-10">
+                <span class="text-xs font-mono text-mintNeon uppercase tracking-widest">Core Capabilities</span>
+                <h3 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                    Technical Arsenal & Stacks
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. Languages -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-6">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-lg border-cyanNeon/20">
+                                <i class="fa-solid fa-terminal"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-base">Core Languages</h4>
+                                <div class="h-[2px] w-10 bg-gradient-to-r from-cyanNeon to-transparent mt-1"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Python</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">JavaScript</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">C</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">C++</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">SQL</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">HTML5</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. AI / ML -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-6">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-mintNeon text-lg border-mintNeon/20">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-base">AI / ML & Computer Vision</h4>
+                                <div class="h-[2px] w-10 bg-gradient-to-r from-mintNeon to-transparent mt-1"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Machine Learning</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Artificial Intelligence</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">PyTorch</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Computer Vision</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Conversational AI / NLP</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Web Dev -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-6">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-sky-400 text-lg border-sky-400/20">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-base">Full-Stack & Web Stacks</h4>
+                                <div class="h-[2px] w-10 bg-gradient-to-r from-sky-400 to-transparent mt-1"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">React.js</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Node.js</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Express.js</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Tailwind CSS</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Databases & Cloud -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-6">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-teal-400 text-lg border-teal-400/20">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-base">Databases & Cloud</h4>
+                                <div class="h-[2px] w-10 bg-gradient-to-r from-teal-400 to-transparent mt-1"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">MySQL</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">MongoDB</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">PostgreSQL</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Git</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">GitHub</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Figma</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Soft Skills -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group md:col-span-2">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-6">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-amber-400 text-lg border-amber-400/20">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-white text-base">Leadership & Strategic Skills</h4>
+                                <div class="h-[2px] w-10 bg-gradient-to-r from-amber-400 to-transparent mt-1"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Problem Solving</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Technical Leadership</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Team Collaboration</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Time Management</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-slateLight bg-baseBg/60 border border-white/10 rounded-xl">Adaptability</span>
+                            <span class="px-3.5 py-1.5 text-xs font-mono text-cyanNeon bg-cyanNeon/10 border border-cyanNeon/30 rounded-xl font-semibold">Communication (IELTS 7.5)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS SHOWCASE -->
+        <section id="projects" class="mb-32">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-xs font-mono text-cyanNeon uppercase tracking-widest">Selected Works</span>
+                    <h3 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                        Featured Engineering Projects
+                    </h3>
+                </div>
+                <div class="text-xs font-mono text-slateMuted">
+                    Production-ready AI & scalable web systems
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Project 1: Ecocheck -->
+                <div class="liquid-glass p-8 rounded-3xl flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyanNeon/5 blur-2xl pointer-events-none group-hover:bg-cyanNeon/15 transition-colors"></div>
+
+                    <div>
+                        <div class="flex items-start justify-between gap-3 mb-6 relative z-10">
+                            <div class="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-xl text-cyanNeon border-cyanNeon/25 group-hover:border-cyanNeon/60 transition-colors">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div class="flex flex-col items-end gap-1">
+                                <span class="text-[10px] font-mono px-3 py-1 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 text-cyanNeon font-semibold">
+                                    Featured Green AI
+                                </span>
+                                <span class="text-[10px] font-mono text-slateMuted">Dec 2025 - Jan 2026</span>
+                            </div>
+                        </div>
+
+                        <h4 class="text-2xl font-display font-bold text-white mb-2 group-hover:text-cyanNeon transition-colors">
+                            Ecocheck (Eco-Gram)
+                        </h4>
+                        <p class="text-xs font-medium text-mintNeon/90 mb-4">Automated Green Computing & Eco-Efficiency Code Analysis</p>
+
+                        <p class="text-sm text-slateMuted leading-relaxed mb-6">
+                            Engineered an automated eco-efficiency and code quality analysis tool designed to identify performance bottlenecks, reduce computational resource consumption, and enforce green software engineering practices.
+                        </p>
+
+                        <div class="space-y-3 mb-8 text-xs text-slateLight/90">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-cyanNeon text-[10px] mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">Implemented static code parsing routines and automated metric checks across client-server workflows to analyze runtime overhead and memory utilization.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-cyanNeon text-[10px] mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">Accelerated execution efficiency by optimizing resource-heavy operations to lower carbon footprint across web applications.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-cyanNeon text-[10px] mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">Computer vision modules analyze environmental imagery to evaluate biodiversity, transport modes, and e-waste for an urban sustainability score.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">Node.js</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">Express.js</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">React.js</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">Computer Vision</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">Streamlit</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a 
+                                href="https://ecocheck.streamlit.app" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="flex-1 btn-liquid-primary py-3 px-4 rounded-xl text-xs font-display text-center flex items-center justify-center gap-2"
+                            >
+                                <span>Live Demo</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                            <a 
+                                href="https://github.com/manudeep07/Collaborative-online-notepad" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="px-4 btn-liquid-secondary py-3 text-white text-xs font-display rounded-xl flex items-center justify-center gap-2"
+                            >
+                                <i class="fa-brands fa-github text-sm"></i>
+                                <span>Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Natya-AI -->
+                <div class="liquid-glass p-8 rounded-3xl flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-mintNeon/5 blur-2xl pointer-events-none group-hover:bg-mintNeon/15 transition-colors"></div>
+
+                    <div>
+                        <div class="flex items-start justify-between gap-3 mb-6 relative z-10">
+                            <div class="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-xl text-mintNeon border-mintNeon/25 group-hover:border-mintNeon/60 transition-colors">
+                                <i class="fa-solid fa-film"></i>
+                            </div>
+                            <div class="flex flex-col items-end gap-1">
+                                <span class="text-[10px] font-mono px-3 py-1 rounded-full bg-mintNeon/10 border border-mintNeon/30 text-mintNeon font-semibold">
+                                    Live AI Web App
+                                </span>
+                                <span class="text-[10px] font-mono text-slateMuted">2025</span>
+                            </div>
+                        </div>
+
+                        <h4 class="text-2xl font-display font-bold text-white mb-2 group-hover:text-mintNeon transition-colors">
+                            Natya-AI
+                        </h4>
+                        <p class="text-xs font-medium text-cyanNeon/90 mb-4">Conversational AI Recommendation & Media Discovery Engine</p>
+
+                        <p class="text-sm text-slateMuted leading-relaxed mb-6">
+                            Designed and developed Natya-AI, a chat-first movie and TV recommendation application leveraging conversational AI to deliver hyper-personalized entertainment suggestions.
+                        </p>
+
+                        <div class="space-y-3 mb-8 text-xs text-slateLight/90">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-mintNeon text-[10px] mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">Interactive user flows where individuals query based on mood, genre, actors, runtime, and language with clear AI rationale.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-mintNeon text-[10px] mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">Engineered Python recommendation logic and API services, paired with an intuitive conversational chat interface.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-mintNeon text-[10px] mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">Rapid prototyping and experimentation delivering seamless conversational experiences for dynamic media discovery.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">Python</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">JavaScript</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">Conversational AI</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">NLP</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a 
+                                href="https://natyamv.onrender.app" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="flex-1 btn-liquid-primary py-3 px-4 rounded-xl text-xs font-display text-center flex items-center justify-center gap-2"
+                            >
+                                <span>Live Demo</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                            <a 
+                                href="https://github.com/PranavLabs/Natya-AI/tree/main" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="px-4 btn-liquid-secondary py-3 text-white text-xs font-display rounded-xl flex items-center justify-center gap-2"
+                            >
+                                <i class="fa-brands fa-github text-sm"></i>
+                                <span>Repo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Taskify -->
+                <div class="liquid-glass p-8 rounded-3xl flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 blur-2xl pointer-events-none group-hover:bg-blue-500/15 transition-colors"></div>
+
+                    <div>
+                        <div class="flex items-start justify-between gap-3 mb-6 relative z-10">
+                            <div class="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-xl text-cyanNeon border-cyanNeon/25 group-hover:border-cyanNeon/60 transition-colors">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <div class="flex flex-col items-end gap-1">
+                                <span class="text-[10px] font-mono px-3 py-1 rounded-full bg-cyanNeon/10 border border-cyanNeon/30 text-cyanNeon font-semibold">
+                                    Gamified Productivity
+                                </span>
+                                <span class="text-[10px] font-mono text-slateMuted">2024</span>
+                            </div>
+                        </div>
+
+                        <h4 class="text-2xl font-display font-bold text-white mb-2 group-hover:text-cyanNeon transition-colors">
+                            Taskify
+                        </h4>
+                        <p class="text-xs font-medium text-mintNeon/90 mb-4">Gamified Task Planner with Habit-Forming Rewards</p>
+
+                        <p class="text-sm text-slateMuted leading-relaxed mb-6">
+                            Developed a lightweight, gamified task planner web application that enables users to create, organize, prioritize, and track daily tasks seamlessly.
+                        </p>
+
+                        <div class="space-y-3 mb-8 text-xs text-slateLight/90">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-cyanNeon text-[10px] mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">Engaging points system incentivizing task completion, allowing users to earn and redeem points for "chill time".</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-cyanNeon text-[10px] mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">Minimal, distraction-free, mobile-friendly user interface with responsive interactions and persistent storage.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-chevron-right text-cyanNeon text-[10px] mt-1 shrink-0"></i>
+                                <span class="leading-relaxed">Engineered using clean, modular vanilla JavaScript and lightweight styling for optimal performance.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">HTML5</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">CSS3</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">JavaScript</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 bg-baseBg/80 border border-white/10 rounded-lg text-slateMuted">Local Storage</span>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <a 
+                                href="https://github.com/PranavLabs/taskify/tree/main" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="w-full btn-liquid-secondary py-3 text-white text-xs font-display rounded-xl flex items-center justify-center gap-2"
+                            >
+                                <i class="fa-brands fa-github text-sm"></i>
+                                <span>View Repository on GitHub</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE TELEMETRY / TERMINAL WIDGET -->
+        <section class="mb-32">
+            <div class="liquid-glass p-6 sm:p-8 rounded-3xl border-cyanNeon/20">
+                <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                        <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                        <span class="text-xs font-mono text-slateMuted ml-2">pranav@antigravity-os: ~$</span>
+                    </div>
+                    <span class="text-[11px] font-mono text-cyanNeon">Interactive Terminal v2.4</span>
+                </div>
+
+                <div id="terminal-logs" class="space-y-2 mb-4 max-h-48 overflow-y-auto font-mono text-xs text-slateMuted">
+                    <div class="text-slateLight">System initialized. Pranav Gandha profile telemetry online.</div>
+                    <div class="text-slateLight">Type <span class="text-cyanNeon">"skills"</span>, <span class="text-cyanNeon">"projects"</span>, <span class="text-cyanNeon">"cv"</span>, or <span class="text-cyanNeon">"contact"</span> for direct query.</div>
+                </div>
+
+                <form id="terminal-form" onsubmit="handleTerminal(event)" class="flex gap-3">
+                    <div class="relative flex-1">
+                        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-cyanNeon font-mono text-xs">></span>
+                        <input 
+                            id="terminal-input"
+                            type="text" 
+                            placeholder="Type command: bio, skills, projects, cv, contact..."
+                            class="w-full pl-8 pr-4 py-2.5 rounded-xl bg-baseBg/90 border border-white/10 text-xs font-mono text-white focus:outline-none focus:border-cyanNeon/60"
+                        />
+                    </div>
+                    <button 
+                        type="submit"
+                        class="btn-liquid-secondary px-5 py-2.5 rounded-xl text-xs font-mono text-cyanNeon hover:text-white"
+                    >
+                        Execute
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- VERIFIED CREDENTIALS & CERTIFICATIONS -->
+        <section id="certifications" class="mb-32">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-3">
+                <div>
+                    <span class="text-xs font-mono text-mintNeon uppercase tracking-widest">Verified Credentials</span>
+                    <h3 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                        Certifications & Honors
+                    </h3>
+                </div>
+                <span class="text-xs font-mono text-slateMuted">Click card to verify certification online</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. Coursera ML -->
+                <a 
+                    href="https://coursera.org/share/823973311d59167801c78af9e7d890c7" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/50 transition-all block"
+                >
+                    <div>
+                        <div class="flex items-start justify-between gap-3 mb-5">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <span class="text-[10px] font-mono px-3 py-1 rounded-full liquid-glass text-mintNeon border-mintNeon/30 font-medium">
+                                Coursera Verified
+                            </span>
+                        </div>
+
+                        <h4 class="font-display font-bold text-white text-base mb-1.5 group-hover:text-cyanNeon transition-colors">
+                            Supervised Machine Learning: Regression and Classification
+                        </h4>
+                        
+                        <div class="text-xs font-mono text-slateMuted mb-3 flex items-center gap-2">
+                            <span>Coursera (DeepLearning.AI & Stanford)</span>
+                            <span>•</span>
+                            <span class="text-cyanNeon">Aug 2025</span>
+                        </div>
+
+                        <p class="text-xs text-slateMuted leading-relaxed mb-6">
+                            Rigorous foundation in machine learning, cost minimization, linear & logistic regression, gradient descent optimization, and classification regularizations.
+                        </p>
+                    </div>
+
+                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-cyanNeon group-hover:text-white transition-colors">
+                        <span>Verify Credential Link</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- 2. NeoColab -->
+                <a 
+                    href="https://drive.google.com/file/d/1tfUuBbssScN7SY5Y4FhucPp1RfvS-YfR/view?usp=drive_link" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/50 transition-all block"
+                >
+                    <div>
+                        <div class="flex items-start justify-between gap-3 mb-5">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <span class="text-[10px] font-mono px-3 py-1 rounded-full liquid-glass text-mintNeon border-mintNeon/30 font-medium">
+                                NeoColab Verified
+                            </span>
+                        </div>
+
+                        <h4 class="font-display font-bold text-white text-base mb-1.5 group-hover:text-cyanNeon transition-colors">
+                            Computer Programming & Algorithmic Problem Solving
+                        </h4>
+                        
+                        <div class="text-xs font-mono text-slateMuted mb-3 flex items-center gap-2">
+                            <span>NeoColab</span>
+                            <span>•</span>
+                            <span class="text-cyanNeon">Sep 2024</span>
+                        </div>
+
+                        <p class="text-xs text-slateMuted leading-relaxed mb-6">
+                            Demonstrated high algorithmic rigor, efficient data structures, computational speed, and problem-solving mastery in C/C++.
+                        </p>
+                    </div>
+
+                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-cyanNeon group-hover:text-white transition-colors">
+                        <span>Verify Credential Link</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- 3. LinkedIn Learning -->
+                <a 
+                    href="https://www.linkedin.com/learning/certificates/0df0cd22a2f15487299e6f1a225cf44fe2985451fb00282f28a02dfb9e12072a" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/50 transition-all block"
+                >
+                    <div>
+                        <div class="flex items-start justify-between gap-3 mb-5">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <span class="text-[10px] font-mono px-3 py-1 rounded-full liquid-glass text-mintNeon border-mintNeon/30 font-medium">
+                                LinkedIn Certified
+                            </span>
+                        </div>
+
+                        <h4 class="font-display font-bold text-white text-base mb-1.5 group-hover:text-cyanNeon transition-colors">
+                            Time Management Fundamentals & Professional Execution
+                        </h4>
+                        
+                        <div class="text-xs font-mono text-slateMuted mb-3 flex items-center gap-2">
+                            <span>LinkedIn Learning</span>
+                            <span>•</span>
+                            <span class="text-cyanNeon">Verified Credential</span>
+                        </div>
+
+                        <p class="text-xs text-slateMuted leading-relaxed mb-6">
+                            Applied professional productivity frameworks, strategic workflow prioritization, deep work scheduling, and goal architecture.
+                        </p>
+                    </div>
+
+                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-cyanNeon group-hover:text-white transition-colors">
+                        <span>Verify Credential Link</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- 4. WorldQuant Brain -->
+                <a 
+                    href="https://www.linkedin.com/in/pranavgandha/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-amber-400/50 transition-all block"
+                >
+                    <div>
+                        <div class="flex items-start justify-between gap-3 mb-5">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-amber-400 text-lg border-white/10 group-hover:border-amber-400/40 transition-colors">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <span class="text-[10px] font-mono px-3 py-1 rounded-full liquid-glass text-amber-300 border-amber-300/30 font-medium">
+                                Gold Level Alpha
+                            </span>
+                        </div>
+
+                        <h4 class="font-display font-bold text-white text-base mb-1.5 group-hover:text-amber-300 transition-colors">
+                            WorldQuant BRAIN Gold Level Consultant
+                        </h4>
+                        
+                        <div class="text-xs font-mono text-slateMuted mb-3 flex items-center gap-2">
+                            <span>WorldQuant Brain Quantitative Research</span>
+                        </div>
+
+                        <p class="text-xs text-slateMuted leading-relaxed mb-6">
+                            Achieved Gold Level consultant status on the WorldQuant BRAIN quantitative platform, formulating predictive mathematical alphas and data signals.
+                        </p>
+                    </div>
+
+                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-amber-300 group-hover:text-white transition-colors">
+                        <span>View Profile & Validation</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </div>
+                </a>
+
+                <!-- 5. RCS CTF -->
+                <a 
+                    href="https://www.linkedin.com/in/pranavgandha/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="liquid-glass p-7 rounded-3xl flex flex-col justify-between group hover:border-cyanNeon/50 transition-all block md:col-span-2"
+                >
+                    <div>
+                        <div class="flex items-start justify-between gap-3 mb-5">
+                            <div class="w-11 h-11 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-lg border-white/10 group-hover:border-cyanNeon/40 transition-colors">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <span class="text-[10px] font-mono px-3 py-1 rounded-full liquid-glass text-cyanNeon border-cyanNeon/30 font-medium">
+                                National Hackathon
+                            </span>
+                        </div>
+
+                        <h4 class="font-display font-bold text-white text-base mb-1.5 group-hover:text-cyanNeon transition-colors">
+                            RCS CTF National Cybersecurity Achievement
+                        </h4>
+                        
+                        <div class="text-xs font-mono text-slateMuted mb-3 flex items-center gap-2">
+                            <span>RCS Hackathon & CTF</span>
+                            <span>•</span>
+                            <span class="text-cyanNeon">May 2024</span>
+                        </div>
+
+                        <p class="text-xs text-slateMuted leading-relaxed mb-6">
+                            Ranked #2 in collegiate hackathon CTF through penetration testing, vulnerability assessment, cryptographic challenges, and system exploitation.
+                        </p>
+                    </div>
+
+                    <div class="pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-cyanNeon group-hover:text-white transition-colors">
+                        <span>View Profile & Verification</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[11px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- EDUCATION JOURNEY -->
+        <section id="education" class="mb-32">
+            <div class="mb-10">
+                <span class="text-xs font-mono text-cyanNeon uppercase tracking-widest">Academic Foundations</span>
+                <h3 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight mt-1">
+                    Education Journey
+                </h3>
+            </div>
+
+            <div class="space-y-6">
+                <!-- 1. LPU -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-cyanNeon/30">
+                    <div class="flex items-start gap-4">
+                        <div class="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-xl shrink-0 mt-1 border-white/10">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                <h4 class="font-display font-bold text-white text-lg">Lovely Professional University</h4>
+                                <span class="text-xs font-mono text-slateMuted">• Phagwara, Punjab</span>
+                            </div>
+                            <p class="text-sm font-medium text-slateLight mb-2">Bachelor of Technology — Computer Science & Engineering</p>
+                            <p class="text-xs text-slateMuted leading-relaxed max-w-2xl">Specializing in Artificial Intelligence, Machine Learning, and Full-Stack Engineering. Active participant in hackathons and technical clubs.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex md:flex-col md:items-end justify-between items-center gap-2 shrink-0 border-t md:border-t-0 pt-4 md:pt-0 border-white/10">
+                        <span class="px-4 py-1.5 rounded-full liquid-glass border-cyanNeon/40 text-cyanNeon font-display font-bold text-sm shadow-sm">
+                            CGPA: 8.51
+                        </span>
+                        <span class="text-xs font-mono text-slateMuted">
+                            Aug 2025 - Present
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 2. Innocent Hearts XII -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-cyanNeon/30">
+                    <div class="flex items-start gap-4">
+                        <div class="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-xl shrink-0 mt-1 border-white/10">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                <h4 class="font-display font-bold text-white text-lg">Innocent Hearts School</h4>
+                                <span class="text-xs font-mono text-slateMuted">• Jalandhar, Punjab</span>
+                            </div>
+                            <p class="text-sm font-medium text-slateLight mb-2">Higher Secondary Education (Class XII - Non-Medical)</p>
+                            <p class="text-xs text-slateMuted leading-relaxed max-w-2xl">Focused on Mathematics, Physics, Chemistry, and Computer Science fundamentals.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex md:flex-col md:items-end justify-between items-center gap-2 shrink-0 border-t md:border-t-0 pt-4 md:pt-0 border-white/10">
+                        <span class="px-4 py-1.5 rounded-full liquid-glass border-cyanNeon/40 text-cyanNeon font-display font-bold text-sm shadow-sm">
+                            Percentage: 80%
+                        </span>
+                        <span class="text-xs font-mono text-slateMuted">
+                            May 2023 - May 2025
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 3. Innocent Hearts X -->
+                <div class="liquid-glass p-7 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-cyanNeon/30">
+                    <div class="flex items-start gap-4">
+                        <div class="w-13 h-13 p-3.5 rounded-2xl liquid-glass flex items-center justify-center text-cyanNeon text-xl shrink-0 mt-1 border-white/10">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                <h4 class="font-display font-bold text-white text-lg">Innocent Hearts School</h4>
+                                <span class="text-xs font-mono text-slateMuted">• Jalandhar, Punjab</span>
+                            </div>
+                            <p class="text-sm font-medium text-slateLight mb-2">Secondary Education (Class X)</p>
+                            <p class="text-xs text-slateMuted leading-relaxed max-w-2xl">Graduated with academic distinction across all foundational sciences and mathematics.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex md:flex-col md:items-end justify-between items-center gap-2 shrink-0 border-t md:border-t-0 pt-4 md:pt-0 border-white/10">
+                        <span class="px-4 py-1.5 rounded-full liquid-glass border-cyanNeon/40 text-cyanNeon font-display font-bold text-sm shadow-sm">
+                            Percentage: 87%
+                        </span>
+                        <span class="text-xs font-mono text-slateMuted">
+                            May 2022 - Mar 2023
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & CONNECT CONSOLE -->
+        <section id="contact" class="mb-20">
+            <div class="liquid-glass p-8 sm:p-14 rounded-3xl relative overflow-hidden border-cyanNeon/25">
+                <div class="absolute top-0 right-0 w-96 h-96 liquid-mesh-cyan blur-3xl rounded-full pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+                    <div class="lg:col-span-7 space-y-5">
+                        <span class="text-xs font-mono text-mintNeon uppercase tracking-widest">Connect Console</span>
+                        <h3 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
+                            Let's engineer the future together.
+                        </h3>
+                        <p class="text-sm sm:text-base text-slateMuted leading-relaxed max-w-xl">
+                            I'm open for high-impact AI/ML engineering roles, full-stack architecture opportunities, and ambitious software collaborations.
+                        </p>
+
+                        <div class="pt-2 flex flex-wrap gap-4">
+                            <a 
+                                href="mailto:pranavgandha@outlook.com" 
+                                class="btn-liquid-primary px-7 py-3.5 rounded-2xl font-display text-sm flex items-center gap-2.5"
+                            >
+                                <i class="fa-regular fa-envelope text-base text-black"></i>
+                                <span>Send Email</span>
+                            </a>
+                            <a 
+                                href="https://drive.google.com/file/d/1YA_xPwQs9Iu1ZfzjHNWtJxDz1XjTIRpn/view?usp=sharing"
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="btn-liquid-secondary px-6 py-3.5 rounded-2xl font-display text-sm text-white flex items-center gap-2"
+                            >
+                                <i class="fa-solid fa-file-arrow-down text-cyanNeon"></i>
+                                <span>Download CV</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Direct Interactive Cards -->
+                    <div class="lg:col-span-5 space-y-3.5">
+                        <div 
+                            onclick="copyText('pranavgandha@outlook.com', this)"
+                            class="p-4 rounded-2xl liquid-glass hover:border-cyanNeon/50 cursor-pointer transition-all flex items-center justify-between"
+                        >
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl liquid-glass flex items-center justify-center text-cyanNeon">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[10px] font-mono text-slateMuted">Email Address</div>
+                                    <div class="text-sm font-medium text-white">pranavgandha@outlook.com</div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-copy text-slateMuted text-sm copy-icon"></i>
+                        </div>
+
+                        <div 
+                            onclick="copyText('+91-6280326280', this)"
+                            class="p-4 rounded-2xl liquid-glass hover:border-mintNeon/50 cursor-pointer transition-all flex items-center justify-between"
+                        >
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl liquid-glass flex items-center justify-center text-mintNeon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[10px] font-mono text-slateMuted">Phone / WhatsApp</div>
+                                    <div class="text-sm font-medium text-white">+91-6280326280</div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-copy text-slateMuted text-sm copy-icon"></i>
+                        </div>
+
+                        <a 
+                            href="https://www.linkedin.com/in/pranavgandha/"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="p-4 rounded-2xl liquid-glass hover:border-cyanNeon/50 transition-all flex items-center justify-between group"
+                        >
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-10 h-10 rounded-xl liquid-glass flex items-center justify-center text-cyanNeon">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[10px] font-mono text-slateMuted">LinkedIn Network</div>
+                                    <div class="text-sm font-medium text-white">in/pranavgandha</div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slateMuted group-hover:text-cyanNeon group-hover:translate-x-0.5 transition-all"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="pt-10 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs font-mono text-slateMuted">
+            <div>
+                © <span id="current-year">2026</span> Pranav Gandha. Designed with Liquid Glass UI.
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/PranavLabs" target="_blank" rel="noopener noreferrer" title="GitHub" class="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pranavgandha/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/pranavbyte" target="_blank" rel="noopener noreferrer" title="X (Twitter)" class="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://instagram.com/pranav.x.d" target="_blank" rel="noopener noreferrer" title="Instagram" class="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:pranavgandha@outlook.com" title="Email" class="w-10 h-10 flex items-center justify-center rounded-xl liquid-glass text-slateMuted hover:text-white hover:border-cyanNeon/50 hover:scale-110 transition-all duration-300">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Vanilla Interactivity Script -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 40) {
+                nav.classList.add('shadow-2xl', 'shadow-cyanNeon/10', 'border-cyanNeon/30');
+            } else {
+                nav.classList.remove('shadow-2xl', 'shadow-cyanNeon/10', 'border-cyanNeon/30');
+            }
+        });
+
+        // Copy Text Helper
+        function copyText(text, element) {
+            navigator.clipboard.writeText(text);
+            const icon = element.querySelector('.copy-icon');
+            if (icon) {
+                icon.className = 'fa-solid fa-check text-mintNeon text-xs ml-1 copy-icon';
+                setTimeout(() => {
+                    icon.className = 'fa-solid fa-copy opacity-50 text-xs ml-1 copy-icon';
+                }, 2000);
+            }
+        }
+
+        // Terminal logic
+        function handleTerminal(e) {
+            e.preventDefault();
+            const input = document.getElementById('terminal-input');
+            const logs = document.getElementById('terminal-logs');
+            const cmd = input.value.trim().toLowerCase();
+            if (!cmd) return;
+
+            let response = '';
+            if (cmd === 'help' || cmd === '?') {
+                response = 'Commands: bio, skills, projects, cv, contact, clear';
+            } else if (cmd === 'bio') {
+                response = 'Pranav Gandha: B.Tech Computer Science student at Lovely Professional University (8.51 CGPA) & AI Generalist passionate about machine learning, computer vision, and scalable full-stack web applications.';
+            } else if (cmd === 'skills') {
+                response = 'Skills: Python, JavaScript, C++, PyTorch, React, Node.js, Computer Vision, REST APIs, SQL, AWS, IELTS 7.5';
+            } else if (cmd === 'projects') {
+                response = 'Projects: Ecocheck (Green AI CV analysis), Natya-AI (Conversational Recommender), Taskify (Gamified Planner)';
+            } else if (cmd === 'cv') {
+                window.open('https://drive.google.com/file/d/1YA_xPwQs9Iu1ZfzjHNWtJxDz1XjTIRpn/view?usp=sharing', '_blank');
+                response = 'Opening official CV in new tab...';
+            } else if (cmd === 'contact') {
+                response = 'Email: pranavgandha@outlook.com | Mobile: +91-6280326280 | LinkedIn: in/pranavgandha';
+            } else if (cmd === 'clear') {
+                logs.innerHTML = '';
+                input.value = '';
+                return;
+            } else {
+                response = `Unknown command "${cmd}". Type "help" for available directives.`;
+            }
+
+            const userDiv = document.createElement('div');
+            userDiv.className = 'text-cyanNeon';
+            userDiv.textContent = `> ${input.value}`;
+
+            const resDiv = document.createElement('div');
+            resDiv.className = 'text-slateLight';
+            resDiv.textContent = response;
+
+            logs.appendChild(userDiv);
+            logs.appendChild(resDiv);
+            logs.scrollTop = logs.scrollHeight;
+            input.value = '';
+        }
     </script>
 </body>
 </html>
